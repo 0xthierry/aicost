@@ -26,3 +26,7 @@ jobs:
       uses: peter-evans/create-pull-request@v6
       with:
         delete-branch: true
+        title: "[auto] updading AI models $(date +'%Y-%m-%d')"
+        commit-message: "feat: update ai models $(date +'%Y-%m-%d')"
+        body: |
+          This PR updates the AI models.
