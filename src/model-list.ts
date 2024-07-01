@@ -1,6 +1,6 @@
-// Last updated: 2024-05-20T00:20:16.333Z
+// Last updated: 2024-07-01T00:24:14.827Z
 
-export type AICostModelProvider = 'openai' | 'text-completion-openai' | 'azure' | 'anthropic' | 'mistral' | 'deepseek' | 'groq' | 'vertex-ai' | 'vertex_ai-code-chat-models' | 'vertex_ai-anthropic_models' | 'cohere_chat' | 'cohere' | 'replicate' | 'openrouter' | 'ai21' | 'nlp_cloud' | 'aleph_alpha' | 'bedrock' | 'sagemaker' | 'ollama' | 'deepinfra' | 'perplexity' | 'anyscale' | 'cloudflare' | 'voyage'
+export type AICostModelProvider = 'openai' | 'text-completion-openai' | 'azure' | 'anthropic' | 'mistral' | 'deepseek' | 'codestral' | 'text-completion-codestral' | 'groq' | 'friendliai' | 'vertex-ai' | 'vertex_ai-code-chat-models' | 'vertex_ai-anthropic_models' | 'cohere_chat' | 'cohere' | 'replicate' | 'openrouter' | 'ai21' | 'nlp_cloud' | 'aleph_alpha' | 'bedrock' | 'sagemaker' | 'ollama' | 'deepinfra' | 'perplexity' | 'anyscale' | 'cloudflare' | 'voyage' | 'databricks'
 
 // Generated from LiteLLM
 export const AICostModelList = {
@@ -213,6 +213,24 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 4096,
+            "name": "ft:gpt-4-0613",
+            "type": "chat",
+            "inputCost": 0.00003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:gpt-4o-2024-05-13",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 8191,
             "name": "text-embedding-3-large",
             "type": "embedding",
@@ -326,6 +344,15 @@ export const AICostModelList = {
     "azure": [
         {
             "maxTokens": 4096,
+            "name": "azure/gpt-4o",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
             "name": "azure/gpt-4-turbo-2024-04-09",
             "type": "chat",
             "inputCost": 0.00001,
@@ -418,7 +445,7 @@ export const AICostModelList = {
             "maxTokens": 4096,
             "name": "azure/gpt-35-turbo-1106",
             "type": "chat",
-            "inputCost": 0.0000015,
+            "inputCost": 0.000001,
             "inputCostUnit": "token",
             "outputCost": 0.000002,
             "outputCostUnit": "token"
@@ -445,9 +472,9 @@ export const AICostModelList = {
             "maxTokens": 4096,
             "name": "azure/gpt-35-turbo",
             "type": "chat",
-            "inputCost": 0.0000015,
+            "inputCost": 5e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000002,
+            "outputCost": 0.0000015,
             "outputCostUnit": "token"
         },
         {
@@ -577,6 +604,15 @@ export const AICostModelList = {
             "inputCostUnit": "token",
             "outputCost": 0.000015,
             "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "claude-3-5-sonnet-20240620",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
         }
     ],
     "mistral": [
@@ -584,27 +620,27 @@ export const AICostModelList = {
             "maxTokens": 8191,
             "name": "mistral/mistral-tiny",
             "type": "chat",
-            "inputCost": 1.5e-7,
+            "inputCost": 2.5e-7,
             "inputCostUnit": "token",
-            "outputCost": 4.6e-7,
+            "outputCost": 2.5e-7,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8191,
             "name": "mistral/mistral-small",
             "type": "chat",
-            "inputCost": 0.000002,
+            "inputCost": 0.000001,
             "inputCostUnit": "token",
-            "outputCost": 0.000006,
+            "outputCost": 0.000003,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8191,
             "name": "mistral/mistral-small-latest",
             "type": "chat",
-            "inputCost": 0.000002,
+            "inputCost": 0.000001,
             "inputCostUnit": "token",
-            "outputCost": 0.000006,
+            "outputCost": 0.000003,
             "outputCostUnit": "token"
         },
         {
@@ -638,23 +674,41 @@ export const AICostModelList = {
             "maxTokens": 8191,
             "name": "mistral/mistral-large-latest",
             "type": "chat",
-            "inputCost": 0.000008,
+            "inputCost": 0.000004,
             "inputCostUnit": "token",
-            "outputCost": 0.000024,
+            "outputCost": 0.000012,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8191,
             "name": "mistral/mistral-large-2402",
             "type": "chat",
-            "inputCost": 0.000008,
+            "inputCost": 0.000004,
             "inputCostUnit": "token",
-            "outputCost": 0.000024,
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/open-mistral-7b",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8191,
             "name": "mistral/open-mixtral-8x7b",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/open-mixtral-8x22b",
             "type": "chat",
             "inputCost": 0.000002,
             "inputCostUnit": "token",
@@ -662,10 +716,28 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 8191,
+            "name": "mistral/codestral-latest",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/codestral-2405",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 8192,
             "name": "mistral/mistral-embed",
             "type": "embedding",
-            "inputCost": 1.11e-7,
+            "inputCost": 1e-7,
             "inputCostUnit": "token",
             "outputCost": null,
             "outputCostUnit": null
@@ -691,6 +763,46 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         }
     ],
+    "codestral": [
+        {
+            "maxTokens": 8191,
+            "name": "codestral/codestral-latest",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "codestral/codestral-2405",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "text-completion-codestral": [
+        {
+            "maxTokens": 8191,
+            "name": "text-completion-codestral/codestral-latest",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "text-completion-codestral/codestral-2405",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
     "groq": [
         {
             "maxTokens": 4096,
@@ -705,43 +817,99 @@ export const AICostModelList = {
             "maxTokens": 8192,
             "name": "groq/llama3-8b-8192",
             "type": "chat",
-            "inputCost": 1e-7,
+            "inputCost": 5e-8,
             "inputCostUnit": "token",
-            "outputCost": 1e-7,
+            "outputCost": 8e-8,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "groq/llama3-70b-8192",
             "type": "chat",
-            "inputCost": 6.4e-7,
+            "inputCost": 5.9e-7,
             "inputCostUnit": "token",
-            "outputCost": 8e-7,
+            "outputCost": 7.9e-7,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 32768,
             "name": "groq/mixtral-8x7b-32768",
             "type": "chat",
-            "inputCost": 2.7e-7,
+            "inputCost": 2.4e-7,
             "inputCostUnit": "token",
-            "outputCost": 2.7e-7,
+            "outputCost": 2.4e-7,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "groq/gemma-7b-it",
             "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 7e-8,
+            "outputCostUnit": "token"
+        }
+    ],
+    "friendliai": [
+        {
+            "maxTokens": 32768,
+            "name": "friendliai/mixtral-8x7b-instruct-v0-1",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "friendliai/meta-llama-3-8b-instruct",
+            "type": "chat",
             "inputCost": 1e-7,
             "inputCostUnit": "token",
             "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "friendliai/meta-llama-3-70b-instruct",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
             "outputCostUnit": "token"
         }
     ],
     "vertex-ai": [
         {
-            "maxTokens": 1024,
+            "maxTokens": 2048,
             "name": "text-bison",
+            "type": "completion",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "text-bison@001",
+            "type": "completion",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "text-bison@002",
+            "type": "completion",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "text-bison32k",
             "type": "completion",
             "inputCost": 1.25e-7,
             "inputCostUnit": "token",
@@ -750,7 +918,7 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 1024,
-            "name": "text-bison@001",
+            "name": "text-bison32k@002",
             "type": "completion",
             "inputCost": 1.25e-7,
             "inputCostUnit": "token",
@@ -812,6 +980,15 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 8192,
+            "name": "chat-bison-32k@002",
+            "type": "chat",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 1024,
             "name": "code-bison",
             "type": "chat",
@@ -823,6 +1000,33 @@ export const AICostModelList = {
         {
             "maxTokens": 1024,
             "name": "code-bison@001",
+            "type": "completion",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "code-bison@002",
+            "type": "completion",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "code-bison32k",
+            "type": "completion",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "code-bison-32k@002",
             "type": "completion",
             "inputCost": 1.25e-7,
             "inputCostUnit": "token",
@@ -857,84 +1061,138 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 64,
+            "name": "code-gecko-latest",
+            "type": "completion",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 8192,
             "name": "gemini-pro",
             "type": "chat",
-            "inputCost": 2.5e-7,
+            "inputCost": 5e-7,
             "inputCostUnit": "token",
-            "outputCost": 5e-7,
+            "outputCost": 0.0000015,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "gemini-1.0-pro",
             "type": "chat",
-            "inputCost": 2.5e-7,
+            "inputCost": 5e-7,
             "inputCostUnit": "token",
-            "outputCost": 5e-7,
+            "outputCost": 0.0000015,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "gemini-1.0-pro-001",
             "type": "chat",
-            "inputCost": 2.5e-7,
+            "inputCost": 5e-7,
             "inputCostUnit": "token",
-            "outputCost": 5e-7,
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-1.0-ultra",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-1.0-ultra-001",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "gemini-1.0-pro-002",
             "type": "chat",
-            "inputCost": 2.5e-7,
+            "inputCost": 5e-7,
             "inputCostUnit": "token",
-            "outputCost": 5e-7,
+            "outputCost": 0.0000015,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "gemini-1.5-pro",
             "type": "chat",
-            "inputCost": 6.25e-7,
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
-            "outputCost": 0.000001875,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
-            "name": "gemini-1.5-flash-preview-0514",
+            "name": "gemini-1.5-pro-001",
             "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "gemini-1.5-pro-preview-0514",
             "type": "chat",
-            "inputCost": 6.25e-7,
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
-            "outputCost": 0.000001875,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "gemini-1.5-pro-preview-0215",
             "type": "chat",
-            "inputCost": 6.25e-7,
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
-            "outputCost": 0.000001875,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
             "name": "gemini-1.5-pro-preview-0409",
             "type": "chat",
-            "inputCost": 6.25e-7,
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
-            "outputCost": 0.000001875,
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-1.5-flash",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-1.5-flash-001",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-1.5-flash-preview-0514",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
             "outputCostUnit": "token"
         },
         {
@@ -972,6 +1230,24 @@ export const AICostModelList = {
             "inputCostUnit": "token",
             "outputCost": 5e-7,
             "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 3072,
+            "name": "text-embedding-004",
+            "type": "embedding",
+            "inputCost": 6.25e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "text-multilingual-embedding-002",
+            "type": "embedding",
+            "inputCost": 6.25e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
         },
         {
             "maxTokens": 3072,
@@ -1035,18 +1311,18 @@ export const AICostModelList = {
             "inputCostUnit": "token",
             "outputCost": 0,
             "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8192,
-            "name": "gemini/gemini-1.5-flash-latest",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
         }
     ],
     "vertex_ai-code-chat-models": [
+        {
+            "maxTokens": 1024,
+            "name": "codechat-bison@latest",
+            "type": "chat",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
         {
             "maxTokens": 1024,
             "name": "codechat-bison",
@@ -1066,8 +1342,26 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 1024,
+            "name": "codechat-bison@002",
+            "type": "chat",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 8192,
             "name": "codechat-bison-32k",
+            "type": "chat",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.25e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "codechat-bison-32k@002",
             "type": "chat",
             "inputCost": 1.25e-7,
             "inputCostUnit": "token",
@@ -1087,6 +1381,15 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 4096,
+            "name": "vertex_ai/claude-3-5-sonnet@20240620",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
             "name": "vertex_ai/claude-3-haiku@20240307",
             "type": "chat",
             "inputCost": 2.5e-7,
@@ -1098,9 +1401,9 @@ export const AICostModelList = {
             "maxTokens": 4096,
             "name": "vertex_ai/claude-3-opus@20240229",
             "type": "chat",
-            "inputCost": 0.0000015,
+            "inputCost": 0.000015,
             "inputCostUnit": "token",
-            "outputCost": 0.0000075,
+            "outputCost": 0.000075,
             "outputCostUnit": "token"
         }
     ],
@@ -1236,7 +1539,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8192,
             "name": "replicate/meta/llama-3-70b",
             "type": "chat",
             "inputCost": 6.5e-7,
@@ -1245,7 +1548,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8192,
             "name": "replicate/meta/llama-3-70b-instruct",
             "type": "chat",
             "inputCost": 6.5e-7,
@@ -1254,7 +1557,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8086,
             "name": "replicate/meta/llama-3-8b",
             "type": "chat",
             "inputCost": 5e-8,
@@ -1263,7 +1566,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8086,
             "name": "replicate/meta/llama-3-8b-instruct",
             "type": "chat",
             "inputCost": 5e-8,
@@ -1300,6 +1603,15 @@ export const AICostModelList = {
         }
     ],
     "openrouter": [
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/deepseek/deepseek-coder",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
         {
             "maxTokens": 65536,
             "name": "openrouter/microsoft/wizardlm-2-8x22b:nitro",
@@ -1352,6 +1664,24 @@ export const AICostModelList = {
             "inputCost": 2.5e-7,
             "inputCostUnit": "token",
             "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/anthropic/claude-3-haiku-20240307",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/anthropic/claude-3.5-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
@@ -1553,7 +1883,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8096,
+            "maxTokens": 8192,
             "name": "openrouter/meta-llama/codellama-34b-instruct",
             "type": "chat",
             "inputCost": 5e-7,
@@ -1905,6 +2235,15 @@ export const AICostModelList = {
         {
             "maxTokens": 4096,
             "name": "anthropic.claude-3-sonnet-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anthropic.claude-3-5-sonnet-20240620-v1:0",
             "type": "chat",
             "inputCost": 0.000003,
             "inputCostUnit": "token",
@@ -2582,6 +2921,15 @@ export const AICostModelList = {
     ],
     "ollama": [
         {
+            "maxTokens": 8192,
+            "name": "ollama/codegemma",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
             "maxTokens": 4096,
             "name": "ollama/llama2",
             "type": "completion",
@@ -2854,6 +3202,24 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 8191,
+            "name": "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "deepinfra/meta-llama/Meta-Llama-3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 5.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 4096,
             "name": "deepinfra/01-ai/Yi-34B-200K",
             "type": "completion",
@@ -3003,7 +3369,7 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 16384,
-            "name": "anyscale/Mixtral-8x7B-Instruct-v0.1",
+            "name": "anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
             "type": "chat",
             "inputCost": 1.5e-7,
             "inputCostUnit": "token",
@@ -3011,8 +3377,26 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 65536,
+            "name": "anyscale/mistralai/Mixtral-8x22B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 16384,
             "name": "anyscale/HuggingFaceH4/zephyr-7b-beta",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anyscale/google/gemma-7b-it",
             "type": "chat",
             "inputCost": 1.5e-7,
             "inputCostUnit": "token",
@@ -3049,6 +3433,33 @@ export const AICostModelList = {
         {
             "maxTokens": 4096,
             "name": "anyscale/codellama/CodeLlama-34b-Instruct-hf",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anyscale/codellama/CodeLlama-70b-Instruct-hf",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anyscale/meta-llama/Meta-Llama-3-8B-Instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anyscale/meta-llama/Meta-Llama-3-70B-Instruct",
             "type": "chat",
             "inputCost": 0.000001,
             "inputCostUnit": "token",
@@ -3152,6 +3563,71 @@ export const AICostModelList = {
         {
             "maxTokens": 4000,
             "name": "voyage/voyage-lite-02-instruct",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "databricks": [
+        {
+            "maxTokens": 32768,
+            "name": "databricks/databricks-dbrx-instruct",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000225,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "databricks/databricks-meta-llama-3-70b-instruct",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "databricks/databricks-llama-2-70b-chat",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "databricks/databricks-mixtral-8x7b-instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "databricks/databricks-mpt-30b-instruct",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "databricks/databricks-mpt-7b-instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "databricks/databricks-bge-large-en",
             "type": "embedding",
             "inputCost": 1e-7,
             "inputCostUnit": "token",
