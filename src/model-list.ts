@@ -1,10 +1,6319 @@
-// Last updated: 2024-05-20T00:20:16.333Z
+// Last updated: 2026-09-07T03:44:49.343Z
 
-export type AICostModelProvider = 'openai' | 'text-completion-openai' | 'azure' | 'anthropic' | 'mistral' | 'deepseek' | 'groq' | 'vertex-ai' | 'vertex_ai-code-chat-models' | 'vertex_ai-anthropic_models' | 'cohere_chat' | 'cohere' | 'replicate' | 'openrouter' | 'ai21' | 'nlp_cloud' | 'aleph_alpha' | 'bedrock' | 'sagemaker' | 'ollama' | 'deepinfra' | 'perplexity' | 'anyscale' | 'cloudflare' | 'voyage'
+export type AICostModelProvider = 'bedrock' | 'bedrock_converse' | 'anyscale' | 'azure' | 'azure_ai' | 'azure_text' | 'text-completion-openai' | 'cerebras' | 'nlp_cloud' | 'openai' | 'anthropic' | 'cloudflare' | 'codestral' | 'cohere' | 'cohere_chat' | 'deepseek' | 'dashscope' | 'qwencloud' | 'qwen_ai_platform' | 'databricks' | 'deepinfra' | 'volcengine' | 'featherless_ai' | 'fireworks_ai-embedding-models' | 'fireworks_ai' | 'friendliai' | 'vertex-ai' | 'vertex_ai' | 'github_copilot' | 'gigachat' | 'gmi' | 'baseten' | 'gradient_ai' | 'lemonade' | 'amazon_nova' | 'groq' | 'heroku' | 'hyperbolic' | 'ai21' | 'crusoe' | 'inception' | 'text-completion-inception' | 'lambda_ai' | 'meta' | 'meta_llama' | 'minimax' | 'mistral' | 'moonshot' | 'morph' | 'nscale' | 'nebius' | 'oci' | 'ollama' | 'openrouter' | 'ovhcloud' | 'perplexity' | 'publicai' | 'replicate' | 'sagemaker' | 'sambanova' | 'scx-ai' | 'snowflake' | 'text-completion-codestral' | 'together_ai' | 'v0' | 'vercel_ai_gateway' | 'vertex_ai-anthropic_models' | 'vertex_ai-mistral_models' | 'vertex_ai-deepseek_models' | 'vertex_ai-ai21_models' | 'vertex_ai-llama_models' | 'vertex_ai-minimax_models' | 'vertex_ai-moonshot_models' | 'vertex_ai-zai_models' | 'vertex_ai-openai_models' | 'vertex_ai-qwen_models' | 'voyage' | 'wandb' | 'watsonx' | 'xai' | 'zai' | 'scaleway' | 'novita' | 'llamagate' | 'libertai' | 'sarvam' | 'bedrock_mantle' | 'tensormesh' | 'tencent' | 'cognition' | 'pinstripes' | 'darkbloom'
 
 // Generated from LiteLLM
 export const AICostModelList = {
+    "bedrock": [
+        {
+            "maxTokens": 8191,
+            "name": "ai21.j2-mid-v1",
+            "type": "chat",
+            "inputCost": 0.0000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "ai21.j2-ultra-v1",
+            "type": "chat",
+            "inputCost": 0.0000188,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000188,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "ai21.jamba-1-5-large-v1:0",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "ai21.jamba-1-5-mini-v1:0",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ai21.jamba-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8172,
+            "name": "amazon.nova-2-multimodal-embeddings-v1:0",
+            "type": "embedding",
+            "inputCost": 1.35e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128,
+            "name": "amazon.titan-embed-image-v1",
+            "type": "embedding",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "amazon.titan-embed-text-v1",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "amazon.titan-embed-g1-text-02",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "amazon.titan-embed-text-v2:0",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 77,
+            "name": "twelvelabs.marengo-embed-2-7-v1:0",
+            "type": "embedding",
+            "inputCost": 0.00007,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 77,
+            "name": "us.twelvelabs.marengo-embed-2-7-v1:0",
+            "type": "embedding",
+            "inputCost": 0.00007,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 77,
+            "name": "eu.twelvelabs.marengo-embed-2-7-v1:0",
+            "type": "embedding",
+            "inputCost": 0.00007,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "twelvelabs.pegasus-1-2-v1:0",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "us.twelvelabs.pegasus-1-2-v1:0",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "eu.twelvelabs.pegasus-1-2-v1:0",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "amazon.titan-text-express-v1",
+            "type": "chat",
+            "inputCost": 0.0000013,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000017,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "amazon.titan-text-lite-v1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "amazon.titan-text-premier-v1:0",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anthropic.claude-3-5-haiku-20241022-v1:0",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anthropic.claude-3-5-sonnet-20241022-v2:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anthropic.claude-3-7-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anthropic.claude-3-haiku-20240307-v1:0",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anthropic.claude-3-opus-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anthropic.claude-3-sonnet-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-mythos-preview",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "apac.anthropic.claude-3-5-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "apac.anthropic.claude-3-5-sonnet-20241022-v2:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "apac.anthropic.claude-3-haiku-20240307-v1:0",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "apac.anthropic.claude-3-sonnet-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "bedrock/*/1-month-commitment/cohere.command-light-text-v14",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "bedrock/*/1-month-commitment/cohere.command-text-v14",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "bedrock/*/6-month-commitment/cohere.command-light-text-v14",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "bedrock/*/6-month-commitment/cohere.command-text-v14",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": 0.00000223,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000755,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/ap-northeast-1/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/ap-northeast-1/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 7.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000222,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-northeast-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-northeast-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/ap-northeast-1/moonshotai.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 7.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000303,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/ap-northeast-1/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-northeast-1/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/moonshotai.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 7.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000303,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000303,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-south-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000318,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000042,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-south-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/ap-south-1/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 7.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000222,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-south-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-south-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/ap-south-1/moonshotai.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 7.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000294,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/ap-south-1/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-south-1/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-southeast-2/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.09e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001236,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/ap-southeast-3/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 7.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000222,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-southeast-3/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-southeast-3/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/ap-southeast-3/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ap-southeast-3/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ca-central-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000305,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000403,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/ca-central-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/eu-north-1/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 7.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000222,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-north-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-north-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/eu-north-1/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/1-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/1-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/1-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/6-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/6-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/6-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": 0.00000248,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000838,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-central-1/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-central-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-central-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-central-1/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000286,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000378,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-1/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-2/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000345,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000455,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-2/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-2/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 4.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000186,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-2/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 4.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000186,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-west-2/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 7.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000186,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-west-3/mistral.mistral-7b-instruct-v0:2",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-west-3/mistral.mistral-large-2402-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000104,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000312,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/eu-west-3/mistral.mixtral-8x7b-instruct-v0:1",
+            "type": "chat",
+            "inputCost": 5.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-south-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-south-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/eu-south-1/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "bedrock/invoke/anthropic.claude-3-5-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/sa-east-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000445,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000588,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/sa-east-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000101,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/sa-east-1/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 7.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000222,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/sa-east-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/sa-east-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/sa-east-1/moonshotai.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 7.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000303,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/sa-east-1/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/sa-east-1/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000144,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/1-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/1-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/1-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/6-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/6-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/6-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000265,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/mistral.mistral-7b-instruct-v0:2",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/mistral.mistral-large-2402-v1:0",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-east-1/mistral.mixtral-8x7b-instruct-v0:1",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/us-east-1/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 6.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000185,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-1/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-1/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/us-east-1/moonshotai.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/us-east-1/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-1/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/us-east-2/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 6.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000185,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-2/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-2/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/us-east-2/moonshotai.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/us-east-2/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-east-2/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "bedrock/us-gov-east-1/amazon.nova-pro-v1:0",
+            "type": "chat",
+            "inputCost": 9.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000384,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-east-1/amazon.titan-embed-text-v1",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-east-1/amazon.titan-embed-text-v2:0",
+            "type": "embedding",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8000,
+            "name": "bedrock/us-gov-east-1/amazon.titan-text-express-v1",
+            "type": "chat",
+            "inputCost": 0.0000013,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000017,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "bedrock/us-gov-east-1/amazon.titan-text-lite-v1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "bedrock/us-gov-east-1/amazon.titan-text-premier-v1:0",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-east-1/anthropic.claude-3-5-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "bedrock/us-gov-east-1/anthropic.claude-3-haiku-20240307-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-east-1/anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-east-1/claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "bedrock/us-gov-east-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000265,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "bedrock/us-gov-east-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000265,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "bedrock/us-gov-west-1/amazon.nova-pro-v1:0",
+            "type": "chat",
+            "inputCost": 9.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000384,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/amazon.titan-embed-text-v1",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/amazon.titan-embed-text-v2:0",
+            "type": "embedding",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8000,
+            "name": "bedrock/us-gov-west-1/amazon.titan-text-express-v1",
+            "type": "chat",
+            "inputCost": 0.0000013,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000017,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "bedrock/us-gov-west-1/amazon.titan-text-lite-v1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "bedrock/us-gov-west-1/amazon.titan-text-premier-v1:0",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/anthropic.claude-3-7-sonnet-20250219-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/anthropic.claude-3-5-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "bedrock/us-gov-west-1/anthropic.claude-3-haiku-20240307-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "bedrock/us-gov-west-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000265,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "bedrock/us-gov-west-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-west-1/meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000265,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-west-1/meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/1-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/1-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/1-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/6-month-commitment/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/6-month-commitment/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/6-month-commitment/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/anthropic.claude-instant-v1",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/anthropic.claude-v1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/anthropic.claude-v2:1",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/mistral.mistral-7b-instruct-v0:2",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/mistral.mistral-large-2402-v1:0",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "bedrock/us-west-2/mistral.mixtral-8x7b-instruct-v0:1",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "bedrock/us-west-2/deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 6.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000185,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-west-2/minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-west-2/minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/us-west-2/moonshotai.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "bedrock/us-west-2/moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-west-2/qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us.anthropic.claude-3-5-haiku-20241022-v1:0",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "cohere.command-light-text-v14",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "cohere.command-r-plus-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "cohere.command-r-v1:0",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "cohere.command-text-v14",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "cohere.embed-english-v3",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "cohere.embed-multilingual-v3",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cohere.embed-v4:0",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "eu.anthropic.claude-3-5-haiku-20241022-v1:0",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "eu.anthropic.claude-3-5-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "eu.anthropic.claude-3-5-sonnet-20241022-v2:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "eu.anthropic.claude-3-7-sonnet-20250219-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "eu.anthropic.claude-3-haiku-20240307-v1:0",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "eu.anthropic.claude-3-opus-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "eu.anthropic.claude-3-sonnet-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "eu.meta.llama3-2-1b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "eu.meta.llama3-2-3b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama2-13b-chat-v1",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama2-70b-chat-v1",
+            "type": "chat",
+            "inputCost": 0.00000195,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000256,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama3-1-405b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000532,
+            "inputCostUnit": "token",
+            "outputCost": 0.000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "meta.llama3-1-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 9.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "meta.llama3-1-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama3-2-11b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama3-2-1b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama3-2-3b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama3-2-90b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "meta.llama3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000265,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "meta.llama3-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral.mistral-7b-instruct-v0:2",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral.mistral-large-2402-v1:0",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral.mistral-large-2407-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral.mistral-small-2402-v1:0",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral.mixtral-8x7b-instruct-v0:1",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "us.anthropic.claude-3-5-haiku-20241022-v1:0",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.anthropic.claude-3-5-sonnet-20240620-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.anthropic.claude-3-haiku-20240307-v1:0",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.anthropic.claude-3-opus-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.anthropic.claude-3-sonnet-20240229-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama3-1-405b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000532,
+            "inputCostUnit": "token",
+            "outputCost": 0.000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "us.meta.llama3-1-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 9.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "us.meta.llama3-1-8b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama3-2-11b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama3-2-1b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama3-2-3b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama3-2-90b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-east-1/zai.glm-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-west-2/zai.glm-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "bedrock/us-gov-east-1/anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "bedrock/us-gov-west-1/anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/nvidia.nemotron-nano-3-30b",
+            "type": "chat",
+            "inputCost": 7.2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.88e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-west-1/nvidia.nemotron-nano-12b-v2",
+            "type": "chat",
+            "inputCost": 2.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "bedrock/us-gov-west-1/nvidia.nemotron-super-3-120b",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-west-1/openai.gpt-oss-20b-1:0",
+            "type": "chat",
+            "inputCost": 8.4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-west-1/openai.gpt-oss-120b-1:0",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-west-1/anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.0000024,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-west-1/anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000006,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-east-1/nvidia.nemotron-nano-3-30b",
+            "type": "chat",
+            "inputCost": 7.2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.88e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "bedrock/us-gov-east-1/nvidia.nemotron-nano-12b-v2",
+            "type": "chat",
+            "inputCost": 2.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "bedrock/us-gov-east-1/nvidia.nemotron-super-3-120b",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-east-1/openai.gpt-oss-20b-1:0",
+            "type": "chat",
+            "inputCost": 8.4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-east-1/openai.gpt-oss-120b-1:0",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-east-1/anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.0000024,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock/us-gov-east-1/anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000006,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        }
+    ],
+    "bedrock_converse": [
+        {
+            "maxTokens": 8192,
+            "name": "us.writer.palmyra-x4-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "us.writer.palmyra-x5-v1:0",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "writer.palmyra-x4-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "writer.palmyra-x5-v1:0",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "amazon.nova-lite-v1:0",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "amazon.nova-2-lite-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "amazon.nova-2-pro-preview-20251202-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000021875,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "apac.amazon.nova-2-lite-v1:0",
+            "type": "chat",
+            "inputCost": 3.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "apac.amazon.nova-2-pro-preview-20251202-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000021875,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "eu.amazon.nova-2-lite-v1:0",
+            "type": "chat",
+            "inputCost": 3.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "eu.amazon.nova-2-pro-preview-20251202-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000021875,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us.amazon.nova-2-lite-v1:0",
+            "type": "chat",
+            "inputCost": 3.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us.amazon.nova-2-pro-preview-20251202-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000021875,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "amazon.nova-micro-v1:0",
+            "type": "chat",
+            "inputCost": 3.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "amazon.nova-pro-v1:0",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "anthropic.claude-haiku-4-5@20251001",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anthropic.claude-3-7-sonnet-20250219-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "anthropic.claude-opus-4-1-20250805-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "anthropic.claude-opus-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "anthropic.claude-opus-4-5-20251101-v1:0",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-opus-4-6-v1",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.anthropic.claude-opus-4-6-v1",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.anthropic.claude-opus-4-6-v1",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "eu.anthropic.claude-opus-4-6-v1",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "au.anthropic.claude-opus-4-6-v1",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.anthropic.claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.anthropic.claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "eu.anthropic.claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "au.anthropic.claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.anthropic.claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.anthropic.claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.anthropic.claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.anthropic.claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "eu.anthropic.claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "eu.anthropic.claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.anthropic.claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.anthropic.claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "eu.anthropic.claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "au.anthropic.claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "jp.anthropic.claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "eu.anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "au.anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "jp.anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "jp.anthropic.claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "eu.anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "au.anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "jp.anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "anthropic.claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "global.anthropic.claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us.anthropic.claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "eu.anthropic.claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "au.anthropic.claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "jp.anthropic.claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "anthropic.claude-sonnet-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "apac.amazon.nova-lite-v1:0",
+            "type": "chat",
+            "inputCost": 6.3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.52e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "apac.amazon.nova-micro-v1:0",
+            "type": "chat",
+            "inputCost": 3.7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.48e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "apac.amazon.nova-pro-v1:0",
+            "type": "chat",
+            "inputCost": 8.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000336,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "apac.anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "apac.anthropic.claude-sonnet-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "au.anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 81920,
+            "name": "deepseek.v3-v1:0",
+            "type": "chat",
+            "inputCost": 5.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 6.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000185,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "eu.amazon.nova-lite-v1:0",
+            "type": "chat",
+            "inputCost": 7.8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.12e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "eu.amazon.nova-micro-v1:0",
+            "type": "chat",
+            "inputCost": 4.6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.84e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "eu.amazon.nova-pro-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000105,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000042,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "eu.anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "eu.anthropic.claude-opus-4-1-20250805-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "eu.anthropic.claude-opus-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "eu.anthropic.claude-sonnet-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "eu.mistral.pixtral-large-2502-v1:0",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "google.gemma-3-12b-it",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "google.gemma-3-27b-it",
+            "type": "chat",
+            "inputCost": 2.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "google.gemma-3-4b-it",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "global.anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "global.anthropic.claude-sonnet-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "global.anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "global.amazon.nova-2-lite-v1:0",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "jp.anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "jp.anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama3-3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama4-maverick-17b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 2.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "meta.llama4-scout-17b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "minimax.minimax-m2",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "minimax.minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "minimax.minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.devstral-2-123b",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.magistral-small-2509",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.ministral-3-14b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.ministral-3-3b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.ministral-3-8b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.mistral-large-3-675b-instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.voxtral-mini-3b-2507",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral.voxtral-small-24b-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "moonshot.kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshotai.kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "nvidia.nemotron-nano-12b-v2",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "nvidia.nemotron-nano-9b-v2",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "nvidia.nemotron-nano-3-30b",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nvidia.nemotron-super-3-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openai.gpt-oss-120b-1:0",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openai.gpt-oss-20b-1:0",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openai.gpt-oss-safeguard-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openai.gpt-oss-safeguard-20b",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen.qwen3-coder-480b-a35b-v1:0",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwen.qwen3-235b-a22b-2507-v1:0",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwen.qwen3-coder-30b-a3b-v1:0",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen.qwen3-32b-v1:0",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwen.qwen3-next-80b-a3b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwen.qwen3-vl-235b-a22b",
+            "type": "chat",
+            "inputCost": 5.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000266,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwen.qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "us.amazon.nova-lite-v1:0",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "us.amazon.nova-micro-v1:0",
+            "type": "chat",
+            "inputCost": 3.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "us.amazon.nova-premier-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "us.amazon.nova-pro-v1:0",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "us.anthropic.claude-3-7-sonnet-20250219-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "us.anthropic.claude-opus-4-1-20250805-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us-gov.anthropic.claude-sonnet-4-5-20250929-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000036,
+            "inputCostUnit": "token",
+            "outputCost": 0.000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us-gov.anthropic.claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.0000024,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us-gov.anthropic.claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000006,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "au.anthropic.claude-haiku-4-5-20251001-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "us.anthropic.claude-opus-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us.anthropic.claude-opus-4-5-20251101-v1:0",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "global.anthropic.claude-opus-4-5-20251101-v1:0",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "eu.anthropic.claude-opus-4-5-20251101-v1:0",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.deepseek.r1-v1:0",
+            "type": "chat",
+            "inputCost": 0.00000135,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000054,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "us.deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 6.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000185,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "eu.deepseek.v3.2",
+            "type": "chat",
+            "inputCost": 7.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000222,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama3-3-70b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama4-maverick-17b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 2.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.meta.llama4-scout-17b-instruct-v1:0",
+            "type": "chat",
+            "inputCost": 1.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "us.mistral.pixtral-large-2502-v1:0",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "zai.glm-4.7",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "zai.glm-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "zai.glm-4.7-flash",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.openai.gpt-5.6-sol",
+            "type": "chat",
+            "inputCost": 0.0000044,
+            "inputCostUnit": "token",
+            "outputCost": 0.000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.openai.gpt-5.6-sol",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.openai.gpt-5.6-terra",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.openai.gpt-5.6-terra",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "us.openai.gpt-5.6-luna",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "global.openai.gpt-5.6-luna",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "us.xai.grok-4.6",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "global.xai.grok-4.6",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        }
+    ],
+    "anyscale": [
+        {
+            "maxTokens": 16384,
+            "name": "anyscale/HuggingFaceH4/zephyr-7b-beta",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anyscale/codellama/CodeLlama-34b-Instruct-hf",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anyscale/codellama/CodeLlama-70b-Instruct-hf",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anyscale/google/gemma-7b-it",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anyscale/meta-llama/Llama-2-13b-chat-hf",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anyscale/meta-llama/Llama-2-70b-chat-hf",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "anyscale/meta-llama/Llama-2-7b-chat-hf",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anyscale/meta-llama/Meta-Llama-3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "anyscale/meta-llama/Meta-Llama-3-8B-Instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "anyscale/mistralai/Mistral-7B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "anyscale/mistralai/Mixtral-8x22B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "anyscale/mistralai/Mixtral-8x7B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "azure": [
+        {
+            "maxTokens": 8191,
+            "name": "azure/ada",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/command-r-plus",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "azure/computer-use-preview",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "azure/container",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/eu/gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/eu/gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/eu/gpt-4o-mini-2024-07-18",
+            "type": "chat",
+            "inputCost": 1.65e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5-2025-08-07",
+            "type": "chat",
+            "inputCost": 0.000001375,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5-mini-2025-08-07",
+            "type": "chat",
+            "inputCost": 2.75e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000138,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.1-chat",
+            "type": "chat",
+            "inputCost": 0.00000138,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5-nano-2025-08-07",
+            "type": "chat",
+            "inputCost": 5.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/eu/o1-2024-12-17",
+            "type": "chat",
+            "inputCost": 0.0000165,
+            "inputCostUnit": "token",
+            "outputCost": 0.000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "azure/eu/o1-mini-2024-09-12",
+            "type": "chat",
+            "inputCost": 0.00000121,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/eu/o1-preview-2024-09-12",
+            "type": "chat",
+            "inputCost": 0.0000165,
+            "inputCostUnit": "token",
+            "outputCost": 0.000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/eu/o3-mini-2025-01-31",
+            "type": "chat",
+            "inputCost": 0.00000121,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/global-standard/gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/global-standard/gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/global-standard/gpt-4o-mini",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/global/gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/global/gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/global/gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/global/gpt-5.1-chat",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-3.5-turbo",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-3.5-turbo-0125",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-35-turbo",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-35-turbo-0125",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-35-turbo-1106",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-35-turbo-16k",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-35-turbo-16k-0613",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4",
+            "type": "chat",
+            "inputCost": 0.00003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-0125-preview",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-0613",
+            "type": "chat",
+            "inputCost": 0.00003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-1106-preview",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-32k",
+            "type": "chat",
+            "inputCost": 0.00006,
+            "inputCostUnit": "token",
+            "outputCost": 0.00012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-32k-0613",
+            "type": "chat",
+            "inputCost": 0.00006,
+            "inputCostUnit": "token",
+            "outputCost": 0.00012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-turbo",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-turbo-2024-04-09",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4-turbo-vision-preview",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/gpt-4.1",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/gpt-4.1-2025-04-14",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/gpt-4.1-mini",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/gpt-4.1-mini-2025-04-14",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/gpt-4.1-nano",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/gpt-4.1-nano-2025-04-14",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4.5-preview",
+            "type": "chat",
+            "inputCost": 0.000075,
+            "inputCostUnit": "token",
+            "outputCost": 0.00015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4o",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure/gpt-4o-2024-05-13",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-audio-2025-08-28",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-audio-1.5-2026-02-23",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-audio-mini",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-audio-mini-2025-10-06",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4o-audio-preview-2024-12-17",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4o-mini",
+            "type": "chat",
+            "inputCost": 1.65e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4o-mini-2024-07-18",
+            "type": "chat",
+            "inputCost": 1.65e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-4o-mini-audio-preview-2024-12-17",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.1-2025-11-13",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-5.1-chat-2025-11-13",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5-2025-08-07",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-5-chat",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-5-chat-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5-mini",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5-mini-2025-08-07",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5-nano",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5-nano-2025-08-07",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.1-chat",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.2",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.2-2025-12-11",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-5.2-chat",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-5.2-chat-2025-12-11",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/gpt-5.3-chat",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.4",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.4",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.4",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.4-2026-03-05",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.4-2026-03-05",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.4-2026-03-05",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.6",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.6-sol",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.6-terra",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.6-luna",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-6-astra",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.6",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.6-sol",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.6-terra",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.6-luna",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-6-astra",
+            "type": "chat",
+            "inputCost": 0.000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.6",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.6-sol",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.6-terra",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.6-luna",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.5",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.5",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.5-2026-04-23",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.5-2026-04-23",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/eu/gpt-5.5-2026-04-23",
+            "type": "chat",
+            "inputCost": 0.0000055,
+            "inputCostUnit": "token",
+            "outputCost": 0.000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.4-mini",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.4-mini-2026-03-17",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.4-nano",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/gpt-5.4-nano-2026-03-17",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "azure/mistral-large-2402",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "azure/mistral-large-latest",
+            "type": "chat",
+            "inputCost": 0.000008,
+            "inputCostUnit": "token",
+            "outputCost": 0.000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o1-2024-12-17",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "azure/o1-mini",
+            "type": "chat",
+            "inputCost": 0.00000121,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "azure/o1-mini-2024-09-12",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/o1-preview",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/o1-preview-2024-09-12",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o3",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o3-2025-04-16",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o3-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o3-mini-2025-01-31",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o4-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/o4-mini-2025-04-16",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure/text-embedding-3-large",
+            "type": "embedding",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure/text-embedding-3-small",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure/text-embedding-ada-002",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/us/gpt-4.1-2025-04-14",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000088,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/us/gpt-4.1-mini-2025-04-14",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000176,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/us/gpt-4.1-nano-2025-04-14",
+            "type": "chat",
+            "inputCost": 1.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/us/gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/us/gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.00000275,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure/us/gpt-4o-mini-2024-07-18",
+            "type": "chat",
+            "inputCost": 1.65e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5-2025-08-07",
+            "type": "chat",
+            "inputCost": 0.000001375,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5-mini-2025-08-07",
+            "type": "chat",
+            "inputCost": 2.75e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5-nano-2025-08-07",
+            "type": "chat",
+            "inputCost": 5.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000138,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us/gpt-5.1-chat",
+            "type": "chat",
+            "inputCost": 0.00000138,
+            "inputCostUnit": "token",
+            "outputCost": 0.000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/us/o1-2024-12-17",
+            "type": "chat",
+            "inputCost": 0.0000165,
+            "inputCostUnit": "token",
+            "outputCost": 0.000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "azure/us/o1-mini-2024-09-12",
+            "type": "chat",
+            "inputCost": 0.00000121,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "azure/us/o1-preview-2024-09-12",
+            "type": "chat",
+            "inputCost": 0.0000165,
+            "inputCostUnit": "token",
+            "outputCost": 0.000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/us/o3-2025-04-16",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000088,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/us/o3-mini-2025-01-31",
+            "type": "chat",
+            "inputCost": 0.00000121,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/us/o4-mini-2025-04-16",
+            "type": "chat",
+            "inputCost": 0.00000121,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "computer-use-preview",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure/us-gov/gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000171875,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "azure/us-gov/o3-mini",
+            "type": "chat",
+            "inputCost": 0.000001513,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000605,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure/us-gov/text-embedding-3-large",
+            "type": "embedding",
+            "inputCost": 1.63e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure/us-gov/text-embedding-3-small",
+            "type": "embedding",
+            "inputCost": 2.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "azure_ai": [
+        {
+            "maxTokens": 64000,
+            "name": "azure_ai/claude-haiku-4-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "azure_ai/claude-opus-4-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/claude-opus-4-6",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "azure_ai/claude-opus-4-1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "azure_ai/claude-sonnet-4-5",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "azure_ai/claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.5-2026-04-23",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.4",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.4-2026-03-05",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.4-mini",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.4-mini-2026-03-17",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.4-nano",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/gpt-5.4-nano-2026-03-17",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "azure_ai/model_router",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "azure_ai/Cohere-embed-v3-english",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "azure_ai/Cohere-embed-v3-multilingual",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Codestral-2501",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "azure_ai/FW-DeepSeek-V3.2",
+            "type": "chat",
+            "inputCost": 6.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000185,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "azure_ai/FW-DeepSeek-V4-Pro",
+            "type": "chat",
+            "inputCost": 0.000001925,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003828,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/FW-GLM-5",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000352,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/FW-GLM-5.1",
+            "type": "chat",
+            "inputCost": 0.00000154,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/FW-GLM-5.2",
+            "type": "chat",
+            "inputCost": 0.00000154,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/FW-GLM-5.2-Fast",
+            "type": "chat",
+            "inputCost": 0.0000021,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "azure_ai/FW-Inkling",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000405,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "azure_ai/FW-Kimi-K2.5",
+            "type": "chat",
+            "inputCost": 6.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000033,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "azure_ai/FW-Kimi-K2.6",
+            "type": "chat",
+            "inputCost": 0.000001045,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "azure_ai/FW-Kimi-K2.7-Code",
+            "type": "chat",
+            "inputCost": 0.00000105,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/FW-Kimi-K3",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "azure_ai/FW-MiniMax-M2.5",
+            "type": "chat",
+            "inputCost": 3.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512000,
+            "name": "azure_ai/FW-MiniMax-M3",
+            "type": "chat",
+            "inputCost": 3.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "azure_ai/FW-Nemotron-Lightning-3.5-30B-A3B",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "azure_ai/FW-Nemotron-3-Ultra-NVFP4",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "azure_ai/MAI-Thinking-1",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "azure_ai/Llama-3.2-11B-Vision-Instruct",
+            "type": "chat",
+            "inputCost": 3.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "azure_ai/Llama-3.2-90B-Vision-Instruct",
+            "type": "chat",
+            "inputCost": 0.00000204,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000204,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "azure_ai/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 7.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure_ai/Llama-4-Maverick-17B-128E-Instruct-FP8",
+            "type": "chat",
+            "inputCost": 0.00000141,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure_ai/Llama-4-Scout-17B-16E-Instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "azure_ai/Meta-Llama-3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 3.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "azure_ai/Meta-Llama-3.1-405B-Instruct",
+            "type": "chat",
+            "inputCost": 0.00000533,
+            "inputCostUnit": "token",
+            "outputCost": 0.000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "azure_ai/Meta-Llama-3.1-70B-Instruct",
+            "type": "chat",
+            "inputCost": 0.00000268,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000354,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "azure_ai/Meta-Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3-medium-128k-instruct",
+            "type": "chat",
+            "inputCost": 1.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3-medium-4k-instruct",
+            "type": "chat",
+            "inputCost": 1.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3-mini-128k-instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3-mini-4k-instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3-small-128k-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3-small-8k-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3.5-MoE-instruct",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3.5-mini-instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-3.5-vision-instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "azure_ai/Phi-4",
+            "type": "chat",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-4-mini-instruct",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-4-multimodal-instruct",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-4-mini-reasoning",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/Phi-4-reasoning",
+            "type": "chat",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "azure_ai/MAI-DS-R1",
+            "type": "chat",
+            "inputCost": 0.00000135,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000054,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "azure_ai/deepseek-v3.2",
+            "type": "chat",
+            "inputCost": 5.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "azure_ai/deepseek-v3.2-speciale",
+            "type": "chat",
+            "inputCost": 5.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "azure_ai/deepseek-r1",
+            "type": "chat",
+            "inputCost": 0.00000135,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000054,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "azure_ai/deepseek-v3",
+            "type": "chat",
+            "inputCost": 0.00000114,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000456,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "azure_ai/deepseek-v3-0324",
+            "type": "chat",
+            "inputCost": 0.00000114,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000456,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/deepseek-v3.1",
+            "type": "chat",
+            "inputCost": 0.00000123,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000494,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "azure_ai/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.00000174,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000348,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "azure_ai/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 1.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/DeepSeek-V4-Flash-0731",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/embed-v-4-0",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/global/grok-3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/global/grok-3-mini",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000127,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-3-mini",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000127,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-4",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "azure_ai/grok-4.3",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/grok-4.6",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-4-fast-non-reasoning",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-4-fast-reasoning",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-4-1-fast-non-reasoning",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-4-1-fast-reasoning",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "azure_ai/grok-code-fast-1",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "azure_ai/jais-30b-chat",
+            "type": "chat",
+            "inputCost": 0.0032,
+            "inputCostUnit": "token",
+            "outputCost": 0.00971,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/jamba-instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "azure_ai/kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "azure_ai/kimi-k2.6",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/ministral-3b",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure_ai/mistral-large",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/mistral-large-2407",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/mistral-large-latest",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure_ai/mistral-large-3",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure_ai/mistral-medium-2505",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "azure_ai/mistral-nemo",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "azure_ai/mistral-small",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "azure_ai/mistral-small-2503",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "azure_ai/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        }
+    ],
+    "azure_text": [
+        {
+            "maxTokens": 4097,
+            "name": "azure/gpt-3.5-turbo-instruct-0914",
+            "type": "completion",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4097,
+            "name": "azure/gpt-35-turbo-instruct",
+            "type": "completion",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4097,
+            "name": "azure/gpt-35-turbo-instruct-0914",
+            "type": "completion",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        }
+    ],
+    "text-completion-openai": [
+        {
+            "maxTokens": 4096,
+            "name": "babbage-002",
+            "type": "completion",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "davinci-002",
+            "type": "completion",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:babbage-002",
+            "type": "completion",
+            "inputCost": 0.0000016,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:davinci-002",
+            "type": "completion",
+            "inputCost": 0.000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "gpt-3.5-turbo-instruct",
+            "type": "completion",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4097,
+            "name": "gpt-3.5-turbo-instruct-0914",
+            "type": "completion",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        }
+    ],
+    "cerebras": [
+        {
+            "maxTokens": 128000,
+            "name": "cerebras/llama-3.3-70b",
+            "type": "chat",
+            "inputCost": 8.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cerebras/llama3.1-70b",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cerebras/llama3.1-8b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "cerebras/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cerebras/qwen-3-32b",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cerebras/zai-glm-4.6",
+            "type": "chat",
+            "inputCost": 0.00000225,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cerebras/zai-glm-4.7",
+            "type": "chat",
+            "inputCost": 0.00000225,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "cerebras/gemma-4-31b",
+            "type": "chat",
+            "inputCost": 9.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000149,
+            "outputCostUnit": "token"
+        }
+    ],
+    "nlp_cloud": [
+        {
+            "maxTokens": 16384,
+            "name": "chatdolphin",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dolphin",
+            "type": "completion",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        }
+    ],
     "openai": [
+        {
+            "maxTokens": 4096,
+            "name": "chatgpt-4o-latest",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:gpt-3.5-turbo",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:gpt-3.5-turbo-0125",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:gpt-3.5-turbo-0613",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:gpt-3.5-turbo-1106",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ft:gpt-4-0613",
+            "type": "chat",
+            "inputCost": 0.00003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "ft:gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.00000375,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "ft:gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.00000375,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "ft:gpt-4o-mini-2024-07-18",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "ft:gpt-4.1-2025-04-14",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "ft:gpt-4.1-mini-2025-04-14",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "ft:gpt-4.1-nano-2025-04-14",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "ft:o4-mini-2025-04-16",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "gpt-3.5-turbo",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "gpt-3.5-turbo-0125",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "gpt-3.5-turbo-1106",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "gpt-3.5-turbo-16k",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
         {
             "maxTokens": 4096,
             "name": "gpt-4",
@@ -16,25 +6325,7 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 4096,
-            "name": "gpt-4o",
-            "type": "chat",
-            "inputCost": 0.000005,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "gpt-4o-2024-05-13",
-            "type": "chat",
-            "inputCost": 0.000005,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "gpt-4-turbo-preview",
+            "name": "gpt-4-0125-preview",
             "type": "chat",
             "inputCost": 0.00001,
             "inputCostUnit": "token",
@@ -61,29 +6352,11 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 4096,
-            "name": "gpt-4-32k",
+            "name": "gpt-4-1106-preview",
             "type": "chat",
-            "inputCost": 0.00006,
+            "inputCost": 0.00001,
             "inputCostUnit": "token",
-            "outputCost": 0.00012,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "gpt-4-32k-0314",
-            "type": "chat",
-            "inputCost": 0.00006,
-            "inputCostUnit": "token",
-            "outputCost": 0.00012,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "gpt-4-32k-0613",
-            "type": "chat",
-            "inputCost": 0.00006,
-            "inputCostUnit": "token",
-            "outputCost": 0.00012,
+            "outputCost": 0.00003,
             "outputCostUnit": "token"
         },
         {
@@ -106,110 +6379,614 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 4096,
-            "name": "gpt-4-1106-preview",
+            "name": "gpt-4-turbo-preview",
             "type": "chat",
             "inputCost": 0.00001,
             "inputCostUnit": "token",
             "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "gpt-4.1",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "gpt-4.1-2025-04-14",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "gpt-4.1-mini",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "gpt-4.1-mini-2025-04-14",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "gpt-4.1-nano",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "gpt-4.1-nano-2025-04-14",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 4096,
-            "name": "gpt-4-0125-preview",
+            "name": "gpt-4o-2024-05-13",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-audio-preview",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-audio-preview-2024-12-17",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-audio-preview-2025-06-03",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-audio",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-audio-1.5",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-audio-2025-08-28",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-audio-mini",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-audio-mini-2025-10-06",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-audio-mini-2025-12-15",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-mini",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-mini-2024-07-18",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-mini-audio-preview",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-mini-audio-preview-2024-12-17",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-mini-search-preview",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-mini-search-preview-2025-03-11",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-search-preview",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-4o-search-preview-2025-03-11",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.1-2025-11-13",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-5.1-chat-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.2",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.2-2025-12-11",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-5.2-chat-latest",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-5.3-chat-latest",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-6-astra",
             "type": "chat",
             "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.6",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.6-sol",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.6-terra",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.6-luna",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.6-cyber",
+            "type": "chat",
+            "inputCost": 0.0000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "daybreak-red-latest",
+            "type": "chat",
+            "inputCost": 0.0000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "daybreak-blue-latest",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "chat-latest",
+            "type": "chat",
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
             "outputCost": 0.00003,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "gpt-4-vision-preview",
+            "maxTokens": 128000,
+            "name": "gpt-5.5",
             "type": "chat",
-            "inputCost": 0.00001,
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
             "outputCost": 0.00003,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "gpt-4-1106-vision-preview",
+            "maxTokens": 128000,
+            "name": "gpt-5.5-2026-04-23",
             "type": "chat",
-            "inputCost": 0.00001,
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
             "outputCost": 0.00003,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4097,
-            "name": "gpt-3.5-turbo",
+            "maxTokens": 128000,
+            "name": "gpt-5.4",
             "type": "chat",
-            "inputCost": 0.0000015,
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.4-2026-03-05",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.4-mini",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.4-mini-2026-03-17",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.4-nano",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5.4-nano-2026-03-17",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5-2025-08-07",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-5-chat",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gpt-5-chat-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "gpt-5-mini",
+            "type": "chat",
+            "inputCost": 2.5e-7,
             "inputCostUnit": "token",
             "outputCost": 0.000002,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4097,
-            "name": "gpt-3.5-turbo-0301",
+            "maxTokens": 128000,
+            "name": "gpt-5-mini-2025-08-07",
             "type": "chat",
-            "inputCost": 0.0000015,
+            "inputCost": 2.5e-7,
             "inputCostUnit": "token",
             "outputCost": 0.000002,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4097,
-            "name": "gpt-3.5-turbo-0613",
+            "maxTokens": 128000,
+            "name": "gpt-5-nano",
             "type": "chat",
-            "inputCost": 0.0000015,
+            "inputCost": 5e-8,
             "inputCostUnit": "token",
-            "outputCost": 0.000002,
+            "outputCost": 4e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 16385,
-            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 128000,
+            "name": "gpt-5-nano-2025-08-07",
             "type": "chat",
-            "inputCost": 0.000001,
+            "inputCost": 5e-8,
             "inputCostUnit": "token",
-            "outputCost": 0.000002,
+            "outputCost": 4e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 16385,
-            "name": "gpt-3.5-turbo-0125",
+            "maxTokens": 100000,
+            "name": "o1",
             "type": "chat",
-            "inputCost": 5e-7,
+            "inputCost": 0.000015,
             "inputCostUnit": "token",
-            "outputCost": 0.0000015,
+            "outputCost": 0.00006,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 16385,
-            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 100000,
+            "name": "o1-2024-12-17",
             "type": "chat",
-            "inputCost": 0.000003,
+            "inputCost": 0.000015,
             "inputCostUnit": "token",
-            "outputCost": 0.000004,
+            "outputCost": 0.00006,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 16385,
-            "name": "gpt-3.5-turbo-16k-0613",
+            "maxTokens": 100000,
+            "name": "o3",
             "type": "chat",
-            "inputCost": 0.000003,
+            "inputCost": 0.000002,
             "inputCostUnit": "token",
-            "outputCost": 0.000004,
+            "outputCost": 0.000008,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4097,
-            "name": "ft:gpt-3.5-turbo",
+            "maxTokens": 100000,
+            "name": "o3-2025-04-16",
             "type": "chat",
-            "inputCost": 0.000003,
+            "inputCost": 0.000002,
             "inputCostUnit": "token",
-            "outputCost": 0.000006,
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "o3-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "o3-mini-2025-01-31",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "o4-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "o4-mini-2025-04-16",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
             "outputCostUnit": "token"
         },
         {
@@ -247,308 +7024,61 @@ export const AICostModelList = {
             "inputCostUnit": "token",
             "outputCost": 0,
             "outputCostUnit": null
-        }
-    ],
-    "text-completion-openai": [
-        {
-            "maxTokens": 16384,
-            "name": "ft:davinci-002",
-            "type": "completion",
-            "inputCost": 0.000002,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
         },
         {
-            "maxTokens": 16384,
-            "name": "ft:babbage-002",
-            "type": "completion",
-            "inputCost": 4e-7,
-            "inputCostUnit": "token",
-            "outputCost": 4e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4097,
-            "name": "azure/gpt-3.5-turbo-instruct-0914",
-            "type": "completion",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4097,
-            "name": "azure/gpt-35-turbo-instruct",
-            "type": "completion",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 16384,
-            "name": "babbage-002",
-            "type": "completion",
-            "inputCost": 4e-7,
-            "inputCostUnit": "token",
-            "outputCost": 4e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 16384,
-            "name": "davinci-002",
-            "type": "completion",
-            "inputCost": 0.000002,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "gpt-3.5-turbo-instruct",
-            "type": "completion",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4097,
-            "name": "gpt-3.5-turbo-instruct-0914",
-            "type": "completion",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        }
-    ],
-    "azure": [
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-turbo-2024-04-09",
+            "maxTokens": null,
+            "name": "openai/container",
             "type": "chat",
-            "inputCost": 0.00001,
-            "inputCostUnit": "token",
-            "outputCost": 0.00003,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-0125-preview",
-            "type": "chat",
-            "inputCost": 0.00001,
-            "inputCostUnit": "token",
-            "outputCost": 0.00003,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-1106-preview",
-            "type": "chat",
-            "inputCost": 0.00001,
-            "inputCostUnit": "token",
-            "outputCost": 0.00003,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-0613",
-            "type": "chat",
-            "inputCost": 0.00003,
-            "inputCostUnit": "token",
-            "outputCost": 0.00006,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-32k-0613",
-            "type": "chat",
-            "inputCost": 0.00006,
-            "inputCostUnit": "token",
-            "outputCost": 0.00012,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-32k",
-            "type": "chat",
-            "inputCost": 0.00006,
-            "inputCostUnit": "token",
-            "outputCost": 0.00012,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4",
-            "type": "chat",
-            "inputCost": 0.00003,
-            "inputCostUnit": "token",
-            "outputCost": 0.00006,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-turbo",
-            "type": "chat",
-            "inputCost": 0.00001,
-            "inputCostUnit": "token",
-            "outputCost": 0.00003,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-4-turbo-vision-preview",
-            "type": "chat",
-            "inputCost": 0.00001,
-            "inputCostUnit": "token",
-            "outputCost": 0.00003,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-35-turbo-16k-0613",
-            "type": "chat",
-            "inputCost": 0.000003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000004,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-35-turbo-1106",
-            "type": "chat",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-35-turbo-0125",
-            "type": "chat",
-            "inputCost": 5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-35-turbo-16k",
-            "type": "chat",
-            "inputCost": 0.000003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000004,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/gpt-35-turbo",
-            "type": "chat",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 32000,
-            "name": "azure/mistral-large-latest",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 32000,
-            "name": "azure/mistral-large-2402",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "azure/command-r-plus",
-            "type": "chat",
-            "inputCost": 0.000003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "azure/ada",
-            "type": "embedding",
-            "inputCost": 1e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0,
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
             "outputCostUnit": null
         },
         {
-            "maxTokens": 8191,
-            "name": "azure/text-embedding-ada-002",
-            "type": "embedding",
-            "inputCost": 1e-7,
+            "maxTokens": 128000,
+            "name": "gpt-5-search-api",
+            "type": "chat",
+            "inputCost": 0.00000125,
             "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8191,
-            "name": "azure/text-embedding-3-large",
-            "type": "embedding",
-            "inputCost": 1.3e-7,
+            "maxTokens": 128000,
+            "name": "gpt-5-search-api-2025-10-14",
+            "type": "chat",
+            "inputCost": 0.00000125,
             "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "azure/text-embedding-3-small",
-            "type": "embedding",
-            "inputCost": 2e-8,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
         }
     ],
     "anthropic": [
         {
-            "maxTokens": 8191,
-            "name": "claude-instant-1",
+            "maxTokens": 64000,
+            "name": "claude-haiku-4-5-20251001",
             "type": "chat",
-            "inputCost": 0.00000163,
+            "inputCost": 0.000001,
             "inputCostUnit": "token",
-            "outputCost": 0.00000551,
+            "outputCost": 0.000005,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8191,
-            "name": "claude-instant-1.2",
+            "maxTokens": 64000,
+            "name": "claude-haiku-4-5",
             "type": "chat",
-            "inputCost": 1.63e-7,
+            "inputCost": 0.000001,
             "inputCostUnit": "token",
-            "outputCost": 5.51e-7,
+            "outputCost": 0.000005,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8191,
-            "name": "claude-2",
+            "maxTokens": 64000,
+            "name": "claude-3-7-sonnet-20250219",
             "type": "chat",
-            "inputCost": 0.000008,
+            "inputCost": 0.000003,
             "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "claude-2.1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
@@ -570,158 +7100,2773 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "claude-3-sonnet-20240229",
+            "maxTokens": 32000,
+            "name": "claude-4-opus-20250514",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "claude-4-sonnet-20250514",
             "type": "chat",
             "inputCost": 0.000003,
             "inputCostUnit": "token",
             "outputCost": 0.000015,
             "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "claude-sonnet-4-5",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "claude-sonnet-4-5-20250929",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "claude-opus-4-1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "claude-opus-4-1-20250805",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "claude-opus-4-20250514",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "claude-opus-4-5-20251101",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "claude-opus-4-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-opus-4-6",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-opus-4-6-20260205",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-opus-4-7-20260416",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "claude-sonnet-4-20250514",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-mythos-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-mythos-5-1",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "claude-mythos-preview",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
         }
     ],
-    "mistral": [
+    "cloudflare": [
         {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-tiny",
+            "maxTokens": 3072,
+            "name": "cloudflare/@cf/meta/llama-2-7b-chat-fp16",
             "type": "chat",
-            "inputCost": 1.5e-7,
+            "inputCost": 0.000001923,
             "inputCostUnit": "token",
-            "outputCost": 4.6e-7,
+            "outputCost": 0.000001923,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-small",
+            "maxTokens": 2048,
+            "name": "cloudflare/@cf/meta/llama-2-7b-chat-int8",
             "type": "chat",
-            "inputCost": 0.000002,
+            "inputCost": 0.000001923,
             "inputCostUnit": "token",
-            "outputCost": 0.000006,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-small-latest",
-            "type": "chat",
-            "inputCost": 0.000002,
-            "inputCostUnit": "token",
-            "outputCost": 0.000006,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-medium",
-            "type": "chat",
-            "inputCost": 0.0000027,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000081,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-medium-latest",
-            "type": "chat",
-            "inputCost": 0.0000027,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000081,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-medium-2312",
-            "type": "chat",
-            "inputCost": 0.0000027,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000081,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-large-latest",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral/mistral-large-2402",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral/open-mixtral-8x7b",
-            "type": "chat",
-            "inputCost": 0.000002,
-            "inputCostUnit": "token",
-            "outputCost": 0.000006,
+            "outputCost": 0.000001923,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
-            "name": "mistral/mistral-embed",
-            "type": "embedding",
-            "inputCost": 1.11e-7,
+            "name": "cloudflare/@cf/mistral/mistral-7b-instruct-v0.1",
+            "type": "chat",
+            "inputCost": 0.000001923,
             "inputCostUnit": "token",
-            "outputCost": null,
+            "outputCost": 0.000001923,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "cloudflare/@hf/thebloke/codellama-7b-instruct-awq",
+            "type": "chat",
+            "inputCost": 0.000001923,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001923,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cloudflare/@cf/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "cloudflare/@cf/google/gemma-2b-it-lora",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
             "outputCostUnit": null
+        },
+        {
+            "maxTokens": 80000,
+            "name": "cloudflare/@cf/meta/llama-3.2-3b-instruct",
+            "type": "chat",
+            "inputCost": 5.09e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.35e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "cloudflare/@cf/meta/llama-guard-3-8b",
+            "type": "chat",
+            "inputCost": 4.84e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 15000,
+            "name": "cloudflare/@cf/mistral/mistral-7b-instruct-v0.2-lora",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 262144,
+            "name": "cloudflare/@cf/moonshotai/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 80000,
+            "name": "cloudflare/@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
+            "type": "chat",
+            "inputCost": 4.97e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004881,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "cloudflare/@cf/meta/llama-3.1-8b-instruct-fp8",
+            "type": "chat",
+            "inputCost": 1.52e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.87e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 60000,
+            "name": "cloudflare/@cf/meta/llama-3.2-1b-instruct",
+            "type": "chat",
+            "inputCost": 2.7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.01e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "cloudflare/@cf/moonshotai/kimi-k2.6",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "cloudflare/@cf/zai-org/glm-4.7-flash",
+            "type": "chat",
+            "inputCost": 6.05e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "cloudflare/@cf/meta-llama/llama-2-7b-chat-hf-lora",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 24000,
+            "name": "cloudflare/@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+            "type": "chat",
+            "inputCost": 2.93e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002253,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "cloudflare/@cf/ibm-granite/granite-4.0-h-micro",
+            "type": "chat",
+            "inputCost": 1.7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.12e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "cloudflare/@cf/qwen/qwen2.5-coder-32b-instruct",
+            "type": "chat",
+            "inputCost": 6.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "cloudflare/@cf/zai-org/glm-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "cloudflare/@cf/nvidia/nemotron-3-120b-a12b",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cloudflare/@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+            "type": "chat",
+            "inputCost": 3.51e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.55e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "cloudflare/@cf/qwen/qwen3-30b-a3b-fp8",
+            "type": "chat",
+            "inputCost": 5.09e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.35e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 3500,
+            "name": "cloudflare/@cf/google/gemma-7b-it-lora",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 256000,
+            "name": "cloudflare/@cf/google/gemma-4-26b-a4b-it",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cloudflare/@cf/mistralai/mistral-small-3.1-24b-instruct",
+            "type": "chat",
+            "inputCost": 3.51e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.55e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cloudflare/@cf/meta/llama-3.2-11b-vision-instruct",
+            "type": "chat",
+            "inputCost": 4.85e-8,
+            "inputCostUnit": "token",
+            "outputCost": 6.76e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "cloudflare/@cf/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "cloudflare/@cf/meta/llama-4-scout-17b-16e-instruct",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 24000,
+            "name": "cloudflare/@cf/qwen/qwq-32b",
+            "type": "chat",
+            "inputCost": 6.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        }
+    ],
+    "codestral": [
+        {
+            "maxTokens": 8191,
+            "name": "codestral/codestral-2405",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "codestral/codestral-latest",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "cohere": [
+        {
+            "maxTokens": 128000,
+            "name": "cohere/embed-v4.0",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command",
+            "type": "completion",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command-nightly",
+            "type": "completion",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "embed-english-light-v2.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "embed-english-light-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "embed-english-v2.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "embed-english-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 768,
+            "name": "embed-multilingual-v2.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "embed-multilingual-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "embed-multilingual-light-v3.0",
+            "type": "embedding",
+            "inputCost": 0.0001,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "cohere_chat": [
+        {
+            "maxTokens": 8000,
+            "name": "command-a-03-2025",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command-light",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command-r",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command-r-08-2024",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command-r-plus",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command-r-plus-08-2024",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "command-r7b-12-2024",
+            "type": "chat",
+            "inputCost": 3.75e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
         }
     ],
     "deepseek": [
         {
-            "maxTokens": 4096,
+            "maxTokens": 8192,
             "name": "deepseek-chat",
             "type": "chat",
-            "inputCost": 1.4e-7,
+            "inputCost": 2.8e-7,
             "inputCostUnit": "token",
-            "outputCost": 2.8e-7,
+            "outputCost": 4.2e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepseek-coder",
+            "maxTokens": 65536,
+            "name": "deepseek-reasoner",
             "type": "chat",
-            "inputCost": 1.4e-7,
+            "inputCost": 2.8e-7,
             "inputCostUnit": "token",
-            "outputCost": 2.8e-7,
-            "outputCostUnit": "token"
-        }
-    ],
-    "groq": [
-        {
-            "maxTokens": 4096,
-            "name": "groq/llama2-70b-4096",
-            "type": "chat",
-            "inputCost": 7e-7,
-            "inputCostUnit": "token",
-            "outputCost": 8e-7,
+            "outputCost": 4.2e-7,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
-            "name": "groq/llama3-8b-8192",
+            "name": "deepseek/deepseek-chat",
             "type": "chat",
-            "inputCost": 1e-7,
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "deepseek/deepseek-coder",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "deepseek/deepseek-r1",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000219,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "deepseek/deepseek-reasoner",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "deepseek/deepseek-v3",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepseek/deepseek-v3.2",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "deepseek-v4-flash-vision-exp",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.00000132,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "deepseek/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "deepseek/deepseek-v4-flash-vision-exp",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "deepseek/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.00000132,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
+        }
+    ],
+    "dashscope": [
+        {
+            "maxTokens": 393216,
+            "name": "dashscope/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "dashscope/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "dashscope/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.0000024,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000048,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "dashscope/glm-5.1",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "dashscope/glm-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen-coder",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen-flash-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "dashscope/qwen-max",
+            "type": "chat",
+            "inputCost": 0.0000016,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000064,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen-plus",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "dashscope/qwen-plus-2025-01-25",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen-plus-2025-04-28",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen-plus-2025-07-14",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen-plus-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen-plus-2025-09-11",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen-plus-latest",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen-turbo",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "dashscope/qwen-turbo-2024-11-01",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen-turbo-2025-04-28",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen-turbo-latest",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "dashscope/qwen3-30b-a3b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-coder-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-coder-flash-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-coder-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-coder-plus-2025-07-22",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-max-preview",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-max",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-max-2026-01-23",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-next-80b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3-next-80b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen3-vl-235b-a22b-instruct",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen3-vl-235b-a22b-thinking",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen3-vl-32b-instruct",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen3-vl-32b-thinking",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000287,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "dashscope/qwen3-vl-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3.5-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3.7-max",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "dashscope/qwen3.7-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "dashscope/qwen3.8-max",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "dashscope/qwq-plus",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        }
+    ],
+    "qwencloud": [
+        {
+            "maxTokens": 393216,
+            "name": "qwencloud/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "qwencloud/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "qwencloud/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.0000024,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000048,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwencloud/glm-5.1",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwencloud/glm-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen-coder",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen-flash-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwencloud/qwen-max",
+            "type": "chat",
+            "inputCost": 0.0000016,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000064,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen-plus",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwencloud/qwen-plus-2025-01-25",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen-plus-2025-04-28",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen-plus-2025-07-14",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen-plus-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen-plus-2025-09-11",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen-plus-latest",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen-turbo",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwencloud/qwen-turbo-2024-11-01",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen-turbo-2025-04-28",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen-turbo-latest",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwencloud/qwen3-30b-a3b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-coder-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-coder-flash-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-coder-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-coder-plus-2025-07-22",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-max-preview",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-max",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-max-2026-01-23",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-next-80b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3-next-80b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen3-vl-235b-a22b-instruct",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen3-vl-235b-a22b-thinking",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen3-vl-32b-instruct",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen3-vl-32b-thinking",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000287,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwencloud/qwen3-vl-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3.5-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3.7-max",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwencloud/qwen3.7-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwencloud/qwen3.8-max",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwencloud/qwq-plus",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        }
+    ],
+    "qwen_ai_platform": [
+        {
+            "maxTokens": 393216,
+            "name": "qwen_ai_platform/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "qwen_ai_platform/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "qwen_ai_platform/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.0000024,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000048,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwen_ai_platform/glm-5.1",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwen_ai_platform/glm-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen-coder",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen-flash-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwen_ai_platform/qwen-max",
+            "type": "chat",
+            "inputCost": 0.0000016,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000064,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen-plus",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwen_ai_platform/qwen-plus-2025-01-25",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen-plus-2025-04-28",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen-plus-2025-07-14",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen-plus-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen-plus-2025-09-11",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen-plus-latest",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen-turbo",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwen_ai_platform/qwen-turbo-2024-11-01",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen-turbo-2025-04-28",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen-turbo-latest",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "qwen_ai_platform/qwen3-30b-a3b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-coder-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-coder-flash-2025-07-28",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-coder-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-coder-plus-2025-07-22",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-max-preview",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-max",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-max-2026-01-23",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-next-80b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3-next-80b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen3-vl-235b-a22b-instruct",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen3-vl-235b-a22b-thinking",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen3-vl-32b-instruct",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen3-vl-32b-thinking",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000287,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "qwen_ai_platform/qwen3-vl-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3.5-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3.7-max",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "qwen_ai_platform/qwen3.7-plus",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "qwen_ai_platform/qwen3.8-max",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "qwen_ai_platform/qwq-plus",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        }
+    ],
+    "databricks": [
+        {
+            "maxTokens": 512,
+            "name": "databricks/databricks-bge-large-en",
+            "type": "embedding",
+            "inputCost": 1.0003e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-3-7-sonnet",
+            "type": "chat",
+            "inputCost": 0.0000029999900000000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001000006,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.00001000006,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "databricks/databricks-claude-haiku-4-5",
+            "type": "chat",
+            "inputCost": 0.00000100002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000500003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "databricks/databricks-claude-opus-4",
+            "type": "chat",
+            "inputCost": 0.000015000020000000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00007500003000000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "databricks/databricks-claude-opus-4-1",
+            "type": "chat",
+            "inputCost": 0.000015000020000000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00007500003000000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "databricks/databricks-claude-opus-4-5",
+            "type": "chat",
+            "inputCost": 0.00000500003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025000010000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-opus-4-6",
+            "type": "chat",
+            "inputCost": 0.00000500003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025000010000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.00000500003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002500001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.00000500003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002500001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.00000500003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002500001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "databricks/databricks-claude-sonnet-4",
+            "type": "chat",
+            "inputCost": 0.0000029999900000000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "databricks/databricks-claude-sonnet-4-1",
+            "type": "chat",
+            "inputCost": 0.0000029999900000000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "databricks/databricks-claude-sonnet-4-5",
+            "type": "chat",
+            "inputCost": 0.0000029999900000000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "databricks/databricks-claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.0000029999900000000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.00000299999,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001500002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "databricks/databricks-deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "databricks/databricks-deepseek-v4-pro-0813",
+            "type": "chat",
+            "inputCost": 0.00000131999,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000395997,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "databricks/databricks-gemini-2-5-flash",
+            "type": "chat",
+            "inputCost": 3.0001999999999996e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000249998,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-2-5-pro",
+            "type": "chat",
+            "inputCost": 0.00000124999,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009999990000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-1-flash-lite",
+            "type": "chat",
+            "inputCost": 3.1248e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000187502,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "databricks/databricks-gemini-3-1-flash-image",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "databricks/databricks-gemini-3-pro-image",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-1-pro",
+            "type": "chat",
+            "inputCost": 0.00000249998,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-flash",
+            "type": "chat",
+            "inputCost": 6.2503e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000374997,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-pro",
+            "type": "chat",
+            "inputCost": 0.00000249998,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-8-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-7-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-6-flash",
+            "type": "chat",
+            "inputCost": 0.00000187502,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000937503,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-5-flash",
+            "type": "chat",
+            "inputCost": 0.00000187502,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001124998,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-gemini-3-5-flash-lite",
+            "type": "chat",
+            "inputCost": 3.7499e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000312501,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "databricks/databricks-gemma-3-12b",
+            "type": "chat",
+            "inputCost": 1.5000999999999998e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.0001e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "databricks/databricks-glm-5-2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000439999,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "databricks/databricks-glm-5-3",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000439999,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "databricks/databricks-glm-5-3-flash",
+            "type": "chat",
+            "inputCost": 1.5001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.0001e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5",
+            "type": "chat",
+            "inputCost": 0.00000124999,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009999990000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-1",
+            "type": "chat",
+            "inputCost": 0.00000124999,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009999990000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-1-codex-max",
+            "type": "chat",
+            "inputCost": 0.00000124999,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009999990000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-1-codex-mini",
+            "type": "chat",
+            "inputCost": 2.4997e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000199997,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-2",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-2-codex",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-4",
+            "type": "chat",
+            "inputCost": 0.00000249998,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-4-mini",
+            "type": "chat",
+            "inputCost": 7.4998e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000450002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-4-nano",
+            "type": "chat",
+            "inputCost": 1.9999e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000124999,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-6-sol",
+            "type": "chat",
+            "inputCost": 0.00000400001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001999998,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-6-terra",
+            "type": "chat",
+            "inputCost": 0.00000249998,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001500002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-6-luna",
+            "type": "chat",
+            "inputCost": 0.00000100002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000599998,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-mini",
+            "type": "chat",
+            "inputCost": 2.4997000000000006e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000019999700000000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-gpt-5-nano",
+            "type": "chat",
+            "inputCost": 4.998e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.9998000000000007e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "databricks/databricks-gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5000999999999998e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.9997e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "databricks/databricks-gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.0001999999999996e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "databricks/databricks-grok-4-6",
+            "type": "chat",
+            "inputCost": 0.00000249998,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000750001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "databricks/databricks-gte-large-en",
+            "type": "embedding",
+            "inputCost": 1.2999000000000001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "databricks/databricks-inkling",
+            "type": "chat",
+            "inputCost": 0.00000100002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000404999,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "databricks/databricks-kimi-k3",
+            "type": "chat",
+            "inputCost": 0.00000299999,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001500002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "databricks/databricks-llama-2-70b-chat",
+            "type": "chat",
+            "inputCost": 5.0001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015000300000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-llama-4-maverick",
+            "type": "chat",
+            "inputCost": 5.0001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015000300000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-meta-llama-3-1-405b-instruct",
+            "type": "chat",
+            "inputCost": 0.00000500003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015000020000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-meta-llama-3-1-8b-instruct",
+            "type": "chat",
+            "inputCost": 1.5000999999999998e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.5003000000000007e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-meta-llama-3-3-70b-instruct",
+            "type": "chat",
+            "inputCost": 5.0001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015000300000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "databricks/databricks-meta-llama-3-70b-instruct",
+            "type": "chat",
+            "inputCost": 0.00000100002,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000029999900000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "databricks/databricks-mixtral-8x7b-instruct",
+            "type": "chat",
+            "inputCost": 5.0001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000100002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "databricks/databricks-mpt-30b-instruct",
+            "type": "chat",
+            "inputCost": 0.00000100002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000100002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "databricks/databricks-mpt-7b-instruct",
+            "type": "chat",
+            "inputCost": 5.0001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 25000,
+            "name": "databricks/databricks-qwen35-122b-a10b",
+            "type": "chat",
+            "inputCost": 2.2001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000220003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "databricks/databricks-qwen3-next-80b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000120001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "databricks/databricks-qwen3-embedding-0-6b",
+            "type": "embedding",
+            "inputCost": 2.002e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "deepinfra": [
+        {
+            "maxTokens": 4096,
+            "name": "deepinfra/Gryphe/MythoMax-L2-13b",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/NousResearch/Hermes-3-Llama-3.1-405B",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/NousResearch/Hermes-3-Llama-3.1-70B",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/Qwen/QwQ-32B",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "deepinfra/Qwen/Qwen2.5-72B-Instruct",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "deepinfra/Qwen/Qwen2.5-7B-Instruct",
+            "type": "chat",
+            "inputCost": 4e-8,
             "inputCostUnit": "token",
             "outputCost": 1e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8192,
-            "name": "groq/llama3-70b-8192",
+            "maxTokens": 128000,
+            "name": "deepinfra/Qwen/Qwen2.5-VL-32B-Instruct",
             "type": "chat",
-            "inputCost": 6.4e-7,
+            "inputCost": 2e-7,
             "inputCostUnit": "token",
-            "outputCost": 8e-7,
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "deepinfra/Qwen/Qwen3-14B",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "deepinfra/Qwen/Qwen3-235B-A22B",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-235B-A22B-Instruct-2507",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000029,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "deepinfra/Qwen/Qwen3-30B-A3B",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "deepinfra/Qwen/Qwen3-32B",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-Next-80B-A3B-Instruct",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-Next-80B-A3B-Thinking",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/Sao10K/L3.1-70B-Euryale-v2.2",
+            "type": "chat",
+            "inputCost": 8.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/Sao10K/L3.3-70B-Euryale-v2.3",
+            "type": "chat",
+            "inputCost": 6.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "deepinfra/allenai/olmOCR-7B-0725-FP8",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "deepinfra/anthropic/claude-3-7-sonnet-latest",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "deepinfra/anthropic/claude-4-opus",
+            "type": "chat",
+            "inputCost": 0.0000165,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000825,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "deepinfra/anthropic/claude-4-sonnet",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/deepseek-ai/DeepSeek-R1",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/deepseek-ai/DeepSeek-R1-0528",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000215,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 32768,
-            "name": "groq/mixtral-8x7b-32768",
+            "name": "deepinfra/deepseek-ai/DeepSeek-R1-0528-Turbo",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
             "type": "chat",
             "inputCost": 2.7e-7,
             "inputCostUnit": "token",
@@ -729,33 +9874,4219 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 40960,
+            "name": "deepinfra/deepseek-ai/DeepSeek-R1-Turbo",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V3",
+            "type": "chat",
+            "inputCost": 3.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 2.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V3.1",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V3.1-Terminus",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/google/gemini-2.0-flash-001",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/google/gemini-2.5-flash",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/google/gemini-2.5-pro",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/google/gemma-3-12b-it",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/google/gemma-3-27b-it",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/google/gemma-3-4b-it",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Llama-3.2-11B-Vision-Instruct",
+            "type": "chat",
+            "inputCost": 4.9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4.9e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Llama-3.2-3B-Instruct",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 2.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 327680,
+            "name": "deepinfra/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Llama-Guard-3-8B",
+            "type": "chat",
+            "inputCost": 5.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5.5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/meta-llama/Llama-Guard-4-12B",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 8192,
-            "name": "groq/gemma-7b-it",
+            "name": "deepinfra/meta-llama/Meta-Llama-3-8B-Instruct",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 6e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "deepinfra/microsoft/WizardLM-2-8x22B",
+            "type": "chat",
+            "inputCost": 4.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "deepinfra/microsoft/phi-4",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/mistralai/Mistral-Nemo-Instruct-2407",
+            "type": "chat",
+            "inputCost": 1.9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "deepinfra/mistralai/Mistral-Small-24B-Instruct-2501",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "deepinfra/mistralai/Mistral-Small-3.2-24B-Instruct-2506",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "deepinfra/mistralai/Mixtral-8x7B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/moonshotai/Kimi-K2-Instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/moonshotai/Kimi-K2-Instruct-0905",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/nvidia/Llama-3.1-Nemotron-70B-Instruct",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/nvidia/Llama-3.3-Nemotron-Super-49B-v1.5",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "deepinfra/nvidia/NVIDIA-Nemotron-3.5-Lightning",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/nvidia/NVIDIA-Nemotron-Nano-9B-v2",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 3.7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/zai-org/GLM-4.5",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/openai/gpt-oss-120b-Turbo",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 196608,
+            "name": "deepinfra/MiniMaxAI/MiniMax-M2.7",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.8-27B",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/google/gemma-4-31B-it-Ultra",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/moonshotai/Kimi-K2.5",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000225,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202752,
+            "name": "deepinfra/zai-org/GLM-4.7-Flash",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202752,
+            "name": "deepinfra/zai-org/GLM-4.6",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/anthropic/claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/anthropic/claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/google/gemini-3.5-flash",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/XiaomiMiMo/MiMo-V2.5",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/Qwen/Qwen3-Max",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/google/gemma-4-31B-it-turbo",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 524288,
+            "name": "deepinfra/thinkingmachines/Inkling-Small",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/meta-models/Muse-Glimmer-30B",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/Qwen/Qwen3-Max-Thinking",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-VL-235B-A22B-Instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3-VL-30B-A3B-Instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.5-27B",
+            "type": "chat",
+            "inputCost": 2.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000026,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.6-35B-A3B",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/nvidia/Nemotron-Content-Safety-3.5",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/anthropic/claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 524288,
+            "name": "deepinfra/thinkingmachines/Inkling",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000405,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/moonshotai/Kimi-K2.6",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V4-Pro-0813",
+            "type": "chat",
+            "inputCost": 0.0000013,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000026,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/Qwen/Qwen3.7-Max",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/ByteDance/Seed-2.0-mini",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.8-2.4T-A95B",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 524288,
+            "name": "deepinfra/MiniMaxAI/MiniMax-M3",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/google/gemini-3.1-flash-lite",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/google/gemini-3.7-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/inclusionAI/Ling-3.0-flash",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/stepfun-ai/Step-3.7-Flash",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000115,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.5-35B-A3B",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/ByteDance/Seed-1.8",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/tencent/Hy3",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/ByteDance/Seed-2.0-code",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/ByteDance/Seed-2.0-pro",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202752,
+            "name": "deepinfra/zai-org/GLM-5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000208,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/nvidia/Nemotron-3-Nano-30B-A3B",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/moonshotai/Kimi-K2.7-Code",
+            "type": "chat",
+            "inputCost": 6.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000034,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/anthropic/claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.5-397B-A17B",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V4-Flash-0731",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/google/gemma-4-E4B-it",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V3.2",
+            "type": "chat",
+            "inputCost": 2.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "deepinfra/Qwen/Qwen3.8-Max",
+            "type": "chat",
+            "inputCost": 0.00000165,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004951,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/anthropic/claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.5-122B-A10B",
+            "type": "chat",
+            "inputCost": 2.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202752,
+            "name": "deepinfra/zai-org/GLM-5.1",
+            "type": "chat",
+            "inputCost": 0.00000105,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V4-Pro",
+            "type": "chat",
+            "inputCost": 0.0000013,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000026,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B",
+            "type": "chat",
+            "inputCost": 8.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/zai-org/GLM-5.2",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/moonshotai/Kimi-K3",
+            "type": "chat",
+            "inputCost": 0.00000285,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001425,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/anthropic/claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.6-27B",
+            "type": "chat",
+            "inputCost": 3.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/google/gemma-4-26B-A4B-it",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "deepinfra/google/gemini-3.1-pro",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/XiaomiMiMo/MiMo-V2.5-Pro",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "deepinfra/anthropic/claude-haiku-4-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "deepinfra/deepseek-ai/DeepSeek-V4-Flash",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "deepinfra/openai/gpt-oss-120b-Ultra",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/Qwen/Qwen3.5-9B",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 196608,
+            "name": "deepinfra/MiniMaxAI/MiniMax-M2.7-Turbo",
+            "type": "chat",
+            "inputCost": 3.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000017,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202752,
+            "name": "deepinfra/zai-org/GLM-4.7",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "deepinfra/google/gemma-4-31B-it",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.8e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "volcengine": [
+        {
+            "maxTokens": 32768,
+            "name": "deepseek-v3-2-251201",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "glm-4-7-251222",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "kimi-k2-thinking-251104",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "doubao-embedding",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "doubao-embedding-large",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "doubao-embedding-large-text-240915",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "doubao-embedding-large-text-250515",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "doubao-embedding-text-240715",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "volcengine/doubao-seed-2-0-pro-260215",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "volcengine/doubao-seed-2-0-lite-260215",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "volcengine/doubao-seed-2-0-mini-260215",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "volcengine/doubao-seed-2-0-code-preview-260215",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        }
+    ],
+    "featherless_ai": [
+        {
+            "maxTokens": 4096,
+            "name": "featherless_ai/featherless-ai/Qwerky-72B",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "featherless_ai/featherless-ai/Qwerky-QwQ-32B",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        }
+    ],
+    "fireworks_ai-embedding-models": [
+        {
+            "maxTokens": 512,
+            "name": "fireworks_ai/WhereIsAI/UAE-Large-V1",
+            "type": "embedding",
+            "inputCost": 1.6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/nomic-ai/nomic-embed-text-v1",
+            "type": "embedding",
+            "inputCost": 8e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/nomic-ai/nomic-embed-text-v1.5",
+            "type": "embedding",
+            "inputCost": 8e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "fireworks_ai/thenlper/gte-base",
+            "type": "embedding",
+            "inputCost": 8e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "fireworks_ai/thenlper/gte-large",
+            "type": "embedding",
+            "inputCost": 1.6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "fireworks_ai": [
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-v2-instruct",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 20480,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 160000,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-0528",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 20480,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-basic",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000219,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v3",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v3-0324",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v3p1",
+            "type": "chat",
+            "inputCost": 5.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v3p1-terminus",
+            "type": "chat",
+            "inputCost": 5.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v3p2",
+            "type": "chat",
+            "inputCost": 5.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.00000174,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000348,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v4-pro-0813",
+            "type": "chat",
+            "inputCost": 0.00000132,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/firefunction-v2",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 96000,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-4p5",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000219,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 96000,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-4p5-air",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202800,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-4p6",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000219,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202800,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-4p7",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-5p1",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-5p2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/kimi-k2-instruct",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/kimi-k2-instruct-0905",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/kimi-k2p5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/kimi-k2p6",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/kimi-k2p7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p1-405b-instruct",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p1-8b-instruct",
             "type": "chat",
             "inputCost": 1e-7,
             "inputCostUnit": "token",
             "outputCost": 1e-7,
             "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p2-11b-vision-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p2-1b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p2-3b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p2-90b-vision-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama4-maverick-instruct-basic",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama4-scout-instruct-basic",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 204800,
+            "name": "fireworks_ai/accounts/fireworks/models/minimax-m2p1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 196608,
+            "name": "fireworks_ai/accounts/fireworks/models/minimax-m2p7",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512000,
+            "name": "fireworks_ai/accounts/fireworks/models/minimax-m3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/accounts/fireworks/models/mixtral-8x22b-instruct-hf",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2-72b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-32b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/yi-large",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "fireworks_ai/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "fireworks_ai/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.00000174,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000348,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202800,
+            "name": "fireworks_ai/glm-4p7",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/glm-5p1",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/glm-5p1-fast",
+            "type": "chat",
+            "inputCost": 0.0000028,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000088,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/glm-5p2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/kimi-k2p5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/kimi-k2p6",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/kimi-k2p6-fast",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/kimi-k2p7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/kimi-k2p7-code-fast",
+            "type": "chat",
+            "inputCost": 0.0000019,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 204800,
+            "name": "fireworks_ai/minimax-m2p1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 196608,
+            "name": "fireworks_ai/minimax-m2p7",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512000,
+            "name": "fireworks_ai/minimax-m3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/qwen3p7-plus",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-coder-480b-a35b-instruct",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/chronos-hermes-13b-v2",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-13b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-13b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-13b-python",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-34b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-34b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-34b-python",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-70b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-70b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-70b-python",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-7b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/code-llama-7b-python",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/accounts/fireworks/models/code-qwen-1p5-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/codegemma-2b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/codegemma-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "fireworks_ai/accounts/fireworks/models/cogito-671b-v2-p1",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/cogito-v1-preview-llama-3b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/cogito-v1-preview-llama-70b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/cogito-v1-preview-llama-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/cogito-v1-preview-qwen-14b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/cogito-v1-preview-qwen-32b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/dbrx-instruct",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-1b-base",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-33b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-7b-base",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-7b-base-v1p5",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-7b-instruct-v1p5",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-v2-lite-base",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-coder-v2-lite-instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-prover-v2",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-0528-distill-qwen3-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-distill-llama-70b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-distill-llama-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-distill-qwen-14b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-distill-qwen-1p5b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-distill-qwen-32b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-r1-distill-qwen-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v2-lite-chat",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v2p5",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/devstral-small-2505",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/dobby-mini-unhinged-plus-llama-3-1-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/dobby-unhinged-llama-3-3-70b-new",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/dolphin-2-9-2-qwen2-72b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/dolphin-2p6-mixtral-8x7b",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/ernie-4p5-21b-a3b-pt",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/ernie-4p5-300b-a47b-pt",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/fare-20b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/firefunction-v1",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/firellava-13b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/firesearch-ocr-v6",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/flux-1-dev",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/flux-1-dev-controlnet-union",
+            "type": "chat",
+            "inputCost": 1e-9,
+            "inputCostUnit": "token",
+            "outputCost": 1e-9,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/flux-1-schnell",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/gemma-2b-it",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/gemma-3-27b-it",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/gemma-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/gemma-7b-it",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/gemma2-9b-it",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-4p5v",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/gpt-oss-safeguard-120b",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/gpt-oss-safeguard-20b",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/hermes-2-pro-mistral-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/internvl3-38b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/internvl3-78b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/internvl3-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/kat-coder",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/kat-dev-32b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/kat-dev-72b-exp",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-guard-2-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-guard-3-1b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-guard-3-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v2-13b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v2-13b-chat",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v2-70b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v2-70b-chat",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v2-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v2-7b-chat",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3-70b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3-70b-instruct-hf",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3-8b-instruct-hf",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p1-405b-instruct-long",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p1-70b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p1-70b-instruct-1b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p1-nemotron-70b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p2-1b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p2-3b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/llama-v3p3-70b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llamaguard-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/llava-yi-34b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/minimax-m1-80k",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/minimax-m2",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "fireworks_ai/accounts/fireworks/models/ministral-3-14b-instruct-2512",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "fireworks_ai/accounts/fireworks/models/ministral-3-3b-instruct-2512",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "fireworks_ai/accounts/fireworks/models/ministral-3-8b-instruct-2512",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-7b-instruct-4k",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-7b-instruct-v0p2",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-7b-instruct-v3",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-7b-v0p2",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-large-3-fp8",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-nemo-base-2407",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-nemo-instruct-2407",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mistral-small-24b-instruct-2501",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/accounts/fireworks/models/mixtral-8x22b",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/accounts/fireworks/models/mixtral-8x22b-instruct",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mixtral-8x7b",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mixtral-8x7b-instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/mixtral-8x7b-instruct-hf",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/mythomax-l2-13b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/nemotron-nano-v2-12b-vl",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/nous-capybara-7b-v1p9",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/nous-hermes-2-mixtral-8x7b-dpo",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/nous-hermes-2-yi-34b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/nous-hermes-llama2-13b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/nous-hermes-llama2-70b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/nous-hermes-llama2-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/nvidia-nemotron-nano-12b-v2",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/nvidia-nemotron-nano-9b-v2",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/openchat-3p5-0106-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/openhermes-2-mistral-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/openhermes-2p5-mistral-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/openorca-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "fireworks_ai/accounts/fireworks/models/phi-2-3b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/phi-3-mini-128k-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32064,
+            "name": "fireworks_ai/accounts/fireworks/models/phi-3-vision-128k-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/phind-code-llama-34b-python-v1",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/phind-code-llama-34b-v1",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/phind-code-llama-34b-v2",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "fireworks_ai/accounts/fireworks/models/pythia-12b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen-qwq-32b-preview",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen-v2p5-14b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen-v2p5-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen1p5-72b-chat",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2-7b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2-vl-2b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2-vl-72b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2-vl-7b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-0p5b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-14b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-1p5b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-32b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-32b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-72b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-72b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-7b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-0p5b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-0p5b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-14b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-14b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-1p5b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-1p5b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-32b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-32b-instruct-128k",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-32b-instruct-32k-rope",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-32b-instruct-64k",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-3b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-3b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-coder-7b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-math-72b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-vl-32b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-vl-3b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-vl-72b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen2p5-vl-7b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-0p6b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-14b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-1p7b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-1p7b-fp8-draft",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-1p7b-fp8-draft-131072",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-1p7b-fp8-draft-40960",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-235b-a22b",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-235b-a22b-instruct-2507",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-235b-a22b-thinking-2507",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-30b-a3b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-30b-a3b-instruct-2507",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-30b-a3b-thinking-2507",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-32b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-4b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-4b-instruct-2507",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-coder-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-coder-480b-instruct-bf16",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-embedding-0p6b",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-embedding-4b",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-next-80b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-next-80b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-vl-235b-a22b-instruct",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-vl-235b-a22b-thinking",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-vl-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-vl-30b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-vl-32b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-vl-8b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3p7-plus",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/qwq-32b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/rolm-ocr",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/snorkel-mistral-7b-pairrm-dpo",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/stablecode-3b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/starcoder-16b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "fireworks_ai/accounts/fireworks/models/starcoder-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/starcoder2-15b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/starcoder2-3b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/starcoder2-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/toppy-m-7b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/yi-34b",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "fireworks_ai/accounts/fireworks/models/yi-34b-200k-capybara",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/yi-34b-chat",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "fireworks_ai/accounts/fireworks/models/yi-6b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/zephyr-7b-beta",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/routers/glm-5p1-fast",
+            "type": "chat",
+            "inputCost": 0.0000028,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000088,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/routers/kimi-k2p6-fast",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/routers/kimi-k2p7-code-fast",
+            "type": "chat",
+            "inputCost": 0.0000019,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-vision-exp",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/models/kimi-k3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "fireworks_ai/deepseek-v4-flash-vision-exp",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/glm-5p2-fast",
+            "type": "chat",
+            "inputCost": 0.0000021,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/glm-5p2-fast-us",
+            "type": "chat",
+            "inputCost": 0.0000021,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/kimi-k3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/kimi-k3-fast",
+            "type": "chat",
+            "inputCost": 0.0000045,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000225,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/kimi-k3-us",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "fireworks_ai/qwen3p8-max",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/muse-glimmer-30b",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/nemotron-lightning-3p5-30b-a3b",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/nemotron-3-ultra-nvfp4",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "fireworks_ai/accounts/fireworks/models/muse-glimmer-30b",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "fireworks_ai/accounts/fireworks/models/nemotron-3-ultra-nvfp4",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3p8-max",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/routers/glm-5p2-fast",
+            "type": "chat",
+            "inputCost": 0.0000021,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/routers/glm-5p2-fast-us",
+            "type": "chat",
+            "inputCost": 0.0000021,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/routers/kimi-k3-fast",
+            "type": "chat",
+            "inputCost": 0.0000045,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000225,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "fireworks_ai/accounts/fireworks/routers/kimi-k3-us",
+            "type": "chat",
+            "inputCost": 0.0000033,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-5p3",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "fireworks_ai/accounts/fireworks/models/glm-5p3-flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "fireworks_ai/accounts/fireworks/models/inkling",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000405,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "fireworks_ai/accounts/fireworks/models/qwen3-embedding-8b",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "friendliai": [
+        {
+            "maxTokens": 8192,
+            "name": "friendliai/meta-llama-3.1-70b-instruct",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "friendliai/meta-llama-3.1-8b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "friendliai/zai-org/GLM-5.3-Flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "friendliai/zai-org/GLM-5.3",
+            "type": "chat",
+            "inputCost": 0.00000126,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
         }
     ],
     "vertex-ai": [
         {
-            "maxTokens": 1024,
-            "name": "text-bison",
-            "type": "completion",
-            "inputCost": 1.25e-7,
+            "maxTokens": 8192,
+            "name": "gemini-2.0-flash",
+            "type": "chat",
+            "inputCost": 1e-7,
             "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-2.0-flash-001",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "gemini-2.0-flash-lite",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "gemini-2.0-flash-lite-001",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-2.5-flash",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.1-flash-lite-preview",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.1-flash-lite",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.5-flash-lite",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-2.5-flash-lite",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-2.5-flash-lite-preview-09-2025",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-2.5-flash-preview-09-2025",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-2.5-flash-lite-preview-06-17",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-2.5-pro",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-3-pro-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.1-pro-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.1-pro-preview-customtools",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-2.5-pro-preview-tts",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-robotics-er-1.5-preview",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "gemini-2.5-computer-use-preview-10-2025",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "gemini-embedding-001",
+            "type": "embedding",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-embedding-2-preview",
+            "type": "embedding",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-embedding-2",
+            "type": "embedding",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "gemini-flash-experimental",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-3-flash-preview",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-omni-flash-preview",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "gemini-3.5-flash",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.6-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.7-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gemini-3.8-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 1024,
-            "name": "text-bison@001",
-            "type": "completion",
-            "inputCost": 1.25e-7,
+            "name": "medlm-large",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "medlm-medium",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "multimodalembedding",
+            "type": "embedding",
+            "inputCost": 8e-7,
             "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "multimodalembedding@001",
+            "type": "embedding",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "text-embedding-004",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "text-embedding-005",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "text-embedding-large-exp-03-07",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 3072,
+            "name": "text-embedding-preview-0409",
+            "type": "embedding",
+            "inputCost": 6.25e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "text-multilingual-embedding-002",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
         },
         {
             "maxTokens": 1024,
@@ -776,134 +14107,446 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.1-flash-lite-preview",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.1-flash-lite",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.5-flash-lite",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai": [
+        {
+            "maxTokens": 65535,
+            "name": "vertex_ai/gemini-3-pro-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "vertex_ai/gemini-3-flash-preview",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "vertex_ai/gemini-3.5-flash",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.6-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.7-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.8-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.1-pro-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vertex_ai/gemini-3.1-pro-preview-customtools",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/gemini-embedding-2-preview",
+            "type": "embedding",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/gemini-embedding-2",
+            "type": "embedding",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "vertex_ai/xai/grok-4.1-fast-non-reasoning",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "vertex_ai/xai/grok-4.1-fast-reasoning",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "vertex_ai/xai/grok-4.20-non-reasoning",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "vertex_ai/xai/grok-4.20-reasoning",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        }
+    ],
+    "github_copilot": [
+        {
+            "maxTokens": 16000,
+            "name": "github_copilot/claude-haiku-4.5",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16000,
+            "name": "github_copilot/claude-opus-4.5",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16000,
+            "name": "github_copilot/claude-opus-4.6-fast",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16000,
+            "name": "github_copilot/claude-opus-41",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16000,
+            "name": "github_copilot/claude-sonnet-4",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16000,
+            "name": "github_copilot/claude-sonnet-4.5",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 64000,
+            "name": "github_copilot/gemini-2.5-pro",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 64000,
+            "name": "github_copilot/gemini-3-pro-preview",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
             "maxTokens": 4096,
-            "name": "chat-bison",
+            "name": "github_copilot/gpt-3.5-turbo",
             "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
             "maxTokens": 4096,
-            "name": "chat-bison@001",
+            "name": "github_copilot/gpt-3.5-turbo-0613",
             "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
             "maxTokens": 4096,
-            "name": "chat-bison@002",
+            "name": "github_copilot/gpt-4",
             "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 8192,
-            "name": "chat-bison-32k",
+            "maxTokens": 4096,
+            "name": "github_copilot/gpt-4-0613",
             "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 1024,
-            "name": "code-bison",
+            "maxTokens": 4096,
+            "name": "github_copilot/gpt-4-o-preview",
             "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 1024,
-            "name": "code-bison@001",
+            "maxTokens": 16384,
+            "name": "github_copilot/gpt-4.1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "github_copilot/gpt-4.1-2025-04-14",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "github_copilot/gpt-41-copilot",
             "type": "completion",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 64,
-            "name": "code-gecko@001",
-            "type": "completion",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 64,
-            "name": "code-gecko@002",
-            "type": "completion",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 64,
-            "name": "code-gecko",
-            "type": "completion",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "gemini-pro",
+            "maxTokens": 4096,
+            "name": "github_copilot/gpt-4o",
             "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 8192,
-            "name": "gemini-1.0-pro",
+            "maxTokens": 4096,
+            "name": "github_copilot/gpt-4o-2024-05-13",
             "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 8192,
-            "name": "gemini-1.0-pro-001",
+            "maxTokens": 16384,
+            "name": "github_copilot/gpt-4o-2024-08-06",
             "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 8192,
-            "name": "gemini-1.0-pro-002",
+            "maxTokens": 16384,
+            "name": "github_copilot/gpt-4o-2024-11-20",
             "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 8192,
-            "name": "gemini-1.5-pro",
+            "maxTokens": 4096,
+            "name": "github_copilot/gpt-4o-mini",
             "type": "chat",
-            "inputCost": 6.25e-7,
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "github_copilot/gpt-4o-mini-2024-07-18",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "github_copilot/gpt-5",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 64000,
+            "name": "github_copilot/gpt-5-mini",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 64000,
+            "name": "github_copilot/gpt-5.1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 64000,
+            "name": "github_copilot/gpt-5.2",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 64000,
+            "name": "github_copilot/mai-code-1-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000001875,
+            "outputCost": 0.0000045,
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 64000,
+            "name": "github_copilot/mai-code-1-flash-internal",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "github_copilot/text-embedding-3-small",
+            "type": "embedding",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "github_copilot/text-embedding-3-small-inference",
+            "type": "embedding",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "github_copilot/text-embedding-ada-002",
+            "type": "embedding",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        }
+    ],
+    "gigachat": [
+        {
             "maxTokens": 8192,
-            "name": "gemini-1.5-flash-preview-0514",
+            "name": "gigachat/GigaChat-2",
             "type": "chat",
             "inputCost": 0,
             "inputCostUnit": null,
@@ -912,34 +14555,7 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 8192,
-            "name": "gemini-1.5-pro-preview-0514",
-            "type": "chat",
-            "inputCost": 6.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.000001875,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "gemini-1.5-pro-preview-0215",
-            "type": "chat",
-            "inputCost": 6.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.000001875,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "gemini-1.5-pro-preview-0409",
-            "type": "chat",
-            "inputCost": 6.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.000001875,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "gemini-experimental",
+            "name": "gigachat/GigaChat-2-Max",
             "type": "chat",
             "inputCost": 0,
             "inputCostUnit": null,
@@ -947,138 +14563,64 @@ export const AICostModelList = {
             "outputCostUnit": null
         },
         {
-            "maxTokens": 2048,
-            "name": "gemini-pro-vision",
-            "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 2048,
-            "name": "gemini-1.0-pro-vision",
-            "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 2048,
-            "name": "gemini-1.0-pro-vision-001",
-            "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 3072,
-            "name": "textembedding-gecko",
-            "type": "embedding",
-            "inputCost": 6.25e-9,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 3072,
-            "name": "textembedding-gecko-multilingual",
-            "type": "embedding",
-            "inputCost": 6.25e-9,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 3072,
-            "name": "textembedding-gecko-multilingual@001",
-            "type": "embedding",
-            "inputCost": 6.25e-9,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 3072,
-            "name": "textembedding-gecko@001",
-            "type": "embedding",
-            "inputCost": 6.25e-9,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 3072,
-            "name": "textembedding-gecko@003",
-            "type": "embedding",
-            "inputCost": 6.25e-9,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 3072,
-            "name": "text-embedding-preview-0409",
-            "type": "embedding",
-            "inputCost": 6.25e-9,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 3072,
-            "name": "text-multilingual-embedding-preview-0409",
-            "type": "embedding",
-            "inputCost": 6.25e-9,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
             "maxTokens": 8192,
-            "name": "gemini/gemini-1.5-flash-latest",
+            "name": "gigachat/GigaChat-2-Pro",
             "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "gigachat/Embeddings",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "gigachat/Embeddings-2",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "gigachat/EmbeddingsGigaR",
+            "type": "embedding",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "gigachat/GigaEmbeddings-3B-2025-09",
+            "type": "embedding",
             "inputCost": 0,
             "inputCostUnit": null,
             "outputCost": 0,
             "outputCostUnit": null
         }
     ],
-    "vertex_ai-code-chat-models": [
+    "gmi": [
         {
-            "maxTokens": 1024,
-            "name": "codechat-bison",
+            "maxTokens": 32000,
+            "name": "gmi/anthropic/claude-opus-4.5",
             "type": "chat",
-            "inputCost": 1.25e-7,
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
+            "outputCost": 0.000025,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 1024,
-            "name": "codechat-bison@001",
-            "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "codechat-bison-32k",
-            "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.25e-7,
-            "outputCostUnit": "token"
-        }
-    ],
-    "vertex_ai-anthropic_models": [
-        {
-            "maxTokens": 4096,
-            "name": "vertex_ai/claude-3-sonnet@20240229",
+            "maxTokens": 32000,
+            "name": "gmi/anthropic/claude-sonnet-4.5",
             "type": "chat",
             "inputCost": 0.000003,
             "inputCostUnit": "token",
@@ -1086,8 +14628,3510 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 32000,
+            "name": "gmi/anthropic/claude-sonnet-4",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "gmi/anthropic/claude-opus-4",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "gmi/openai/gpt-5.2",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "gmi/openai/gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "gmi/openai/gpt-5",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/openai/gpt-4o",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/openai/gpt-4o-mini",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/deepseek-ai/DeepSeek-V3.2",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/deepseek-ai/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gmi/google/gemini-3-pro-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "gmi/google/gemini-3-flash-preview",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/moonshotai/Kimi-K2-Thinking",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/MiniMaxAI/MiniMax-M2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gmi/zai-org/GLM-4.7-FP8",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        }
+    ],
+    "baseten": [
+        {
+            "maxTokens": null,
+            "name": "baseten/MiniMaxAI/MiniMax-M2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/nvidia/Nemotron-120B-A12B",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/zai-org/GLM-5",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000315,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/zai-org/GLM-4.7",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/zai-org/GLM-4.6",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/moonshotai/Kimi-K2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/moonshotai/Kimi-K2-Thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/moonshotai/Kimi-K2-Instruct-0905",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/deepseek-ai/DeepSeek-V3.1",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "baseten/deepseek-ai/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 7.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "baseten/zai-org/GLM-5.3",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        }
+    ],
+    "gradient_ai": [
+        {
+            "maxTokens": 40960,
+            "name": "gradient_ai/alibaba-qwen3-32b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1024,
+            "name": "gradient_ai/anthropic-claude-3-opus",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "gradient_ai/anthropic-claude-3.5-haiku",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "gradient_ai/anthropic-claude-3.5-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024,
+            "name": "gradient_ai/anthropic-claude-3.7-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "gradient_ai/deepseek-r1-distill-llama-70b",
+            "type": "chat",
+            "inputCost": 9.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "gradient_ai/llama3-8b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "gradient_ai/llama3.3-70b-instruct",
+            "type": "chat",
+            "inputCost": 6.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "gradient_ai/mistral-nemo-instruct-2407",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gradient_ai/openai-gpt-4o",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "gradient_ai/openai-gpt-4o-mini",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 100000,
+            "name": "gradient_ai/openai-o3",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "gradient_ai/openai-o3-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        }
+    ],
+    "lemonade": [
+        {
+            "maxTokens": 32768,
+            "name": "lemonade/Qwen3-Coder-30B-A3B-Instruct-GGUF",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "lemonade/gpt-oss-20b-mxfp4-GGUF",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "lemonade/gpt-oss-120b-mxfp-GGUF",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "lemonade/Gemma-3-4b-it-GGUF",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "lemonade/Qwen3-4B-Instruct-2507-GGUF",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "amazon_nova": [
+        {
+            "maxTokens": 10000,
+            "name": "amazon-nova/nova-micro-v1",
+            "type": "chat",
+            "inputCost": 3.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "amazon-nova/nova-lite-v1",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "amazon-nova/nova-premier-v1",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000,
+            "name": "amazon-nova/nova-pro-v1",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        }
+    ],
+    "groq": [
+        {
+            "maxTokens": 131072,
+            "name": "groq/llama-3.1-8b-instant",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "groq/llama-3.3-70b-versatile",
+            "type": "chat",
+            "inputCost": 5.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "groq/gemma-7b-it",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "groq/meta-llama/llama-prompt-guard-2-22m",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "groq/meta-llama/llama-prompt-guard-2-86m",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "groq/meta-llama/llama-guard-4-12b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "groq/meta-llama/llama-4-maverick-17b-128e-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "groq/meta-llama/llama-4-scout-17b-16e-instruct",
+            "type": "chat",
+            "inputCost": 1.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "groq/moonshotai/kimi-k2-instruct-0905",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "groq/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "groq/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "groq/openai/gpt-oss-safeguard-20b",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "groq/qwen/qwen3.6-27b",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "groq/qwen/qwen3-32b",
+            "type": "chat",
+            "inputCost": 2.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "groq/qwen/qwen3.8-27b",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        }
+    ],
+    "heroku": [
+        {
+            "maxTokens": 8192,
+            "name": "heroku/claude-3-5-haiku",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "heroku/claude-3-5-sonnet-latest",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "heroku/claude-3-7-sonnet",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "heroku/claude-4-sonnet",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        }
+    ],
+    "hyperbolic": [
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/NousResearch/Hermes-3-Llama-3.1-70B",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "hyperbolic/Qwen/QwQ-32B",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "hyperbolic/Qwen/Qwen2.5-72B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/Qwen/Qwen2.5-Coder-32B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "hyperbolic/Qwen/Qwen3-235B-A22B",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/deepseek-ai/DeepSeek-R1",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "hyperbolic/deepseek-ai/DeepSeek-R1-0528",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/deepseek-ai/DeepSeek-V3",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/deepseek-ai/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/meta-llama/Llama-3.2-3B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "hyperbolic/meta-llama/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "hyperbolic/meta-llama/Meta-Llama-3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/meta-llama/Meta-Llama-3.1-405B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/meta-llama/Meta-Llama-3.1-70B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "hyperbolic/meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "hyperbolic/moonshotai/Kimi-K2-Instruct",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        }
+    ],
+    "ai21": [
+        {
+            "maxTokens": 8192,
+            "name": "j2-light",
+            "type": "completion",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "j2-mid",
+            "type": "completion",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "j2-ultra",
+            "type": "completion",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-1.5",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-1.5-large",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-1.5-large@001",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-1.5-mini",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-1.5-mini@001",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-large-1.6",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-large-1.7",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-mini-1.6",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "jamba-mini-1.7",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "crusoe": [
+        {
+            "maxTokens": 163840,
+            "name": "crusoe/deepseek-ai/DeepSeek-R1-0528",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000007,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "crusoe/deepseek-ai/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "crusoe/google/gemma-3-12b-it",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "crusoe/meta-llama/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "crusoe/moonshotai/Kimi-K2-Thinking",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "crusoe/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "crusoe/Qwen/Qwen3-235B-A22B-Instruct-2507",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        }
+    ],
+    "inception": [
+        {
+            "maxTokens": 50000,
+            "name": "inception/mercury-2",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "text-completion-inception": [
+        {
+            "maxTokens": 8192,
+            "name": "text-completion-inception/mercury-edit-2",
+            "type": "completion",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "lambda_ai": [
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/deepseek-llama3.3-70b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/deepseek-r1-0528",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/deepseek-r1-671b",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/deepseek-v3-0324",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/hermes3-405b",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/hermes3-70b",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/hermes3-8b",
+            "type": "chat",
+            "inputCost": 2.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/lfm-40b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/lfm-7b",
+            "type": "chat",
+            "inputCost": 2.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "lambda_ai/llama-4-maverick-17b-128e-instruct-fp8",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "lambda_ai/llama-4-scout-17b-16e-instruct",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/llama3.1-405b-instruct-fp8",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/llama3.1-70b-instruct-fp8",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/llama3.1-8b-instruct",
+            "type": "chat",
+            "inputCost": 2.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/llama3.1-nemotron-70b-instruct-fp8",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/llama3.2-11b-vision-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/llama3.2-3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/llama3.3-70b-instruct-fp8",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/qwen25-coder-32b-instruct",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "lambda_ai/qwen3-32b-fp8",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "meta": [
+        {
+            "maxTokens": 131072,
+            "name": "meta/muse-spark-1.1",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000425,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "meta/muse-spark-1.2",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000425,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "meta/muse-spark-1.2-contributor",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "meta/muse-spark-1.3",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000425,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "meta/muse-spark-1.3-contributor",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "meta_llama": [
+        {
+            "maxTokens": 4028,
+            "name": "meta_llama/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4028,
+            "name": "meta_llama/Llama-3.3-8B-Instruct",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4028,
+            "name": "meta_llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4028,
+            "name": "meta_llama/Llama-4-Scout-17B-16E-Instruct-FP8",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        }
+    ],
+    "minimax": [
+        {
+            "maxTokens": null,
+            "name": "minimax/MiniMax-M2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "minimax/MiniMax-M2.1-lightning",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "minimax/MiniMax-M2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "minimax/MiniMax-M2.5-lightning",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "minimax/MiniMax-M2",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "minimax/MiniMax-M3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        }
+    ],
+    "mistral": [
+        {
+            "maxTokens": 8191,
+            "name": "mistral/codestral-2405",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/codestral-2508",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/codestral-latest",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/codestral-mamba-latest",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/devstral-medium-2507",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/devstral-small-2505",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/devstral-small-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/devstral-small-latest",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/labs-devstral-small-2512",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/devstral-latest",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/devstral-medium-latest",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/devstral-2512",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/ministral-14b-2512",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/ministral-14b-latest",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/ministral-3b-2512",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/ministral-3b-latest",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral/mistral-embed-2312",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-medium-3",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "mistral/voxtral-small-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "mistral/voxtral-small-latest",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/zai-glm-5-2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/glm-5-2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40000,
+            "name": "mistral/magistral-medium-2506",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40000,
+            "name": "mistral/magistral-medium-2509",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40000,
+            "name": "mistral/magistral-medium-1-2-2509",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/magistral-medium-latest",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40000,
+            "name": "mistral/magistral-small-2506",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/magistral-small-latest",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40000,
+            "name": "mistral/magistral-small-1-2-2509",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral/mistral-embed",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral/codestral-embed",
+            "type": "embedding",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "mistral/codestral-embed-2505",
+            "type": "embedding",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/mistral-large-2402",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/mistral-large-2407",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/mistral-large-2411",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-large-latest",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-large-3",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-large-2512",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-medium",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/mistral-medium-2312",
+            "type": "chat",
+            "inputCost": 0.0000027,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000081,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/mistral-medium-2505",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/mistral-medium-2508",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-medium-2604",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-medium-latest",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/mistral-medium-3-1-2508",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-medium-3-5",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/mistral-small",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-small-latest",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/mistral-small-3-2-2506",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/ministral-3-3b-2512",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/ministral-3-8b-2512",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/ministral-3-14b-2512",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/ministral-8b-2512",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/ministral-8b-latest",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/mistral-tiny",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/open-codestral-mamba",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/open-mistral-7b",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/open-mistral-nemo",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/open-mistral-nemo-2407",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/open-mixtral-8x22b",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "mistral/open-mixtral-8x7b",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/pixtral-12b-2409",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/pixtral-large-2411",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/pixtral-large-latest",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-small-2603",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/labs-leanstral-1-5",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-medium-3.5",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-vibe-cli-latest",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-vibe-cli-with-tools",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "mistral/mistral-vibe-cli-fast",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/mistral-code-latest",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "mistral/mistral-code-fim-latest",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "mistral/mistral-code-agent-latest",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "mistral/labs-leanstral-1-5-1",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "moonshot": [
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/kimi-k2-0711-preview",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshot/kimi-k2-0905-preview",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshot/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshot/kimi-k2-turbo-preview",
+            "type": "chat",
+            "inputCost": 0.00000115,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshot/kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshot/kimi-k2.6",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "moonshot/kimi-k3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/kimi-latest",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/kimi-latest-128k",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "moonshot/kimi-latest-32k",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "moonshot/kimi-latest-8k",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/kimi-thinking-preview",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshot/kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "moonshot/kimi-k2-thinking-turbo",
+            "type": "chat",
+            "inputCost": 0.00000115,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/moonshot-v1-128k",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/moonshot-v1-128k-0430",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/moonshot-v1-128k-vision-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "moonshot/moonshot-v1-32k",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "moonshot/moonshot-v1-32k-0430",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "moonshot/moonshot-v1-32k-vision-preview",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "moonshot/moonshot-v1-8k",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "moonshot/moonshot-v1-8k-0430",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "moonshot/moonshot-v1-8k-vision-preview",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "moonshot/moonshot-v1-auto",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        }
+    ],
+    "morph": [
+        {
+            "maxTokens": 16000,
+            "name": "morph/morph-v3-fast",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16000,
+            "name": "morph/morph-v3-large",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000019,
+            "outputCostUnit": "token"
+        }
+    ],
+    "nscale": [
+        {
+            "maxTokens": null,
+            "name": "nscale/Qwen/QwQ-32B",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/Qwen/Qwen2.5-Coder-32B-Instruct",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/Qwen/Qwen2.5-Coder-3B-Instruct",
+            "type": "chat",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/Qwen/Qwen2.5-Coder-7B-Instruct",
+            "type": "chat",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+            "type": "chat",
+            "inputCost": 3.75e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.75e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/deepseek-ai/DeepSeek-R1-Distill-Llama-8B",
+            "type": "chat",
+            "inputCost": 2.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 9e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 7e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/meta-llama/Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/meta-llama/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "nscale/mistralai/mixtral-8x22b-instruct-v0.1",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "nebius": [
+        {
+            "maxTokens": 128000,
+            "name": "nebius/deepseek-ai/DeepSeek-R1",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 164000,
+            "name": "nebius/deepseek-ai/DeepSeek-R1-0528",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/deepseek-ai/DeepSeek-V3",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/deepseek-ai/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 110000,
+            "name": "nebius/google/gemma-3-27b-it",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/meta-llama/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/meta-llama/Llama-Guard-3-8B",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 6e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/meta-llama/Meta-Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 6e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/meta-llama/Meta-Llama-3.1-70B-Instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/meta-llama/Meta-Llama-3.1-405B-Instruct",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/mistralai/Mistral-Nemo-Instruct-2407",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/NousResearch/Hermes-3-Llama-3.1-405B",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/nvidia/Llama-3.1-Nemotron-Ultra-253B-v1",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/nvidia/Llama-3.3-Nemotron-Super-49B-v1",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/Qwen/Qwen3-235B-A22B",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40960,
+            "name": "nebius/Qwen/Qwen3-32B",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nebius/Qwen/Qwen3-30B-A3B",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nebius/Qwen/Qwen3-14B",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nebius/Qwen/Qwen3-4B",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nebius/Qwen/QwQ-32B",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/Qwen/Qwen2.5-72B-Instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/Qwen/Qwen2.5-32B-Instruct",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nebius/Qwen/Qwen2.5-Coder-7B",
+            "type": "chat",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "nebius/Qwen/Qwen2.5-VL-72B-Instruct",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/Qwen/Qwen2-VL-72B-Instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/Qwen/Qwen2-VL-7B-Instruct",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 6e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "nebius/deepseek-ai/DeepSeek-V4-Flash",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024000,
+            "name": "nebius/deepseek-ai/DeepSeek-V4-Flash-0731",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "nebius/deepseek-ai/DeepSeek-V4-Pro",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 196608,
+            "name": "nebius/MiniMaxAI/MiniMax-M2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "nebius/MiniMaxAI/MiniMax-M3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/moonshotai/Kimi-K2.6",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/moonshotai/Kimi-K2.7-Code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024000,
+            "name": "nebius/moonshotai/Kimi-K3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/NousResearch/Hermes-4-405B",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/NousResearch/Hermes-4-70B",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/nvidia/Cosmos3-Super-Reasoner",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/nvidia/Llama-3_1-Nemotron-Ultra-253B-v1",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/nvidia/Nemotron-3-Nano-Omni",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/nvidia/nemotron-3-super-120b-a12b",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "nebius/nvidia/Nemotron-3-Ultra-550b-a55b",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "nebius/nvidia/Nemotron-3_5-Lightning",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "nebius/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "nebius/openbmb/MiniCPM-V-4_5",
+            "type": "chat",
+            "inputCost": 6.58e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000111,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/Qwen/Qwen3-235B-A22B-Instruct-2507",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/Qwen/Qwen3-30B-A3B-Instruct-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "nebius/Qwen/Qwen3-Next-80B-A3B-Thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "nebius/Qwen/Qwen3.5-397B-A17B",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 202752,
+            "name": "nebius/zai-org/GLM-5.1",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "nebius/zai-org/GLM-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1024000,
+            "name": "nebius/zai-org/GLM-5.3-Flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nebius/BAAI/bge-en-icl",
+            "type": "embedding",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "nebius/BAAI/bge-multilingual-gemma2",
+            "type": "embedding",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "nebius/intfloat/e5-mistral-7b-instruct",
+            "type": "embedding",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 40960,
+            "name": "nebius/Qwen/Qwen3-Embedding-8B",
+            "type": "embedding",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "oci": [
+        {
+            "maxTokens": 4000,
+            "name": "oci/meta.llama-3.1-8b-instruct",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/meta.llama-3.1-70b-instruct",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/meta.llama-3.1-405b-instruct",
+            "type": "chat",
+            "inputCost": 0.00001068,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001068,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/meta.llama-3.2-90b-vision-instruct",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/meta.llama-3.3-70b-instruct",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "oci/meta.llama-4-maverick-17b-128e-instruct-fp8",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "oci/meta.llama-4-scout-17b-16e-instruct",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-3-fast",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-3-mini",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-3-mini-fast",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "oci/xai.grok-4",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-latest",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-a-03-2025",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-plus-latest",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "oci/google.gemini-2.5-flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "oci/google.gemini-2.5-pro",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "oci/google.gemini-2.5-flash-lite",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "oci/cohere.command-a-vision",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "oci/cohere.command-a-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "oci/cohere.embed-multilingual-image-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-a-reasoning-08-2025",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-a-vision-07-2025",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-a-translate-08-2025",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 9e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-r-08-2024",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/cohere.command-r-plus-08-2024",
+            "type": "chat",
+            "inputCost": 0.00000156,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/meta.llama-3.2-11b-vision-instruct",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "oci/meta.llama-3.3-70b-instruct-fp8-dynamic",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-4-fast",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-4.1-fast",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-4.20",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-4.20-multi-agent",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "oci/xai.grok-code-fast-1",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "oci/openai.gpt-5",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "oci/openai.gpt-5-mini",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "oci/openai.gpt-5-nano",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "oci/cohere.embed-english-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "oci/cohere.embed-english-light-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "oci/cohere.embed-multilingual-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "oci/cohere.embed-multilingual-light-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "oci/cohere.embed-english-image-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "oci/cohere.embed-english-light-image-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 512,
+            "name": "oci/cohere.embed-multilingual-light-image-v3.0",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "oci/cohere.embed-v4.0",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "ollama": [
+        {
+            "maxTokens": 8192,
+            "name": "ollama/codegeex4",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/codegemma",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
             "maxTokens": 4096,
-            "name": "vertex_ai/claude-3-haiku@20240307",
+            "name": "ollama/codellama",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/deepseek-coder-v2-base",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/deepseek-coder-v2-instruct",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/deepseek-coder-v2-lite-base",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/deepseek-coder-v2-lite-instruct",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 163840,
+            "name": "ollama/deepseek-v3.1:671b-cloud",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "ollama/gpt-oss:120b-cloud",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "ollama/gpt-oss:20b-cloud",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/internlm2_5-20b-chat",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ollama/llama2",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ollama/llama2-uncensored",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ollama/llama2:13b",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ollama/llama2:70b",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ollama/llama2:7b",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/llama3",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/llama3.1",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/llama3:70b",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/llama3:8b",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/mistral",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/mistral-7B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "ollama/mistral-7B-Instruct-v0.2",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "ollama/mistral-large-instruct-2407",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "ollama/mixtral-8x22B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "ollama/mixtral-8x7B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "ollama/orca-mini",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 262144,
+            "name": "ollama/qwen3-coder:480b-cloud",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "ollama/vicuna",
+            "type": "completion",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "openrouter": [
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/anthropic/claude-3-haiku",
             "type": "chat",
             "inputCost": 2.5e-7,
             "inputCostUnit": "token",
@@ -1095,19 +18139,422 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "vertex_ai/claude-3-opus@20240229",
+            "maxTokens": 8192,
+            "name": "openrouter/anthropic/claude-3.5-sonnet",
             "type": "chat",
-            "inputCost": 0.0000015,
+            "inputCost": 0.000003,
             "inputCostUnit": "token",
-            "outputCost": 0.0000075,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
-        }
-    ],
-    "cohere_chat": [
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-3.7-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "openrouter/anthropic/claude-opus-4",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "openrouter/anthropic/claude-opus-4.1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "openrouter/anthropic/claude-sonnet-4",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-sonnet-4.6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "openrouter/anthropic/claude-opus-4.5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-opus-4.6",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "openrouter/anthropic/claude-sonnet-4.5",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "openrouter/anthropic/claude-haiku-4.5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-opus-4.7",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "openrouter/bytedance/ui-tars-1.5-7b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/deepseek/deepseek-chat",
+            "type": "chat",
+            "inputCost": 3.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/deepseek/deepseek-chat-v3-0324",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "openrouter/deepseek/deepseek-chat-v3.1",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "openrouter/deepseek/deepseek-v3.2",
+            "type": "chat",
+            "inputCost": 2.69e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "openrouter/deepseek/deepseek-v3.2-exp",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/deepseek/deepseek-r1",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/deepseek/deepseek-r1-0528",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000215,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "openrouter/deepseek/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.00000132,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "openrouter/deepseek/deepseek-v4-pro-0813",
+            "type": "chat",
+            "inputCost": 0.00000132,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/google/gemini-2.0-flash-001",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/google/gemini-2.5-flash",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/google/gemini-2.5-pro",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/google/gemini-3-pro-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/google/gemini-3-flash-preview",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.1-flash-lite-preview",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.1-flash-lite",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.1-pro-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/gryphe/mythomax-l2-13b",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 6e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000,
+            "name": "openrouter/mancer/weaver",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "openrouter/meta-llama/llama-3-70b-instruct",
+            "type": "chat",
+            "inputCost": 5.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 204800,
+            "name": "openrouter/minimax/minimax-m2",
+            "type": "chat",
+            "inputCost": 2.55e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000102,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/mistralai/devstral-2512",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/mistralai/ministral-3b-2512",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/mistralai/ministral-8b-2512",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/mistralai/ministral-14b-2512",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/mistralai/mistral-large-2512",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "openrouter/mistralai/mistral-7b-instruct",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "openrouter/mistralai/mistral-large",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/mistralai/mistral-small-3.1-24b-instruct",
+            "type": "chat",
+            "inputCost": 3.51e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.55e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/mistralai/mistral-small-3.2-24b-instruct",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/mistralai/mixtral-8x22b-instruct",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/moonshotai/kimi-k2.5",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000225,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "openrouter/nvidia/nemotron-3.5-lightning",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
         {
             "maxTokens": 4096,
-            "name": "command-r",
+            "name": "openrouter/openai/gpt-3.5-turbo",
             "type": "chat",
             "inputCost": 5e-7,
             "inputCostUnit": "token",
@@ -1116,71 +18563,2352 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 4096,
-            "name": "command-light",
+            "name": "openrouter/openai/gpt-3.5-turbo-16k",
             "type": "chat",
-            "inputCost": 0.000015,
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/openai/gpt-4",
+            "type": "chat",
+            "inputCost": 0.00003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/openai/gpt-4.1",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/openai/gpt-4.1-mini",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/openai/gpt-4.1-nano",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-4o",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/openai/gpt-4o-2024-05-13",
+            "type": "chat",
+            "inputCost": 0.000005,
             "inputCostUnit": "token",
             "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-5-chat",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5-codex",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.2-codex",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5-mini",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5-nano",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.1-codex-max",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.2",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-5.2-chat",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.2-pro",
+            "type": "chat",
+            "inputCost": 0.000021,
+            "inputCostUnit": "token",
+            "outputCost": 0.000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 3.7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o3-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o3-mini-high",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 33792,
+            "name": "openrouter/qwen/qwen-2.5-coder-32b-instruct",
+            "type": "chat",
+            "inputCost": 6.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "openrouter/qwen/qwen-vl-plus",
+            "type": "chat",
+            "inputCost": 2.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262100,
+            "name": "openrouter/qwen/qwen3-coder",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3-coder-plus",
+            "type": "chat",
+            "inputCost": 6.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000325,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/qwen/qwen3-235b-a22b-2507",
+            "type": "chat",
+            "inputCost": 8.75e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/qwen/qwen3-235b-a22b-thinking-2507",
+            "type": "chat",
+            "inputCost": 2.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000023,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.6-plus",
+            "type": "chat",
+            "inputCost": 3.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000195,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.5-35b-a3b",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.5-27b",
+            "type": "chat",
+            "inputCost": 1.95e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.5-122b-a10b",
+            "type": "chat",
+            "inputCost": 2.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.5-flash-02-23",
+            "type": "chat",
+            "inputCost": 6.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.5-plus-02-15",
+            "type": "chat",
+            "inputCost": 2.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000156,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.5-397b-a17b",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/switchpoint/router",
+            "type": "chat",
+            "inputCost": 8.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000034,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 4096,
-            "name": "command-r-plus",
+            "name": "openrouter/undi95/remm-slerp-l2-13b",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "openrouter/x-ai/grok-4",
             "type": "chat",
             "inputCost": 0.000003,
             "inputCostUnit": "token",
             "outputCost": 0.000015,
             "outputCostUnit": "token"
-        }
-    ],
-    "cohere": [
+        },
         {
-            "maxTokens": 4096,
-            "name": "command-nightly",
-            "type": "completion",
-            "inputCost": 0.000015,
+            "maxTokens": 131000,
+            "name": "openrouter/z-ai/glm-4.6",
+            "type": "chat",
+            "inputCost": 5.5e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000015,
+            "outputCost": 0.0000022,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "command",
-            "type": "completion",
-            "inputCost": 0.000015,
+            "maxTokens": 131000,
+            "name": "openrouter/z-ai/glm-4.6:exacto",
+            "type": "chat",
+            "inputCost": 4.5e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000015,
+            "outputCost": 0.0000019,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "command-medium-beta",
-            "type": "completion",
-            "inputCost": 0.000015,
+            "maxTokens": 16384,
+            "name": "openrouter/xiaomi/mimo-v2-flash",
+            "type": "chat",
+            "inputCost": 1e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000015,
+            "outputCost": 3e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "command-xlarge-beta",
-            "type": "completion",
-            "inputCost": 0.000015,
+            "maxTokens": 16384,
+            "name": "openrouter/xiaomi/mimo-v2.5-pro",
+            "type": "chat",
+            "inputCost": 4.35e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000015,
+            "outputCost": 8.7e-7,
             "outputCostUnit": "token"
-        }
-    ],
-    "replicate": [
+        },
         {
-            "maxTokens": 4096,
-            "name": "replicate/llama-2-70b-chat:2c1608e18606fad2812020dc541930f2d0495ce32eee50074220b87300bc16e1",
+            "maxTokens": 131072,
+            "name": "openrouter/xiaomi/mimo-v2.5",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "openrouter/z-ai/glm-4.7",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "openrouter/z-ai/glm-4.7-flash",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/z-ai/glm-5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000192,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/z-ai/glm-5.1",
+            "type": "chat",
+            "inputCost": 9.66e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "openrouter/minimax/minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/minimax/minimax-m2.5",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000108,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "openrouter/openrouter/auto",
             "type": "chat",
             "inputCost": 0,
             "inputCostUnit": null,
             "outputCost": 0,
             "outputCostUnit": null
         },
+        {
+            "maxTokens": 200000,
+            "name": "openrouter/openrouter/free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openrouter/bodybuilder",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-fable-5.1",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-opus-4.8",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/anthropic/claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/google/gemini-2.5-flash-lite",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/google/gemini-3.5-flash",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000009,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.5-flash-lite",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.6-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.7-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.8-flash",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-4o-mini",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.1",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.3-codex",
+            "type": "chat",
+            "inputCost": 0.00000175,
+            "inputCostUnit": "token",
+            "outputCost": 0.000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.4",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.4-mini",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.4-nano",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.6-luna",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.6-terra",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o3",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o4-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "openrouter/x-ai/grok-4.20",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "openrouter/x-ai/grok-4.20-multi-agent",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "openrouter/x-ai/grok-4.3",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "openrouter/x-ai/grok-4.5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "openrouter/x-ai/grok-4.6",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "openrouter/x-ai/grok-build-0.1",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512000,
+            "name": "openrouter/minimax/minimax-m3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/qwen/qwen3.7-plus",
+            "type": "chat",
+            "inputCost": 3.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000128,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-6-astra",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/qwen/qwen3.8-flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/z-ai/glm-5.3-flash",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "openrouter/deepseek/deepseek-v4-flash-vision-exp",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/z-ai/glm-5.3",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/qwen/qwen3.8-27b",
+            "type": "chat",
+            "inputCost": 4.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "openrouter/qwen/qwen3.8-2.4t-a95b",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/nvidia/nemotron-3.5-lightning:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/qwen/qwen3.8-max",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 943718,
+            "name": "openrouter/deepseek/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 6.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.7-flash",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/poolside/laguna-s-2.1",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/poolside/laguna-s-2.1:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 943718,
+            "name": "openrouter/moonshotai/kimi-k3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/poolside/laguna-xs-2.1",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/poolside/laguna-xs-2.1:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 58982,
+            "name": "openrouter/google/gemini-3.1-flash-lite-image",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/google/gemini-3.1-flash-image",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/google/gemini-3-pro-image",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/z-ai/glm-5.2",
+            "type": "chat",
+            "inputCost": 9.66e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 230400,
+            "name": "openrouter/z-ai/glm-5.2:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/moonshotai/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 6.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000034,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 117964,
+            "name": "openrouter/nvidia/nemotron-3.5-content-safety",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/nvidia/nemotron-3.5-content-safety:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b",
+            "type": "chat",
+            "inputCost": 6.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 943718,
+            "name": "openrouter/minimax/minimax-m3:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/qwen/qwen3.7-max",
+            "type": "chat",
+            "inputCost": 0.000001475,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004425,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 209715,
+            "name": "openrouter/mistralai/mistral-medium-3-5",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.5-plus-20260420",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.6-flash",
+            "type": "chat",
+            "inputCost": 1.875e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/qwen/qwen3.6-35b-a3b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.6-max-preview",
+            "type": "chat",
+            "inputCost": 0.000001027,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006162,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3.6-27b",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.5-pro",
+            "type": "chat",
+            "inputCost": 0.00003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "openrouter/deepseek/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 8.778e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.7556e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/moonshotai/kimi-k2.6",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/google/gemma-4-26b-a4b-it",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/google/gemma-4-26b-a4b-it:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/google/gemma-4-31b-it",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/google/gemma-4-31b-it:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/z-ai/glm-5v-turbo",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/minimax/minimax-m2.7",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 176947,
+            "name": "openrouter/minimax/minimax-m2.7:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 209715,
+            "name": "openrouter/mistralai/mistral-small-2603",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "openrouter/z-ai/glm-5-turbo",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/nvidia/nemotron-3-super-120b-a12b",
+            "type": "chat",
+            "inputCost": 8.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/qwen/qwen3.5-9b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.4-pro",
+            "type": "chat",
+            "inputCost": 0.00003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 58982,
+            "name": "openrouter/google/gemini-3.1-flash-image-preview",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-3.1-pro-preview-customtools",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3-max-thinking",
+            "type": "chat",
+            "inputCost": 7.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000039,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/qwen/qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "openrouter/minimax/minimax-m2-her",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-audio",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-audio-mini",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/nvidia/nemotron-3-nano-30b-a3b",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/z-ai/glm-4.6v",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/google/gemini-3-pro-image-preview",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.1-codex",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5.1-codex-mini",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100352,
+            "name": "openrouter/moonshotai/kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 26214,
+            "name": "openrouter/mistralai/voxtral-small-24b-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/openai/gpt-oss-safeguard-20b",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-vl-32b-instruct",
+            "type": "chat",
+            "inputCost": 1.04e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.16e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-vl-8b-thinking",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000021,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-vl-8b-instruct",
+            "type": "chat",
+            "inputCost": 1.17e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.55e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/google/gemini-2.5-flash-image",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-vl-30b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/qwen/qwen3-vl-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "openrouter/openai/gpt-5-pro",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-vl-235b-a22b-thinking",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-vl-235b-a22b-instruct",
+            "type": "chat",
+            "inputCost": 2.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000019,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3-max",
+            "type": "chat",
+            "inputCost": 7.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000039,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/deepseek/deepseek-v3.1-terminus",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/qwen/qwen3-coder-flash",
+            "type": "chat",
+            "inputCost": 1.95e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.75e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-next-80b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/qwen/qwen3-next-80b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen-plus-2025-07-28",
+            "type": "chat",
+            "inputCost": 2.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100352,
+            "name": "openrouter/moonshotai/kimi-k2-0905",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen3-30b-a3b-thinking-2507",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 104857,
+            "name": "openrouter/mistralai/mistral-medium-3.1",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/z-ai/glm-4.5v",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 204800,
+            "name": "openrouter/mistralai/codestral-2508",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 235929,
+            "name": "openrouter/qwen/qwen3-coder-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "openrouter/qwen/qwen3-30b-a3b-instruct-2507",
+            "type": "chat",
+            "inputCost": 4.815e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.9305e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 98304,
+            "name": "openrouter/z-ai/glm-4.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 98304,
+            "name": "openrouter/z-ai/glm-4.5-air",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100352,
+            "name": "openrouter/moonshotai/kimi-k2",
+            "type": "chat",
+            "inputCost": 5.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000023,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40000,
+            "name": "openrouter/minimax/minimax-m1",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o3-pro",
+            "type": "chat",
+            "inputCost": 0.00002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "openrouter/google/gemini-2.5-pro-preview",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 104857,
+            "name": "openrouter/mistralai/mistral-medium-3",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65535,
+            "name": "openrouter/google/gemini-2.5-pro-preview-05-06",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/meta-llama/llama-guard-4-12b",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/qwen/qwen3-30b-a3b",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/qwen/qwen3-8b",
+            "type": "chat",
+            "inputCost": 1.17e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.55e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/qwen/qwen3-14b",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/qwen/qwen3-32b",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "openrouter/qwen/qwen3-235b-a22b",
+            "type": "chat",
+            "inputCost": 4.55e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000182,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o4-mini-high",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 115200,
+            "name": "openrouter/meta-llama/llama-4-maverick",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.96e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/meta-llama/llama-4-scout",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "openrouter/openai/o1-pro",
+            "type": "chat",
+            "inputCost": 0.00015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/google/gemma-3-4b-it",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/google/gemma-3-12b-it",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 117964,
+            "name": "openrouter/google/gemma-3-27b-it",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 26214,
+            "name": "openrouter/mistralai/mistral-saba",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 115200,
+            "name": "openrouter/qwen/qwen2.5-vl-72b-instruct",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "openrouter/qwen/qwen-plus",
+            "type": "chat",
+            "inputCost": 2.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/mistralai/mistral-small-24b-instruct-2501",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 7372,
+            "name": "openrouter/deepseek/deepseek-r1-distill-llama-70b",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 900172,
+            "name": "openrouter/minimax/minimax-01",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/meta-llama/llama-3.3-70b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-4o-2024-11-20",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 104857,
+            "name": "openrouter/mistralai/mistral-large-2407",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 29491,
+            "name": "openrouter/qwen/qwen-2.5-7b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 54000,
+            "name": "openrouter/meta-llama/llama-3.2-1b-instruct",
+            "type": "chat",
+            "inputCost": 2.7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.01e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 117964,
+            "name": "openrouter/meta-llama/llama-3.2-3b-instruct",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/qwen/qwen-2.5-72b-instruct",
+            "type": "chat",
+            "inputCost": 3.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-4o-2024-08-06",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/meta-llama/llama-3.1-70b-instruct",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 117964,
+            "name": "openrouter/meta-llama/llama-3.1-8b-instruct",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/mistralai/mistral-nemo",
+            "type": "chat",
+            "inputCost": 1.9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "openrouter/openai/gpt-4o-mini-2024-07-18",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "openrouter/google/gemma-2-27b-it",
+            "type": "chat",
+            "inputCost": 6.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/openai/gpt-4-turbo",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "openrouter/openai/gpt-4-turbo-preview",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 3685,
+            "name": "openrouter/openai/gpt-3.5-turbo-instruct",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        }
+    ],
+    "ovhcloud": [
+        {
+            "maxTokens": 131000,
+            "name": "ovhcloud/DeepSeek-R1-Distill-Llama-70B",
+            "type": "chat",
+            "inputCost": 6.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "ovhcloud/Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "ovhcloud/Meta-Llama-3_1-70B-Instruct",
+            "type": "chat",
+            "inputCost": 6.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "ovhcloud/Meta-Llama-3_3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 6.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 127000,
+            "name": "ovhcloud/Mistral-7B-Instruct-v0.3",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 118000,
+            "name": "ovhcloud/Mistral-Nemo-Instruct-2407",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "ovhcloud/Mistral-Small-3.2-24B-Instruct-2506",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "ovhcloud/Mixtral-8x7B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": 6.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "ovhcloud/Qwen2.5-Coder-32B-Instruct",
+            "type": "chat",
+            "inputCost": 8.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "ovhcloud/Qwen2.5-VL-72B-Instruct",
+            "type": "chat",
+            "inputCost": 9.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "ovhcloud/Qwen3-32B",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "ovhcloud/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131000,
+            "name": "ovhcloud/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "ovhcloud/llava-v1.6-mistral-7b-hf",
+            "type": "chat",
+            "inputCost": 2.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "ovhcloud/mamba-codestral-7B-v0.1",
+            "type": "chat",
+            "inputCost": 1.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.9e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "perplexity": [
+        {
+            "maxTokens": 16384,
+            "name": "perplexity/codellama-34b-instruct",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "perplexity/codellama-70b-instruct",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000028,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "perplexity/llama-2-70b-chat",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000028,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "perplexity/llama-3.1-70b-instruct",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "perplexity/llama-3.1-8b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "perplexity/mistral-7b-instruct",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "perplexity/mixtral-8x7b-instruct",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "perplexity/pplx-70b-chat",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000028,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "perplexity/pplx-70b-online",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": "request",
+            "outputCost": 0.0000028,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "perplexity/pplx-7b-chat",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "perplexity/pplx-7b-online",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": "request",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "perplexity/sonar",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "perplexity/sonar-deep-research",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "perplexity/sonar-medium-chat",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 12000,
+            "name": "perplexity/sonar-medium-online",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": "request",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "perplexity/sonar-pro",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "perplexity/sonar-reasoning",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "perplexity/sonar-reasoning-pro",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "perplexity/sonar-small-chat",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 12000,
+            "name": "perplexity/sonar-small-online",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": "request",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "perplexity/pplx-embed-v1-0.6b",
+            "type": "embedding",
+            "inputCost": 4e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "perplexity/pplx-embed-v1-4b",
+            "type": "embedding",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "perplexity/pplx-embed-context-v1-0.6b",
+            "type": "embedding",
+            "inputCost": 8e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "perplexity/pplx-embed-context-v1-4b",
+            "type": "embedding",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "publicai": [
+        {
+            "maxTokens": 4096,
+            "name": "publicai/swiss-ai/apertus-8b-instruct",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/swiss-ai/apertus-70b-instruct",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/aisingapore/Gemma-SEA-LION-v4-27B-IT",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/BSC-LT/salamandra-7b-instruct-tools-16k",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/BSC-LT/ALIA-40b-instruct_Q8_0",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/allenai/Olmo-3-7B-Instruct",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/aisingapore/Qwen-SEA-LION-v4-32B-IT",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/allenai/Olmo-3-7B-Think",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "publicai/allenai/Olmo-3-32B-Think",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "replicate": [
         {
             "maxTokens": 4096,
             "name": "replicate/meta/llama-2-13b",
@@ -1236,7 +20964,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8192,
             "name": "replicate/meta/llama-3-70b",
             "type": "chat",
             "inputCost": 6.5e-7,
@@ -1245,7 +20973,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8192,
             "name": "replicate/meta/llama-3-70b-instruct",
             "type": "chat",
             "inputCost": 6.5e-7,
@@ -1254,7 +20982,7 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8086,
             "name": "replicate/meta/llama-3-8b",
             "type": "chat",
             "inputCost": 5e-8,
@@ -1263,17 +20991,8 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
+            "maxTokens": 8086,
             "name": "replicate/meta/llama-3-8b-instruct",
-            "type": "chat",
-            "inputCost": 5e-8,
-            "inputCostUnit": "token",
-            "outputCost": 2.5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "replicate/mistralai/mistral-7b-v0.1",
             "type": "chat",
             "inputCost": 5e-8,
             "inputCostUnit": "token",
@@ -1291,1258 +21010,267 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 4096,
+            "name": "replicate/mistralai/mistral-7b-v0.1",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
             "name": "replicate/mistralai/mixtral-8x7b-instruct-v0.1",
             "type": "chat",
             "inputCost": 3e-7,
             "inputCostUnit": "token",
             "outputCost": 0.000001,
             "outputCostUnit": "token"
-        }
-    ],
-    "openrouter": [
-        {
-            "maxTokens": 65536,
-            "name": "openrouter/microsoft/wizardlm-2-8x22b:nitro",
-            "type": "chat",
-            "inputCost": 0.000001,
-            "inputCostUnit": "token",
-            "outputCost": 0.000001,
-            "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8192,
-            "name": "openrouter/google/gemini-pro-1.5",
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-5",
             "type": "chat",
-            "inputCost": 0.0000025,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000075,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 65536,
-            "name": "openrouter/mistralai/mixtral-8x22b-instruct",
-            "type": "chat",
-            "inputCost": 6.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 6.5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 128000,
-            "name": "openrouter/cohere/command-r-plus",
-            "type": "chat",
-            "inputCost": 0.000003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 32768,
-            "name": "openrouter/databricks/dbrx-instruct",
-            "type": "chat",
-            "inputCost": 6e-7,
-            "inputCostUnit": "token",
-            "outputCost": 6e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 200000,
-            "name": "openrouter/anthropic/claude-3-haiku",
-            "type": "chat",
-            "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000125,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 200000,
-            "name": "openrouter/anthropic/claude-3-sonnet",
-            "type": "chat",
-            "inputCost": 0.000003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 32000,
-            "name": "openrouter/mistralai/mistral-large",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 32769,
-            "name": "openrouter/cognitivecomputations/dolphin-mixtral-8x7b",
-            "type": "chat",
-            "inputCost": 5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 45875,
-            "name": "openrouter/google/gemini-pro-vision",
-            "type": "chat",
-            "inputCost": 1.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 3.75e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/fireworks/firellava-13b",
-            "type": "chat",
-            "inputCost": 2e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "openrouter/meta-llama/llama-3-8b-instruct:free",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 16384,
-            "name": "openrouter/meta-llama/llama-3-8b-instruct:extended",
-            "type": "chat",
-            "inputCost": 2.25e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000225,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "openrouter/meta-llama/llama-3-70b-instruct:nitro",
-            "type": "chat",
-            "inputCost": 9e-7,
-            "inputCostUnit": "token",
-            "outputCost": 9e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "openrouter/meta-llama/llama-3-70b-instruct",
-            "type": "chat",
-            "inputCost": 5.9e-7,
-            "inputCostUnit": "token",
-            "outputCost": 7.9e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/openai/gpt-4o",
-            "type": "chat",
-            "inputCost": 0.000005,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/openai/gpt-4o-2024-05-13",
-            "type": "chat",
-            "inputCost": 0.000005,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 130000,
-            "name": "openrouter/openai/gpt-4-vision-preview",
-            "type": "chat",
-            "inputCost": 0.00001,
-            "inputCostUnit": "token",
-            "outputCost": 0.00003,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4095,
-            "name": "openrouter/openai/gpt-3.5-turbo",
-            "type": "chat",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000002,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 16383,
-            "name": "openrouter/openai/gpt-3.5-turbo-16k",
-            "type": "chat",
-            "inputCost": 0.000003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000004,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "openrouter/openai/gpt-4",
-            "type": "chat",
-            "inputCost": 0.00003,
-            "inputCostUnit": "token",
-            "outputCost": 0.00006,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 100000,
-            "name": "openrouter/anthropic/claude-instant-v1",
-            "type": "chat",
-            "inputCost": 0.00000163,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000551,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 100000,
-            "name": "openrouter/anthropic/claude-2",
-            "type": "chat",
-            "inputCost": 0.00001102,
-            "inputCostUnit": "token",
-            "outputCost": 0.00003268,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/anthropic/claude-3-opus",
-            "type": "chat",
-            "inputCost": 0.000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000075,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 25804,
-            "name": "openrouter/google/palm-2-chat-bison",
-            "type": "chat",
-            "inputCost": 5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 20070,
-            "name": "openrouter/google/palm-2-codechat-bison",
-            "type": "chat",
-            "inputCost": 5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/meta-llama/llama-2-13b-chat",
-            "type": "chat",
-            "inputCost": 2e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/meta-llama/llama-2-70b-chat",
-            "type": "chat",
-            "inputCost": 0.0000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8096,
-            "name": "openrouter/meta-llama/codellama-34b-instruct",
-            "type": "chat",
-            "inputCost": 5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/nousresearch/nous-hermes-llama2-13b",
-            "type": "chat",
-            "inputCost": 2e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8000,
-            "name": "openrouter/mancer/weaver",
-            "type": "chat",
-            "inputCost": 0.000005625,
-            "inputCostUnit": "token",
-            "outputCost": 0.000005625,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "openrouter/gryphe/mythomax-l2-13b",
-            "type": "chat",
-            "inputCost": 0.000001875,
-            "inputCostUnit": "token",
-            "outputCost": 0.000001875,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/jondurbin/airoboros-l2-70b-2.1",
-            "type": "chat",
-            "inputCost": 0.000013875,
-            "inputCostUnit": "token",
-            "outputCost": 0.000013875,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 6144,
-            "name": "openrouter/undi95/remm-slerp-l2-13b",
-            "type": "chat",
-            "inputCost": 0.000001875,
-            "inputCostUnit": "token",
-            "outputCost": 0.000001875,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "openrouter/pygmalionai/mythalion-13b",
-            "type": "chat",
-            "inputCost": 0.000001875,
-            "inputCostUnit": "token",
-            "outputCost": 0.000001875,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "openrouter/mistralai/mistral-7b-instruct",
-            "type": "chat",
-            "inputCost": 1.3e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.3e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "openrouter/mistralai/mistral-7b-instruct:free",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        }
-    ],
-    "ai21": [
-        {
-            "maxTokens": 8192,
-            "name": "j2-ultra",
-            "type": "completion",
-            "inputCost": 0.000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "j2-mid",
-            "type": "completion",
-            "inputCost": 0.00001,
+            "inputCost": 0.00000125,
             "inputCostUnit": "token",
             "outputCost": 0.00001,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8192,
-            "name": "j2-light",
-            "type": "completion",
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/anthropic/claude-4.5-haiku",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/ibm-granite/granite-3.3-8b-instruct",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-4o",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/openai/o4-mini",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/openai/o1-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/openai/o1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-4o-mini",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/qwen/qwen3-235b-a22b-instruct-2507",
+            "type": "chat",
+            "inputCost": 2.64e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000106,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/anthropic/claude-4-sonnet",
+            "type": "chat",
             "inputCost": 0.000003,
             "inputCostUnit": "token",
-            "outputCost": 0.000003,
-            "outputCostUnit": "token"
-        }
-    ],
-    "nlp_cloud": [
-        {
-            "maxTokens": 16384,
-            "name": "dolphin",
-            "type": "completion",
-            "inputCost": 5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 5e-7,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 16384,
-            "name": "chatdolphin",
+            "maxTokens": 8192,
+            "name": "replicate/deepseek-ai/deepseek-v3",
             "type": "chat",
-            "inputCost": 5e-7,
+            "inputCost": 0.00000145,
             "inputCostUnit": "token",
-            "outputCost": 5e-7,
-            "outputCostUnit": "token"
-        }
-    ],
-    "aleph_alpha": [
-        {
-            "maxTokens": 2048,
-            "name": "luminous-base",
-            "type": "completion",
-            "inputCost": 0.00003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000033,
+            "outputCost": 0.00000145,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 2048,
-            "name": "luminous-base-control",
+            "maxTokens": null,
+            "name": "replicate/anthropic/claude-3.7-sonnet",
             "type": "chat",
-            "inputCost": 0.0000375,
+            "inputCost": 0.000003,
             "inputCostUnit": "token",
-            "outputCost": 0.00004125,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 2048,
-            "name": "luminous-extended",
-            "type": "completion",
-            "inputCost": 0.000045,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000495,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 2048,
-            "name": "luminous-extended-control",
+            "maxTokens": null,
+            "name": "replicate/anthropic/claude-3.5-haiku",
             "type": "chat",
-            "inputCost": 0.00005625,
+            "inputCost": 0.000001,
             "inputCostUnit": "token",
-            "outputCost": 0.000061875,
+            "outputCost": 0.000005,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 2048,
-            "name": "luminous-supreme",
-            "type": "completion",
-            "inputCost": 0.000175,
+            "maxTokens": null,
+            "name": "replicate/anthropic/claude-3.5-sonnet",
+            "type": "chat",
+            "inputCost": 0.00000375,
             "inputCostUnit": "token",
-            "outputCost": 0.0001925,
+            "outputCost": 0.00001875,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 2048,
-            "name": "luminous-supreme-control",
+            "maxTokens": null,
+            "name": "replicate/google/gemini-3-pro",
             "type": "chat",
-            "inputCost": 0.00021875,
+            "inputCost": 0.000002,
             "inputCostUnit": "token",
-            "outputCost": 0.000240625,
-            "outputCostUnit": "token"
-        }
-    ],
-    "bedrock": [
-        {
-            "maxTokens": 8191,
-            "name": "ai21.j2-mid-v1",
-            "type": "chat",
-            "inputCost": 0.0000125,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000125,
+            "outputCost": 0.000012,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8191,
-            "name": "ai21.j2-ultra-v1",
+            "maxTokens": null,
+            "name": "replicate/anthropic/claude-4.5-sonnet",
             "type": "chat",
-            "inputCost": 0.0000188,
+            "inputCost": 0.000003,
             "inputCostUnit": "token",
-            "outputCost": 0.0000188,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4000,
-            "name": "amazon.titan-text-lite-v1",
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-4.1",
             "type": "chat",
-            "inputCost": 3e-7,
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-4.1-nano",
+            "type": "chat",
+            "inputCost": 1e-7,
             "inputCostUnit": "token",
             "outputCost": 4e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8000,
-            "name": "amazon.titan-text-express-v1",
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-4.1-mini",
             "type": "chat",
-            "inputCost": 0.0000013,
+            "inputCost": 4e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.0000017,
+            "outputCost": 0.0000016,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8192,
-            "name": "amazon.titan-embed-text-v1",
-            "type": "embedding",
-            "inputCost": 1e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8192,
-            "name": "amazon.titan-embed-text-v2:0",
-            "type": "embedding",
-            "inputCost": 2e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral.mistral-7b-instruct-v0:2",
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-5-nano",
             "type": "chat",
-            "inputCost": 1.5e-7,
+            "inputCost": 5e-8,
             "inputCostUnit": "token",
-            "outputCost": 2e-7,
+            "outputCost": 4e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8191,
-            "name": "mistral.mixtral-8x7b-instruct-v0:1",
-            "type": "chat",
-            "inputCost": 4.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 7e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "mistral.mistral-large-2402-v1:0",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/mistral.mixtral-8x7b-instruct-v0:1",
-            "type": "chat",
-            "inputCost": 4.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 7e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/mistral.mixtral-8x7b-instruct-v0:1",
-            "type": "chat",
-            "inputCost": 4.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 7e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-west-3/mistral.mixtral-8x7b-instruct-v0:1",
-            "type": "chat",
-            "inputCost": 5.9e-7,
-            "inputCostUnit": "token",
-            "outputCost": 9.1e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/mistral.mistral-7b-instruct-v0:2",
-            "type": "chat",
-            "inputCost": 1.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/mistral.mistral-7b-instruct-v0:2",
-            "type": "chat",
-            "inputCost": 1.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-west-3/mistral.mistral-7b-instruct-v0:2",
-            "type": "chat",
-            "inputCost": 2e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2.6e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/mistral.mistral-large-2402-v1:0",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/mistral.mistral-large-2402-v1:0",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-west-3/mistral.mistral-large-2402-v1:0",
-            "type": "chat",
-            "inputCost": 0.0000104,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000312,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "anthropic.claude-3-sonnet-20240229-v1:0",
-            "type": "chat",
-            "inputCost": 0.000003,
-            "inputCostUnit": "token",
-            "outputCost": 0.000015,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "anthropic.claude-3-haiku-20240307-v1:0",
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-5-mini",
             "type": "chat",
             "inputCost": 2.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000125,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "anthropic.claude-3-opus-20240229-v1:0",
-            "type": "chat",
-            "inputCost": 0.000015,
-            "inputCostUnit": "token",
-            "outputCost": 0.000075,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/1-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/6-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/1-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/6-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/1-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/6-month-commitment/anthropic.claude-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/1-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/6-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/1-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/6-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/1-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/6-month-commitment/anthropic.claude-v2",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": 0.000008,
-            "inputCostUnit": "token",
-            "outputCost": 0.000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/1-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/6-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/1-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/6-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/1-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/6-month-commitment/anthropic.claude-v2:1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": 0.00000163,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000551,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": 8e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/1-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-east-1/6-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/1-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/6-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/us-west-2/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": 8e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000024,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": 0.00000223,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000755,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/1-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": 0.00000248,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000838,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/1-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8191,
-            "name": "bedrock/eu-central-1/6-month-commitment/anthropic.claude-instant-v1",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "cohere.command-text-v14",
-            "type": "chat",
-            "inputCost": 0.0000015,
             "inputCostUnit": "token",
             "outputCost": 0.000002,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "bedrock/*/1-month-commitment/cohere.command-text-v14",
+            "maxTokens": null,
+            "name": "replicate/google/gemini-2.5-flash",
             "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "bedrock/*/6-month-commitment/cohere.command-text-v14",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "cohere.command-light-text-v14",
-            "type": "chat",
-            "inputCost": 3e-7,
+            "inputCost": 0.0000025,
             "inputCostUnit": "token",
-            "outputCost": 6e-7,
+            "outputCost": 0.0000025,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "bedrock/*/1-month-commitment/cohere.command-light-text-v14",
+            "maxTokens": null,
+            "name": "replicate/openai/gpt-oss-120b",
             "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "bedrock/*/6-month-commitment/cohere.command-light-text-v14",
-            "type": "chat",
-            "inputCost": null,
-            "inputCostUnit": null,
-            "outputCost": null,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "cohere.command-r-plus-v1:0",
-            "type": "chat",
-            "inputCost": 0.000003,
+            "inputCost": 1.8e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000015,
+            "outputCost": 7.2e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "cohere.command-r-v1:0",
+            "maxTokens": 163840,
+            "name": "replicate/deepseek-ai/deepseek-v3.1",
             "type": "chat",
-            "inputCost": 5e-7,
+            "inputCost": 6.72e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.0000015,
+            "outputCost": 0.000002016,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 512,
-            "name": "cohere.embed-english-v3",
-            "type": "embedding",
-            "inputCost": 1e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 512,
-            "name": "cohere.embed-multilingual-v3",
-            "type": "embedding",
-            "inputCost": 1e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "meta.llama2-13b-chat-v1",
+            "maxTokens": null,
+            "name": "replicate/xai/grok-4",
             "type": "chat",
-            "inputCost": 7.5e-7,
+            "inputCost": 0.0000072,
             "inputCostUnit": "token",
-            "outputCost": 0.000001,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "meta.llama2-70b-chat-v1",
-            "type": "chat",
-            "inputCost": 0.00000195,
-            "inputCostUnit": "token",
-            "outputCost": 0.00000256,
+            "outputCost": 0.000036,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
-            "name": "meta.llama3-8b-instruct-v1:0",
+            "name": "replicate/deepseek-ai/deepseek-r1",
             "type": "chat",
-            "inputCost": 4e-7,
+            "inputCost": 0.00000375,
             "inputCostUnit": "token",
-            "outputCost": 6e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8192,
-            "name": "meta.llama3-70b-instruct-v1:0",
-            "type": "chat",
-            "inputCost": 0.00000265,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000035,
+            "outputCost": 0.00001,
             "outputCostUnit": "token"
         }
     ],
     "sagemaker": [
-        {
-            "maxTokens": 4096,
-            "name": "sagemaker/meta-textgeneration-llama-2-7b",
-            "type": "completion",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "sagemaker/meta-textgeneration-llama-2-7b-f",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
         {
             "maxTokens": 4096,
             "name": "sagemaker/meta-textgeneration-llama-2-13b",
@@ -2578,12 +21306,10 @@ export const AICostModelList = {
             "inputCostUnit": null,
             "outputCost": 0,
             "outputCostUnit": null
-        }
-    ],
-    "ollama": [
+        },
         {
             "maxTokens": 4096,
-            "name": "ollama/llama2",
+            "name": "sagemaker/meta-textgeneration-llama-2-7b",
             "type": "completion",
             "inputCost": 0,
             "inputCostUnit": null,
@@ -2592,252 +21318,575 @@ export const AICostModelList = {
         },
         {
             "maxTokens": 4096,
-            "name": "ollama/llama2:13b",
-            "type": "completion",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "ollama/llama2:70b",
-            "type": "completion",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "ollama/llama2-uncensored",
-            "type": "completion",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8192,
-            "name": "ollama/llama3",
+            "name": "sagemaker/meta-textgeneration-llama-2-7b-f",
             "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8192,
-            "name": "ollama/llama3:70b",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8192,
-            "name": "ollama/mistral",
-            "type": "completion",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 8192,
-            "name": "ollama/mistral-7B-Instruct-v0.1",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 32768,
-            "name": "ollama/mistral-7B-Instruct-v0.2",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 32768,
-            "name": "ollama/mixtral-8x7B-Instruct-v0.1",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 65536,
-            "name": "ollama/mixtral-8x22B-Instruct-v0.1",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "ollama/codellama",
-            "type": "completion",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4096,
-            "name": "ollama/orca-mini",
-            "type": "completion",
-            "inputCost": 0,
-            "inputCostUnit": null,
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 2048,
-            "name": "ollama/vicuna",
-            "type": "completion",
             "inputCost": 0,
             "inputCostUnit": null,
             "outputCost": 0,
             "outputCostUnit": null
         }
     ],
-    "deepinfra": [
+    "sambanova": [
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/lizpreciatior/lzlv_70b_fp16_hf",
+            "maxTokens": 131072,
+            "name": "sambanova/MiniMax-M2.7",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "sambanova/DeepSeek-R1",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000007,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "sambanova/DeepSeek-R1-Distill-Llama-70B",
             "type": "chat",
             "inputCost": 7e-7,
             "inputCostUnit": "token",
-            "outputCost": 9e-7,
+            "outputCost": 0.0000014,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "sambanova/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "sambanova/Llama-4-Maverick-17B-128E-Instruct",
+            "type": "chat",
+            "inputCost": 6.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "sambanova/Llama-4-Scout-17B-16E-Instruct",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "sambanova/Meta-Llama-3.1-405B-Instruct",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "sambanova/Meta-Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "sambanova/Meta-Llama-3.2-1B-Instruct",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 4096,
-            "name": "deepinfra/Gryphe/MythoMax-L2-13b",
+            "name": "sambanova/Meta-Llama-3.2-3B-Instruct",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "sambanova/Meta-Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "sambanova/Meta-Llama-Guard-3-8B",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "sambanova/QwQ-32B",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "sambanova/Qwen2-Audio-7B-Instruct",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "sambanova/Qwen3-32B",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "sambanova/DeepSeek-V3.1",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "sambanova/gpt-oss-120b",
             "type": "chat",
             "inputCost": 2.2e-7,
             "inputCostUnit": "token",
-            "outputCost": 2.2e-7,
+            "outputCost": 5.9e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8191,
-            "name": "deepinfra/mistralai/Mistral-7B-Instruct-v0.1",
+            "maxTokens": 32768,
+            "name": "sambanova/DeepSeek-V3.2",
             "type": "chat",
-            "inputCost": 1.3e-7,
+            "inputCost": 0.000003,
             "inputCostUnit": "token",
-            "outputCost": 1.3e-7,
+            "outputCost": 0.0000045,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/meta-llama/Llama-2-70b-chat-hf",
+            "maxTokens": 131072,
+            "name": "sambanova/gemma-4-31B-it",
             "type": "chat",
-            "inputCost": 7e-7,
+            "inputCost": 3.8e-7,
             "inputCostUnit": "token",
-            "outputCost": 9e-7,
+            "outputCost": 0.00000115,
             "outputCostUnit": "token"
-        },
+        }
+    ],
+    "scx-ai": [
         {
-            "maxTokens": 8191,
-            "name": "deepinfra/cognitivecomputations/dolphin-2.6-mixtral-8x7b",
+            "maxTokens": 131072,
+            "name": "scx-ai/GLM-5.2",
             "type": "chat",
-            "inputCost": 2.7e-7,
+            "inputCost": 6.1e-7,
             "inputCostUnit": "token",
-            "outputCost": 2.7e-7,
+            "outputCost": 0.00000198,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/codellama/CodeLlama-34b-Instruct-hf",
+            "maxTokens": 131072,
+            "name": "scx-ai/Qwen3.8-Max",
             "type": "chat",
-            "inputCost": 6e-7,
+            "inputCost": 0.00000165,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000499,
+            "outputCostUnit": "token"
+        }
+    ],
+    "snowflake": [
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/claude-3-5-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/deepseek-r1",
+            "type": "chat",
+            "inputCost": 0.00000135,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000054,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/gemma-7b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/jamba-1.5-large",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/jamba-1.5-mini",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/jamba-instruct",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/llama2-70b-chat",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/llama3-70b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/llama3-8b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/llama3.1-405b",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/llama3.1-70b",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/llama3.1-8b",
+            "type": "chat",
+            "inputCost": 2.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/llama3.2-1b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/llama3.2-3b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/llama3.3-70b",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/mistral-7b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/mistral-large",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/mistral-large2",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/mixtral-8x7b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/reka-core",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/reka-flash",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/snowflake-arctic",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/snowflake-llama-3.1-405b",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/snowflake-llama-3.3-70b",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/claude-sonnet-4-5",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/claude-4-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/claude-4-opus",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/claude-haiku-4-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/claude-3-7-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/openai-gpt-4.1",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/openai-gpt-5",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/openai-gpt-5-mini",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "snowflake/openai-gpt-5-nano",
+            "type": "chat",
+            "inputCost": 1.5e-7,
             "inputCostUnit": "token",
             "outputCost": 6e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/deepinfra/mixtral",
+            "maxTokens": 16384,
+            "name": "snowflake/llama4-maverick",
+            "type": "chat",
+            "inputCost": 2.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/snowflake-arctic-embed-l-v2.0",
+            "type": "embedding",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "snowflake/snowflake-arctic-embed-m-v2.0",
+            "type": "embedding",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "text-completion-codestral": [
+        {
+            "maxTokens": 8191,
+            "name": "text-completion-codestral/codestral-2405",
             "type": "completion",
-            "inputCost": 2.7e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2.7e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "deepinfra/Phind/Phind-CodeLlama-34B-v2",
-            "type": "chat",
-            "inputCost": 6e-7,
-            "inputCostUnit": "token",
-            "outputCost": 6e-7,
-            "outputCostUnit": "token"
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
         },
         {
             "maxTokens": 8191,
-            "name": "deepinfra/mistralai/Mixtral-8x7B-Instruct-v0.1",
-            "type": "chat",
-            "inputCost": 2.7e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2.7e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "deepinfra/deepinfra/airoboros-70b",
-            "type": "chat",
-            "inputCost": 7e-7,
-            "inputCostUnit": "token",
-            "outputCost": 9e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "deepinfra/01-ai/Yi-34B-Chat",
-            "type": "chat",
-            "inputCost": 6e-7,
-            "inputCostUnit": "token",
-            "outputCost": 6e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "deepinfra/01-ai/Yi-6B-200K",
+            "name": "text-completion-codestral/codestral-latest",
             "type": "completion",
-            "inputCost": 1.3e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.3e-7,
-            "outputCostUnit": "token"
-        },
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "together_ai": [
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/jondurbin/airoboros-l2-70b-gpt4-1.4.1",
+            "maxTokens": null,
+            "name": "together-ai-21.1b-41b",
             "type": "chat",
-            "inputCost": 7e-7,
+            "inputCost": 8e-7,
             "inputCostUnit": "token",
-            "outputCost": 9e-7,
+            "outputCost": 8e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/meta-llama/Llama-2-13b-chat-hf",
-            "type": "chat",
-            "inputCost": 2.2e-7,
-            "inputCostUnit": "token",
-            "outputCost": 2.2e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 8191,
-            "name": "deepinfra/amazon/MistralLite",
+            "maxTokens": null,
+            "name": "together-ai-4.1b-8b",
             "type": "chat",
             "inputCost": 2e-7,
             "inputCostUnit": "token",
@@ -2845,259 +21894,1398 @@ export const AICostModelList = {
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/meta-llama/Llama-2-7b-chat-hf",
+            "maxTokens": null,
+            "name": "together-ai-41.1b-80b",
             "type": "chat",
-            "inputCost": 1.3e-7,
+            "inputCost": 9e-7,
             "inputCostUnit": "token",
-            "outputCost": 1.3e-7,
+            "outputCost": 9e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/01-ai/Yi-34B-200K",
-            "type": "completion",
+            "maxTokens": 1000,
+            "name": "together-ai-8.1b-21b",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together-ai-81.1b-110b",
+            "type": "chat",
+            "inputCost": 0.0000018,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together-ai-embedding-151m-to-350m",
+            "type": "embedding",
+            "inputCost": 1.6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together-ai-embedding-up-to-150m",
+            "type": "embedding",
+            "inputCost": 8e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/baai/bge-base-en-v1.5",
+            "type": "embedding",
+            "inputCost": 8e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/BAAI/bge-base-en-v1.5",
+            "type": "embedding",
+            "inputCost": 8e-9,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together-ai-up-to-4b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen2.5-72B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen2.5-7B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507",
+            "type": "chat",
+            "inputCost": 6.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen3-235B-A22B-fp8-tput",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 20480,
+            "name": "together_ai/deepseek-ai/DeepSeek-R1",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000007,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/deepseek-ai/DeepSeek-R1-0528-tput",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000219,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "together_ai/deepseek-ai/DeepSeek-V3",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "together_ai/deepseek-ai/DeepSeek-V3.1",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000017,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/meta-llama/Llama-3.2-3B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 131072,
+            "name": "together_ai/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 0.00000104,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000104,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/meta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 0.0000035,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 8.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/mistralai/Mistral-7B-Instruct-v0.1",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/mistralai/Mistral-Small-24B-Instruct-2501",
+            "type": "chat",
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/mistralai/Mixtral-8x7B-Instruct-v0.1",
+            "type": "chat",
             "inputCost": 6e-7,
             "inputCostUnit": "token",
             "outputCost": 6e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "deepinfra/openchat/openchat_3.5",
+            "maxTokens": null,
+            "name": "together_ai/moonshotai/Kimi-K2-Instruct",
             "type": "chat",
-            "inputCost": 1.3e-7,
+            "inputCost": 0.000001,
             "inputCostUnit": "token",
-            "outputCost": 1.3e-7,
+            "outputCost": 0.000003,
             "outputCostUnit": "token"
-        }
-    ],
-    "perplexity": [
+        },
         {
-            "maxTokens": 16384,
-            "name": "perplexity/codellama-34b-instruct",
+            "maxTokens": 131072,
+            "name": "together_ai/openai/gpt-oss-120b",
             "type": "chat",
-            "inputCost": 3.5e-7,
+            "inputCost": 1.5e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.0000014,
+            "outputCost": 6e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 16384,
-            "name": "perplexity/codellama-70b-instruct",
+            "maxTokens": null,
+            "name": "together_ai/openai/gpt-oss-20b",
             "type": "chat",
-            "inputCost": 7e-7,
+            "inputCost": 5e-8,
             "inputCostUnit": "token",
-            "outputCost": 0.0000028,
+            "outputCost": 2e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 8192,
-            "name": "perplexity/pplx-7b-chat",
+            "maxTokens": null,
+            "name": "together_ai/togethercomputer/CodeLlama-34b-Instruct",
             "type": "chat",
-            "inputCost": 7e-8,
+            "inputCost": null,
+            "inputCostUnit": null,
+            "outputCost": null,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/zai-org/GLM-4.5-Air-FP8",
+            "type": "chat",
+            "inputCost": 2e-7,
             "inputCostUnit": "token",
-            "outputCost": 2.8e-7,
+            "outputCost": 0.0000011,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "perplexity/pplx-70b-chat",
-            "type": "chat",
-            "inputCost": 7e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000028,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "perplexity/pplx-7b-online",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": "request",
-            "outputCost": 2.8e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "perplexity/pplx-70b-online",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": "request",
-            "outputCost": 0.0000028,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "perplexity/llama-2-70b-chat",
-            "type": "chat",
-            "inputCost": 7e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0.0000028,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "perplexity/mistral-7b-instruct",
-            "type": "chat",
-            "inputCost": 7e-8,
-            "inputCostUnit": "token",
-            "outputCost": 2.8e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "perplexity/mixtral-8x7b-instruct",
-            "type": "chat",
-            "inputCost": 7e-8,
-            "inputCostUnit": "token",
-            "outputCost": 2.8e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 16384,
-            "name": "perplexity/sonar-small-chat",
-            "type": "chat",
-            "inputCost": 7e-8,
-            "inputCostUnit": "token",
-            "outputCost": 2.8e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 12000,
-            "name": "perplexity/sonar-small-online",
-            "type": "chat",
-            "inputCost": 0,
-            "inputCostUnit": "request",
-            "outputCost": 2.8e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 16384,
-            "name": "perplexity/sonar-medium-chat",
+            "maxTokens": 200000,
+            "name": "together_ai/zai-org/GLM-4.6",
             "type": "chat",
             "inputCost": 6e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.0000018,
+            "outputCost": 0.0000022,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 12000,
-            "name": "perplexity/sonar-medium-online",
+            "maxTokens": 200000,
+            "name": "together_ai/zai-org/GLM-4.7",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "together_ai/moonshotai/Kimi-K2.5",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000028,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/moonshotai/Kimi-K2-Instruct-0905",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen3-Next-80B-A3B-Instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen3-Next-80B-A3B-Thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "together_ai/Qwen/Qwen3.5-397B-A17B",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 524288,
+            "name": "together_ai/MiniMaxAI/MiniMax-M3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "together_ai/Prism-ML/Ternary-Bonsai-27B",
             "type": "chat",
             "inputCost": 0,
-            "inputCostUnit": "request",
-            "outputCost": 0.0000018,
-            "outputCostUnit": "token"
-        }
-    ],
-    "anyscale": [
-        {
-            "maxTokens": 16384,
-            "name": "anyscale/mistralai/Mistral-7B-Instruct-v0.1",
-            "type": "chat",
-            "inputCost": 1.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.5e-7,
-            "outputCostUnit": "token"
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
         },
         {
-            "maxTokens": 16384,
-            "name": "anyscale/Mixtral-8x7B-Instruct-v0.1",
+            "maxTokens": 262144,
+            "name": "together_ai/Qwen/Qwen3.5-9B",
             "type": "chat",
-            "inputCost": 1.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 16384,
-            "name": "anyscale/HuggingFaceH4/zephyr-7b-beta",
-            "type": "chat",
-            "inputCost": 1.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "anyscale/meta-llama/Llama-2-7b-chat-hf",
-            "type": "chat",
-            "inputCost": 1.5e-7,
-            "inputCostUnit": "token",
-            "outputCost": 1.5e-7,
-            "outputCostUnit": "token"
-        },
-        {
-            "maxTokens": 4096,
-            "name": "anyscale/meta-llama/Llama-2-13b-chat-hf",
-            "type": "chat",
-            "inputCost": 2.5e-7,
+            "inputCost": 1.7e-7,
             "inputCostUnit": "token",
             "outputCost": 2.5e-7,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "anyscale/meta-llama/Llama-2-70b-chat-hf",
+            "maxTokens": 1000000,
+            "name": "together_ai/Qwen/Qwen3.6-Plus",
             "type": "chat",
-            "inputCost": 0.000001,
+            "inputCost": 5e-7,
             "inputCostUnit": "token",
-            "outputCost": 0.000001,
+            "outputCost": 0.000003,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 4096,
-            "name": "anyscale/codellama/CodeLlama-34b-Instruct-hf",
+            "maxTokens": 1000000,
+            "name": "together_ai/Qwen/Qwen3.7-Max",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "together_ai/Qwen/Qwen3.7-Plus",
+            "type": "chat",
+            "inputCost": 3.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000128,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1010000,
+            "name": "together_ai/Qwen/Qwen3.8-2.4T-A95B",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "together_ai/arize-ai/qwen-2-1.5b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "together_ai/deepseek-ai/DeepSeek-V4-Flash-0731",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512000,
+            "name": "together_ai/deepseek-ai/DeepSeek-V4-Pro",
+            "type": "chat",
+            "inputCost": 0.00000174,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000348,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "together_ai/deepseek-ai/DeepSeek-V4-Pro-0813",
+            "type": "chat",
+            "inputCost": 0.00000132,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "together_ai/google/gemma-3n-E4B-it",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "together_ai/google/gemma-4-31B-it",
+            "type": "chat",
+            "inputCost": 3.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 514,
+            "name": "together_ai/intfloat/multilingual-e5-large-instruct",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "together_ai/meta-llama/Llama-Guard-4-12B",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "together_ai/meta-models/Muse-Glimmer-30B",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "together_ai/moonshotai/Kimi-K2.7-Code",
+            "type": "chat",
+            "inputCost": 9.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "together_ai/moonshotai/Kimi-K3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512288,
+            "name": "together_ai/nvidia/nemotron-3-ultra-550b-a55b",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "together_ai/pearl-ai/gemma-4-31b-it",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 524288,
+            "name": "together_ai/thinkingmachines/Inkling",
             "type": "chat",
             "inputCost": 0.000001,
             "inputCostUnit": "token",
-            "outputCost": 0.000001,
+            "outputCost": 0.00000405,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 524288,
+            "name": "together_ai/thinkingmachines/Inkling-Small",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "together_ai/zai-org/GLM-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "together_ai/zai-org/GLM-5.3",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "together_ai/zai-org/GLM-5.3-Flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "together_ai/Qwen/Qwen3.8-Flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.7e-7,
             "outputCostUnit": "token"
         }
     ],
-    "cloudflare": [
+    "v0": [
         {
-            "maxTokens": 3072,
-            "name": "cloudflare/@cf/meta/llama-2-7b-chat-fp16",
+            "maxTokens": 128000,
+            "name": "v0/v0-1.0-md",
             "type": "chat",
-            "inputCost": 0.000001923,
+            "inputCost": 0.000003,
             "inputCostUnit": "token",
-            "outputCost": 0.000001923,
+            "outputCost": 0.000015,
             "outputCostUnit": "token"
         },
         {
-            "maxTokens": 2048,
-            "name": "cloudflare/@cf/meta/llama-2-7b-chat-int8",
+            "maxTokens": 512000,
+            "name": "v0/v0-1.5-lg",
             "type": "chat",
-            "inputCost": 0.000001923,
+            "inputCost": 0.000015,
             "inputCostUnit": "token",
-            "outputCost": 0.000001923,
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "v0/v0-1.5-md",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vercel_ai_gateway": [
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/alibaba/qwen-3-14b",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/alibaba/qwen-3-235b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/alibaba/qwen-3-30b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/alibaba/qwen-3-32b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 66536,
+            "name": "vercel_ai_gateway/alibaba/qwen3-coder",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 8192,
-            "name": "cloudflare/@cf/mistral/mistral-7b-instruct-v0.1",
+            "name": "vercel_ai_gateway/amazon/nova-lite",
             "type": "chat",
-            "inputCost": 0.000001923,
+            "inputCost": 6e-8,
             "inputCostUnit": "token",
-            "outputCost": 0.000001923,
+            "outputCost": 2.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/amazon/nova-micro",
+            "type": "chat",
+            "inputCost": 3.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/amazon/nova-pro",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/amazon/titan-embed-text-v2",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vercel_ai_gateway/anthropic/claude-3-haiku",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
             "outputCostUnit": "token"
         },
         {
             "maxTokens": 4096,
-            "name": "cloudflare/@hf/thebloke/codellama-7b-instruct-awq",
+            "name": "vercel_ai_gateway/anthropic/claude-3-opus",
             "type": "chat",
-            "inputCost": 0.000001923,
+            "inputCost": 0.000015,
             "inputCostUnit": "token",
-            "outputCost": 0.000001923,
+            "outputCost": 0.000075,
             "outputCostUnit": "token"
-        }
-    ],
-    "voyage": [
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/anthropic/claude-3.5-haiku",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/anthropic/claude-3.5-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-3.7-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vercel_ai_gateway/anthropic/claude-4-opus",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-4-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/anthropic/claude-3-5-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/anthropic/claude-3-5-sonnet-20241022",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-3-7-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-haiku-4.5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vercel_ai_gateway/anthropic/claude-opus-4",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vercel_ai_gateway/anthropic/claude-opus-4.1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-opus-4.5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-opus-4.6",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-sonnet-4",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/anthropic/claude-sonnet-4.5",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "vercel_ai_gateway/cohere/command-a",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
         {
             "maxTokens": 4096,
-            "name": "voyage/voyage-01",
+            "name": "vercel_ai_gateway/cohere/command-r",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vercel_ai_gateway/cohere/command-r-plus",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/cohere/embed-v4.0",
+            "type": "chat",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/deepseek/deepseek-r1",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000219,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "vercel_ai_gateway/deepseek/deepseek-r1-distill-llama-70b",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/deepseek/deepseek-v3",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/google/gemini-2.0-flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/google/gemini-2.0-flash-lite",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vercel_ai_gateway/google/gemini-2.5-flash",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "vercel_ai_gateway/google/gemini-2.5-pro",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/google/gemini-embedding-001",
+            "type": "embedding",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/google/gemma-2-9b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/google/text-embedding-005",
+            "type": "embedding",
+            "inputCost": 2.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/google/text-multilingual-embedding-002",
+            "type": "embedding",
+            "inputCost": 2.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/inception/mercury-coder-small",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3-70b",
+            "type": "chat",
+            "inputCost": 5.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3-8b",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3.1-70b",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "vercel_ai_gateway/meta/llama-3.1-8b",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3.2-11b",
+            "type": "chat",
+            "inputCost": 1.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3.2-1b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3.2-3b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3.2-90b",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-3.3-70b",
+            "type": "chat",
+            "inputCost": 7.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-4-maverick",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vercel_ai_gateway/meta/llama-4-scout",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/mistral/codestral",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/mistral/codestral-embed",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vercel_ai_gateway/mistral/devstral-small",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/mistral/magistral-medium",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vercel_ai_gateway/mistral/magistral-small",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/mistral/ministral-3b",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/mistral/ministral-8b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/mistral/mistral-embed",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/mistral/mistral-large",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vercel_ai_gateway/mistral/mistral-saba-24b",
+            "type": "chat",
+            "inputCost": 7.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/mistral/mistral-small",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "vercel_ai_gateway/mistral/mixtral-8x22b-instruct",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/mistral/pixtral-12b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/mistral/pixtral-large",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/moonshotai/kimi-k2",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/morph/morph-v3-fast",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/morph/morph-v3-large",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000019,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vercel_ai_gateway/openai/gpt-3.5-turbo",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vercel_ai_gateway/openai/gpt-3.5-turbo-instruct",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vercel_ai_gateway/openai/gpt-4-turbo",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vercel_ai_gateway/openai/gpt-4.1",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vercel_ai_gateway/openai/gpt-4.1-mini",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vercel_ai_gateway/openai/gpt-4.1-nano",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/openai/gpt-4o",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "vercel_ai_gateway/openai/gpt-4o-mini",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "vercel_ai_gateway/openai/o1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.00006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "vercel_ai_gateway/openai/o3",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "vercel_ai_gateway/openai/o3-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100000,
+            "name": "vercel_ai_gateway/openai/o4-mini",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/openai/text-embedding-3-large",
+            "type": "embedding",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/openai/text-embedding-3-small",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 0,
+            "name": "vercel_ai_gateway/openai/text-embedding-ada-002",
             "type": "embedding",
             "inputCost": 1e-7,
             "inputCostUnit": "token",
@@ -3105,10 +23293,1049 @@ export const AICostModelList = {
             "outputCostUnit": null
         },
         {
+            "maxTokens": 8000,
+            "name": "vercel_ai_gateway/perplexity/sonar",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "vercel_ai_gateway/perplexity/sonar-pro",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "vercel_ai_gateway/perplexity/sonar-reasoning",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "vercel_ai_gateway/perplexity/sonar-reasoning-pro",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vercel_ai_gateway/vercel/v0-1.0-md",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vercel_ai_gateway/vercel/v0-1.5-md",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4000,
+            "name": "vercel_ai_gateway/xai/grok-2",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vercel_ai_gateway/xai/grok-2-vision",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "vercel_ai_gateway/xai/grok-3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "vercel_ai_gateway/xai/grok-3-fast",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "vercel_ai_gateway/xai/grok-3-mini",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "vercel_ai_gateway/xai/grok-3-mini-fast",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "vercel_ai_gateway/xai/grok-4",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "vercel_ai_gateway/zai/glm-4.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 96000,
+            "name": "vercel_ai_gateway/zai/glm-4.5-air",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "vercel_ai_gateway/zai/glm-4.6",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-anthropic_models": [
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/claude-3-5-haiku",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/claude-3-5-haiku@20241022",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/claude-haiku-4-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/claude-haiku-4-5@20251001",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/claude-3-5-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/claude-3-5-sonnet@20240620",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/claude-3-7-sonnet@20250219",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
             "maxTokens": 4096,
-            "name": "voyage/voyage-lite-01",
+            "name": "vertex_ai/claude-3-haiku",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vertex_ai/claude-3-haiku@20240307",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vertex_ai/claude-3-opus",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vertex_ai/claude-3-opus@20240229",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vertex_ai/claude-3-sonnet",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "vertex_ai/claude-3-sonnet@20240229",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vertex_ai/claude-opus-4",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vertex_ai/claude-opus-4-1",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vertex_ai/claude-opus-4-1@20250805",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-opus-4-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-opus-4-5@20251101",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-4-6",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-4-6@default",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-4-7",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-4-7@default",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-fable-5",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-fable-5-1",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-fable-5@default",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-fable-5-1@default",
+            "type": "chat",
+            "inputCost": 0.00001,
+            "inputCostUnit": "token",
+            "outputCost": 0.00005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-5",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-5@default",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-4-8",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-opus-4-8@default",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-sonnet-4-5",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-sonnet-5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-sonnet-4-6",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-sonnet-4-5@20250929",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vertex_ai/claude-opus-4@20250514",
+            "type": "chat",
+            "inputCost": 0.000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-sonnet-4",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-sonnet-4@20250514",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/claude-sonnet-5@default",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "vertex_ai/claude-sonnet-4-6@default",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-mistral_models": [
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/mistralai/codestral-2@001",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/codestral-2",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/codestral-2@001",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/mistralai/codestral-2",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/codestral-2501",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/codestral@2405",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/codestral@latest",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistral-medium-3",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistral-medium-3@001",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistralai/mistral-medium-3",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistralai/mistral-medium-3@001",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistral-large-2411",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistral-large@2407",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistral-large@2411-001",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistral-large@latest",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/mistral-nemo@2407",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/mistral-nemo@latest",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/mistral-small-2503",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8191,
+            "name": "vertex_ai/mistral-small-2503@001",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-deepseek_models": [
+        {
+            "maxTokens": 32768,
+            "name": "vertex_ai/deepseek-ai/deepseek-v3.1-maas",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000017,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vertex_ai/deepseek-ai/deepseek-v3.2-maas",
+            "type": "chat",
+            "inputCost": 5.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000168,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "vertex_ai/deepseek-ai/deepseek-r1-0528-maas",
+            "type": "chat",
+            "inputCost": 0.00000135,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000054,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-ai21_models": [
+        {
+            "maxTokens": 256000,
+            "name": "vertex_ai/jamba-1.5",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "vertex_ai/jamba-1.5-large",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "vertex_ai/jamba-1.5-large@001",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000008,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "vertex_ai/jamba-1.5-mini",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "vertex_ai/jamba-1.5-mini@001",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-llama_models": [
+        {
+            "maxTokens": 2048,
+            "name": "vertex_ai/meta/llama-3.1-405b-instruct-maas",
+            "type": "chat",
+            "inputCost": 0.000005,
+            "inputCostUnit": "token",
+            "outputCost": 0.000016,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "vertex_ai/meta/llama-3.1-70b-instruct-maas",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "vertex_ai/meta/llama-3.1-8b-instruct-maas",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 2048,
+            "name": "vertex_ai/meta/llama-3.2-90b-vision-instruct-maas",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "vertex_ai/meta/llama-4-maverick-17b-128e-instruct-maas",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000115,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "vertex_ai/meta/llama-4-maverick-17b-16e-instruct-maas",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000115,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000000,
+            "name": "vertex_ai/meta/llama-4-scout-17b-128e-instruct-maas",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 10000000,
+            "name": "vertex_ai/meta/llama-4-scout-17b-16e-instruct-maas",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vertex_ai/meta/llama3-405b-instruct-maas",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vertex_ai/meta/llama3-70b-instruct-maas",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "vertex_ai/meta/llama3-8b-instruct-maas",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "vertex_ai-minimax_models": [
+        {
+            "maxTokens": 196608,
+            "name": "vertex_ai/minimaxai/minimax-m2-maas",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-moonshot_models": [
+        {
+            "maxTokens": 256000,
+            "name": "vertex_ai/moonshotai/kimi-k2-thinking-maas",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-zai_models": [
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/zai-org/glm-4.7-maas",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/zai-org/glm-5-maas",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-openai_models": [
+        {
+            "maxTokens": 128000,
+            "name": "vertex_ai/google/gemma-4-26b-a4b-it-maas",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vertex_ai/openai/gpt-oss-120b-maas",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vertex_ai/openai/gpt-oss-20b-maas",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "vertex_ai-qwen_models": [
+        {
+            "maxTokens": 16384,
+            "name": "vertex_ai/qwen/qwen3-235b-a22b-instruct-2507-maas",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "vertex_ai/qwen/qwen3-coder-480b-a35b-instruct-maas",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "vertex_ai/qwen/qwen3-next-80b-a3b-instruct-maas",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "vertex_ai/qwen/qwen3-next-80b-a3b-thinking-maas",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        }
+    ],
+    "voyage": [
+        {
+            "maxTokens": 4000,
+            "name": "voyage/voyage-2",
             "type": "embedding",
             "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-3",
+            "type": "embedding",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-3-large",
+            "type": "embedding",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-3-lite",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-3.5",
+            "type": "embedding",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-3.5-lite",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16000,
+            "name": "voyage/voyage-code-2",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-code-3",
+            "type": "embedding",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 120000,
+            "name": "voyage/voyage-context-3",
+            "type": "embedding",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-finance-2",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
             "inputCostUnit": "token",
             "outputCost": 0,
             "outputCostUnit": null
@@ -3132,17 +24359,8 @@ export const AICostModelList = {
             "outputCostUnit": null
         },
         {
-            "maxTokens": 16000,
-            "name": "voyage/voyage-code-2",
-            "type": "embedding",
-            "inputCost": 1.2e-7,
-            "inputCostUnit": "token",
-            "outputCost": 0,
-            "outputCostUnit": null
-        },
-        {
-            "maxTokens": 4000,
-            "name": "voyage/voyage-2",
+            "maxTokens": 4096,
+            "name": "voyage/voyage-lite-01",
             "type": "embedding",
             "inputCost": 1e-7,
             "inputCostUnit": "token",
@@ -3157,6 +24375,3114 @@ export const AICostModelList = {
             "inputCostUnit": "token",
             "outputCost": 0,
             "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-multimodal-3",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-4-large",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-4",
+            "type": "embedding",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-4-lite",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-code-4",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 120000,
+            "name": "voyage/voyage-context-4",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32000,
+            "name": "voyage/voyage-multimodal-3.5",
+            "type": "embedding",
+            "inputCost": 1.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "wandb": [
+        {
+            "maxTokens": 131072,
+            "name": "wandb/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "wandb/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "wandb/zai-org/GLM-4.5",
+            "type": "chat",
+            "inputCost": 0.055,
+            "inputCostUnit": "token",
+            "outputCost": 0.2,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3-235B-A22B-Instruct-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3-Coder-480B-A35B-Instruct",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3-235B-A22B-Thinking-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "wandb/moonshotai/Kimi-K2-Instruct",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/moonshotai/Kimi-K2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 197000,
+            "name": "wandb/MiniMaxAI/MiniMax-M2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "wandb/meta-llama/Llama-3.1-8B-Instruct",
+            "type": "chat",
+            "inputCost": 2.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "wandb/deepseek-ai/DeepSeek-V3.1",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000165,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 161000,
+            "name": "wandb/deepseek-ai/DeepSeek-R1-0528",
+            "type": "chat",
+            "inputCost": 0.00000135,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000054,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 161000,
+            "name": "wandb/deepseek-ai/DeepSeek-V3-0324",
+            "type": "chat",
+            "inputCost": 0.00000114,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "wandb/meta-llama/Llama-3.3-70B-Instruct",
+            "type": "chat",
+            "inputCost": 7.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 64000,
+            "name": "wandb/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+            "type": "chat",
+            "inputCost": 1.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "wandb/microsoft/Phi-4-mini-instruct",
+            "type": "chat",
+            "inputCost": 0.008,
+            "inputCostUnit": "token",
+            "outputCost": 0.035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "wandb/deepseek-ai/DeepSeek-V4-Flash",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/deepseek-ai/DeepSeek-V4-Flash-0731",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "wandb/deepseek-ai/DeepSeek-V4-Pro",
+            "type": "chat",
+            "inputCost": 0.00000115,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000255,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/google/gemma-4-31B-it",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "wandb/ibm-granite/granite-4.1-8b",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "wandb/JetBrains/Mellum2-12B-A2.5B-Instruct",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "wandb/meta-llama/Llama-3.1-70B-Instruct",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/MiniMaxAI/MiniMax-M3",
+            "type": "chat",
+            "inputCost": 2.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/moonshotai/Kimi-K2.7-Code",
+            "type": "chat",
+            "inputCost": 7.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000035,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/moonshotai/Kimi-K2.6",
+            "type": "chat",
+            "inputCost": 6.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000341,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/nvidia/NVIDIA-Nemotron-3-Ultra-550B-A55B",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000275,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "wandb/OpenPipe/Qwen3-14B-Instruct",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3.8-27B",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3.6-35B-A3B",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3.6-27B",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3.5-35B-A3B",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/Qwen/Qwen3-30B-A3B-Instruct-2507",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "wandb/zai-org/GLM-5.2",
+            "type": "chat",
+            "inputCost": 7.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000242,
+            "outputCostUnit": "token"
+        }
+    ],
+    "watsonx": [
+        {
+            "maxTokens": 1024,
+            "name": "watsonx/ibm/granite-3-8b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "watsonx/mistralai/mistral-large",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "watsonx/bigscience/mt0-xxl-13b",
+            "type": "chat",
+            "inputCost": 0.000001908,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001908,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "watsonx/bigscience/mt0-xxl",
+            "type": "chat",
+            "inputCost": 0.000001908,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001908,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/core42/jais-13b-chat",
+            "type": "chat",
+            "inputCost": 0.0005,
+            "inputCostUnit": "token",
+            "outputCost": 0.002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/google/flan-t5-xl-3b",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/ibm/granite-13b-chat-v2",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/ibm/granite-13b-instruct-v2",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/ibm/granite-3-3-8b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "watsonx/ibm/granite-4-h-small",
+            "type": "chat",
+            "inputCost": 6.36e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.65e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/ibm/granite-guardian-3-2-2b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/ibm/granite-guardian-3-3-8b",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "watsonx/ibm/granite-ttm-1024-96-r2",
+            "type": "chat",
+            "inputCost": 3.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "watsonx/ibm/granite-ttm-1536-96-r2",
+            "type": "chat",
+            "inputCost": 3.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 512,
+            "name": "watsonx/ibm/granite-ttm-512-96-r2",
+            "type": "chat",
+            "inputCost": 3.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/ibm/granite-vision-3-2-2b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "watsonx/meta-llama/llama-3-2-11b-vision-instruct",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "watsonx/meta-llama/llama-3-2-1b-instruct",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "watsonx/meta-llama/llama-3-2-3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "watsonx/meta-llama/llama-3-2-90b-vision-instruct",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "watsonx/meta-llama/llama-3-3-70b-instruct",
+            "type": "chat",
+            "inputCost": 7.526e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.526e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/meta-llama/llama-4-maverick-17b",
+            "type": "chat",
+            "inputCost": 3.71e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+            "type": "chat",
+            "inputCost": 3.71e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001484,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "watsonx/meta-llama/llama-guard-3-11b-vision",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "watsonx/mistralai/mistral-medium-2505",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.00001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "watsonx/mistralai/mistral-small-2503",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "watsonx/mistralai/mistral-small-3-1-24b-instruct-2503",
+            "type": "chat",
+            "inputCost": 1.06e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.18e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "watsonx/mistralai/pixtral-12b-2409",
+            "type": "chat",
+            "inputCost": 3.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "watsonx/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.59e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.36e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "watsonx/sdaia/allam-1-13b-instruct",
+            "type": "chat",
+            "inputCost": 0.0000018,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        }
+    ],
+    "xai": [
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-beta",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-fast-beta",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-fast-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-mini",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-mini-beta",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-mini-fast",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-mini-fast-beta",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-mini-fast-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "xai/grok-3-mini-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "xai/grok-4",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "xai/grok-4-fast-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "xai/grok-4-fast-non-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "xai/grok-4-0709",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "xai/grok-4-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "xai/grok-4-1-fast",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "xai/grok-4-1-fast-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "xai/grok-4-1-fast-reasoning-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "xai/grok-4-1-fast-non-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2000000,
+            "name": "xai/grok-4-1-fast-non-reasoning-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-beta-0309-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-0309-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-beta-0309-non-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.3",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.3-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "xai/grok-4.5",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "xai/grok-4.5-latest",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "xai/grok-build-latest",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "xai/grok-4.6",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "xai/grok-code-fast",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "xai/grok-code-fast-1",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "xai/grok-code-fast-1-0825",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-0309-non-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "xai/grok-build-0.1",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-reasoning-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-non-reasoning",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000000,
+            "name": "xai/grok-4.20-non-reasoning-latest",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        }
+    ],
+    "zai": [
+        {
+            "maxTokens": null,
+            "name": "zai/glm-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-5.3",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-5.3-flash",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-5.1",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-5-code",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000005,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.7",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.7-flash",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.6",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.5v",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.5-x",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000089,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.5-air",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.5-airx",
+            "type": "chat",
+            "inputCost": 0.0000011,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4-32b-0414-128k",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-4.5-flash",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": null,
+            "name": "zai/glm-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        }
+    ],
+    "scaleway": [
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/qwen/qwen3.5-397b-a17b",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/qwen/qwen3.6-35b-a3b",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/qwen/qwen3-235b-a22b-instruct-2507",
+            "type": "chat",
+            "inputCost": 7.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000225,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "scaleway/qwen/qwen3-embedding-8b",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 32768,
+            "name": "scaleway/qwen/qwen3-coder-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "scaleway/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "scaleway/google/gemma-4-26b-a4b-it",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "scaleway/google/gemma-3-27b-it",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/hcompany/holo2-30b-a3b",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/mistralai/mistral-medium-3.5-128b",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000075,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/mistralai/devstral-2-123b-instruct-2512",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/mistralai/voxtral-small-24b-2507",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "scaleway/mistralai/mistral-small-3.2-24b-instruct-2506",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "scaleway/mistralai/pixtral-12b-2409",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "scaleway/BAAI/bge-multilingual-gemma2",
+            "type": "embedding",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/meta/llama-3.3-70b-instruct",
+            "type": "chat",
+            "inputCost": 9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "scaleway/glm-5.2",
+            "type": "chat",
+            "inputCost": 0.0000018,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000055,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "scaleway/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "novita": [
+        {
+            "maxTokens": 65536,
+            "name": "novita/deepseek/deepseek-v3.2",
+            "type": "chat",
+            "inputCost": 2.69e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/minimax/minimax-m2.1",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-4.7",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "novita/xiaomimimo/mimo-v2-flash",
+            "type": "chat",
+            "inputCost": 1.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/zai-org/autoglm-phone-9b-multilingual",
+            "type": "chat",
+            "inputCost": 3.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.38e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100352,
+            "name": "novita/moonshotai/kimi-k2-thinking",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/minimax/minimax-m2",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/paddlepaddle/paddleocr-vl",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/deepseek/deepseek-v3.2-exp",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-vl-235b-a22b-thinking",
+            "type": "chat",
+            "inputCost": 9.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000395,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/zai-org/glm-4.6v",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-4.6",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "novita/kwaipilot/kat-coder-pro",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-next-80b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-next-80b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/deepseek/deepseek-ocr",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/deepseek/deepseek-v3.1-terminus",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-vl-235b-a22b-instruct",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3-max",
+            "type": "chat",
+            "inputCost": 0.00000211,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000845,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/skywork/r1v4-lite",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/deepseek/deepseek-v3.1",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100352,
+            "name": "novita/moonshotai/kimi-k2-0905",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3-coder-480b-a35b-instruct",
+            "type": "chat",
+            "inputCost": 3.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000155,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-coder-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 100352,
+            "name": "novita/moonshotai/kimi-k2-instruct",
+            "type": "chat",
+            "inputCost": 5.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000023,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/deepseek/deepseek-v3-0324",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000112,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 98304,
+            "name": "novita/zai-org/glm-4.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-235b-a22b-thinking-2507",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/meta-llama/llama-3.1-8b-instruct",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/google/gemma-3-12b-it",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/zai-org/glm-4.5v",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/qwen/qwen3-235b-a22b-instruct-2507",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/deepseek/deepseek-r1-distill-qwen-14b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 12288,
+            "name": "novita/meta-llama/llama-3.3-70b-instruct",
+            "type": "chat",
+            "inputCost": 1.35e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/qwen/qwen-2.5-72b-instruct",
+            "type": "chat",
+            "inputCost": 3.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16000,
+            "name": "novita/mistralai/mistral-nemo",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 40000,
+            "name": "novita/minimaxai/minimax-m1-80k",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/deepseek/deepseek-r1-0528",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "novita/deepseek/deepseek-r1-distill-qwen-32b",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/meta-llama/llama-3-8b-instruct",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "novita/microsoft/wizardlm-2-8x22b",
+            "type": "chat",
+            "inputCost": 6.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "novita/deepseek/deepseek-r1-0528-qwen3-8b",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 9e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/deepseek/deepseek-r1-distill-llama-70b",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "novita/meta-llama/llama-3-70b-instruct",
+            "type": "chat",
+            "inputCost": 5.1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 20000,
+            "name": "novita/qwen/qwen3-235b-a22b-fp8",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+            "type": "chat",
+            "inputCost": 2.7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/meta-llama/llama-4-scout-17b-16e-instruct",
+            "type": "chat",
+            "inputCost": 1.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/nousresearch/hermes-2-pro-llama-3-8b",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen2.5-vl-72b-instruct",
+            "type": "chat",
+            "inputCost": 8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/sao10k/l3-70b-euryale-v2.1",
+            "type": "chat",
+            "inputCost": 0.00000148,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000148,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/baidu/ernie-4.5-21B-a3b-thinking",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/sao10k/l3-8b-lunaris",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/baichuan/baichuan-m2-32b",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 7e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16000,
+            "name": "novita/baidu/ernie-4.5-vl-424b-a47b",
+            "type": "chat",
+            "inputCost": 4.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000125,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 12000,
+            "name": "novita/baidu/ernie-4.5-300b-a47b-paddle",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000011,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 160000,
+            "name": "novita/deepseek/deepseek-prover-v2-671b",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 20000,
+            "name": "novita/qwen/qwen3-32b-fp8",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 20000,
+            "name": "novita/qwen/qwen3-30b-a3b-fp8",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/google/gemma-3-27b-it",
+            "type": "chat",
+            "inputCost": 1.19e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16000,
+            "name": "novita/deepseek/deepseek-v3-turbo",
+            "type": "chat",
+            "inputCost": 4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000013,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16000,
+            "name": "novita/deepseek/deepseek-r1-turbo",
+            "type": "chat",
+            "inputCost": 7e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "novita/Sao10K/L3-8B-Stheno-v3.2",
+            "type": "chat",
+            "inputCost": 5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 3200,
+            "name": "novita/gryphe/mythomax-l2-13b",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 9e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/baidu/ernie-4.5-vl-28b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 3.9e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.9e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-vl-8b-instruct",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 98304,
+            "name": "novita/zai-org/glm-4.5-air",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-vl-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-vl-30b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/qwen/qwen3-omni-30b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "novita/qwen/qwen3-omni-30b-a3b-instruct",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 9.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/qwen/qwen-mt-plus",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 7.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "novita/baidu/ernie-4.5-vl-28b-a3b",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "novita/baidu/ernie-4.5-21B-a3b",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 20000,
+            "name": "novita/qwen/qwen3-8b-fp8",
+            "type": "chat",
+            "inputCost": 3.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.38e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/qwen/qwen3-4b-fp8",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/qwen/qwen2.5-7b-instruct",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 7e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "novita/meta-llama/llama-3.2-3b-instruct",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/sao10k/l31-70b-euryale-v2.2",
+            "type": "chat",
+            "inputCost": 0.00000148,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000148,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/qwen/qwen3-embedding-0.6b",
+            "type": "embedding",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 4096,
+            "name": "novita/qwen/qwen3-embedding-8b",
+            "type": "embedding",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 96000,
+            "name": "novita/baai/bge-m3",
+            "type": "embedding",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-5.3",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "novita/deepseek/deepseek-v4-pro-0813",
+            "type": "chat",
+            "inputCost": 0.00000132,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000396,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1048576,
+            "name": "novita/moonshotai/kimi-k3",
+            "type": "chat",
+            "inputCost": 0.000003,
+            "inputCostUnit": "token",
+            "outputCost": 0.000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "novita/tencent/hy3",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-5.2",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "novita/moonshotai/kimi-k2.7-code",
+            "type": "chat",
+            "inputCost": 9.499999999999999e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "novita/deepseek/deepseek-v4-flash-vision-exp",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "novita/deepseek/deepseek-v4-flash-0731",
+            "type": "chat",
+            "inputCost": 4.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000132,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/mindai/macaron-v1-venti",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000045,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/minimax/minimax-m3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "novita/deepseek/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 393216,
+            "name": "novita/deepseek/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 0.0000016000000000000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032000000000000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/inclusionai/ling-3.0-flash-fast",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/qwen/qwen3.8-max",
+            "type": "chat",
+            "inputCost": 0.000002,
+            "inputCostUnit": "token",
+            "outputCost": 0.000006,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/inclusionai/ling-3.0-flash",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/mindai/macaron-v1-tall",
+            "type": "chat",
+            "inputCost": 4.5000000000000003e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000026,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "novita/stepfun/step-3.7-flash",
+            "type": "chat",
+            "inputCost": 2.0000000000000002e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000115,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "novita/nvidia/nemotron-3-nano-30b-a3b",
+            "type": "chat",
+            "inputCost": 5.0000000000000004e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.0000000000000002e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/baidu/cobuddy",
+            "type": "chat",
+            "inputCost": 2.8e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000113,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/xiaomimimo/mimo-v2.5",
+            "type": "chat",
+            "inputCost": 1.6800000000000002e-7,
+            "inputCostUnit": "token",
+            "outputCost": 3.3600000000000004e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3.7-max",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000375,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/xiaomimimo/mimo-v2.5-pro",
+            "type": "chat",
+            "inputCost": 5.22e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000001044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3.6-27b",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036000000000000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "novita/moonshotai/kimi-k2.6",
+            "type": "chat",
+            "inputCost": 8.000000000000001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000034,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-5.1",
+            "type": "chat",
+            "inputCost": 0.00000138,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/minimax/minimax-m2.7-highspeed",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-5v-turbo",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/google/gemma-4-26b-a4b-it",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.0000000000000003e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/google/gemma-4-31b-it",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.0000000000000003e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-5-turbo",
+            "type": "chat",
+            "inputCost": 0.0000012,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/minimax/minimax-m2.7",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131100,
+            "name": "novita/minimax/minimax-m2.5-highspeed",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3.5-27b",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000024,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3.5-122b-a10b",
+            "type": "chat",
+            "inputCost": 4.0000000000000003e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032000000000000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3.5-35b-a3b",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3.5-397b-a17b",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036000000000000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131100,
+            "name": "novita/minimax/minimax-m2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-5",
+            "type": "chat",
+            "inputCost": 0.000001,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032000000000000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3-coder-next",
+            "type": "chat",
+            "inputCost": 2.0000000000000002e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000015,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "novita/deepseek/deepseek-ocr-2",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "novita/moonshotai/kimi-k2.5",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "novita/zai-org/glm-4.7-h",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000022,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "novita/zai-org/glm-4.7-flash",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 4.0000000000000003e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "novita/qwen/qwen3.6-35b-a3b",
+            "type": "chat",
+            "inputCost": 2.48e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000014850000000000002,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16000,
+            "name": "novita/deepseek/deepseek_v3",
+            "type": "chat",
+            "inputCost": 8.900000000000001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.900000000000001e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16000,
+            "name": "novita/deepseek/deepseek-r1",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "novita/deepseek/deepseek-v3/community",
+            "type": "chat",
+            "inputCost": 8.900000000000001e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.900000000000001e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8000,
+            "name": "novita/deepseek/deepseek-r1/community",
+            "type": "chat",
+            "inputCost": 0.000004,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "novita/thudm/glm-4-32b-0414",
+            "type": "chat",
+            "inputCost": 5.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000166,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32000,
+            "name": "novita/meta-llama/llama-3.2-1b-instruct",
+            "type": "chat",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-8,
+            "outputCostUnit": "token"
+        }
+    ],
+    "llamagate": [
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/llama-3.1-8b",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 5e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/llama-3.2-3b",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/mistral-7b-v0.3",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/qwen3-8b",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/dolphin3-8b",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "llamagate/deepseek-r1-8b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "llamagate/deepseek-r1-7b-qwen",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/openthinker-7b",
+            "type": "chat",
+            "inputCost": 8e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/qwen2.5-coder-7b",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "llamagate/deepseek-coder-6.7b",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 4096,
+            "name": "llamagate/codellama-7b",
+            "type": "chat",
+            "inputCost": 6e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/qwen3-vl-8b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 2048,
+            "name": "llamagate/llava-7b",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/gemma3-4b",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "llamagate/nomic-embed-text",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        },
+        {
+            "maxTokens": 40960,
+            "name": "llamagate/qwen3-embedding-8b",
+            "type": "embedding",
+            "inputCost": 2e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "libertai": [
+        {
+            "maxTokens": 16000,
+            "name": "libertai/hermes-3-8b-tee",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/gemma-4-31b-it",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/gemma-4-31b-it-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/qwen3.6-27b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/qwen3.6-27b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/qwen3.6-35b-a3b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/qwen3.6-35b-a3b-thinking",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/qwen3.5-122b-a10b",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 262144,
+            "name": "libertai/qwen3.5-122b-a10b-thinking",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "libertai/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 200000,
+            "name": "libertai/deepseek-v4-flash-thinking",
+            "type": "chat",
+            "inputCost": 2.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.00000175,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 8192,
+            "name": "libertai/bge-m3",
+            "type": "embedding",
+            "inputCost": 1e-8,
+            "inputCostUnit": "token",
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "sarvam": [
+        {
+            "maxTokens": 32000,
+            "name": "sarvam/sarvam-m",
+            "type": "chat",
+            "inputCost": 0,
+            "inputCostUnit": null,
+            "outputCost": 0,
+            "outputCostUnit": null
+        }
+    ],
+    "bedrock_mantle": [
+        {
+            "maxTokens": 32768,
+            "name": "bedrock_mantle/openai.gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "bedrock_mantle/openai.gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "bedrock_mantle/openai.gpt-oss-safeguard-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 65536,
+            "name": "bedrock_mantle/openai.gpt-oss-safeguard-20b",
+            "type": "chat",
+            "inputCost": 7.5e-8,
+            "inputCostUnit": "token",
+            "outputCost": 3e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "bedrock_mantle/google.gemma-4-31b",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 256000,
+            "name": "bedrock_mantle/google.gemma-4-26b-a4b",
+            "type": "chat",
+            "inputCost": 1.3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 128000,
+            "name": "bedrock_mantle/google.gemma-4-e2b",
+            "type": "chat",
+            "inputCost": 4e-8,
+            "inputCostUnit": "token",
+            "outputCost": 8e-8,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "bedrock_mantle/xai.grok-4.3",
+            "type": "chat",
+            "inputCost": 0.00000125,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 500000,
+            "name": "bedrock_mantle/xai.grok-4.6",
+            "type": "chat",
+            "inputCost": 0.0000022,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000066,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 16384,
+            "name": "bedrock_mantle/us-gov-west-1/xai.grok-4.3",
+            "type": "chat",
+            "inputCost": 0.0000015,
+            "inputCostUnit": "token",
+            "outputCost": 0.000003,
+            "outputCostUnit": "token"
+        }
+    ],
+    "tensormesh": [
+        {
+            "maxTokens": null,
+            "name": "tensormesh/Qwen/Qwen3.5-397B-A17B-FP8",
+            "type": "chat",
+            "inputCost": 6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000036,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
+            "type": "chat",
+            "inputCost": 4.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000018,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/Qwen/Qwen3.6-27B-FP8",
+            "type": "chat",
+            "inputCost": 3.2e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000032,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/lukealonso/GLM-5.1-NVFP4-MTP",
+            "type": "chat",
+            "inputCost": 0.0000014,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000044,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/deepseek-ai/DeepSeek-V4-Flash",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/moonshotai/Kimi-K2.6",
+            "type": "chat",
+            "inputCost": 9.6e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.000004,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/MiniMaxAI/MiniMax-M2.5",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/google/gemma-4-31B-it",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/openai/gpt-oss-120b",
+            "type": "chat",
+            "inputCost": 1.5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tensormesh/openai/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 7e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "tencent": [
+        {
+            "maxTokens": 384000,
+            "name": "tencent/deepseek-v4-pro",
+            "type": "chat",
+            "inputCost": 4.35e-7,
+            "inputCostUnit": "token",
+            "outputCost": 8.7e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 384000,
+            "name": "tencent/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2.8e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "tencent/minimax-m3",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000012,
+            "outputCostUnit": "token"
+        }
+    ],
+    "cognition": [
+        {
+            "maxTokens": null,
+            "name": "cognition/swe-1.6",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "cognition/swe-1.7",
+            "type": "chat",
+            "inputCost": 5e-7,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000025,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": null,
+            "name": "cognition/swe-1.7-lightning",
+            "type": "chat",
+            "inputCost": 0.0000025,
+            "inputCostUnit": "token",
+            "outputCost": 0.0000125,
+            "outputCostUnit": "token"
+        }
+    ],
+    "pinstripes": [
+        {
+            "maxTokens": 128000,
+            "name": "pinstripes/ps/glm-4.5-air",
+            "type": "chat",
+            "inputCost": 1.25e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "pinstripes/ps/qwen3.6-35b-a3b",
+            "type": "chat",
+            "inputCost": 1.4e-7,
+            "inputCostUnit": "token",
+            "outputCost": 4.5e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "pinstripes/ps/qwen3-30b-a3b",
+            "type": "chat",
+            "inputCost": 9e-8,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 131072,
+            "name": "pinstripes/ps/qwen3-coder-30b-a3b",
+            "type": "chat",
+            "inputCost": 3e-7,
+            "inputCostUnit": "token",
+            "outputCost": 6e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 163840,
+            "name": "pinstripes/ps/deepseek-v4-flash",
+            "type": "chat",
+            "inputCost": 1e-7,
+            "inputCostUnit": "token",
+            "outputCost": 2e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 1000192,
+            "name": "pinstripes/ps/minimax-m2.7",
+            "type": "chat",
+            "inputCost": 2.55e-7,
+            "inputCostUnit": "token",
+            "outputCost": 5.5e-7,
+            "outputCostUnit": "token"
+        }
+    ],
+    "darkbloom": [
+        {
+            "maxTokens": 32768,
+            "name": "darkbloom/gemma-4-26b",
+            "type": "chat",
+            "inputCost": 3e-8,
+            "inputCostUnit": "token",
+            "outputCost": 1.65e-7,
+            "outputCostUnit": "token"
+        },
+        {
+            "maxTokens": 32768,
+            "name": "darkbloom/gpt-oss-20b",
+            "type": "chat",
+            "inputCost": 1.45e-8,
+            "inputCostUnit": "token",
+            "outputCost": 7e-8,
+            "outputCostUnit": "token"
         }
     ]
 } as const
